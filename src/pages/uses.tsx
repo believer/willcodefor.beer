@@ -14,8 +14,6 @@ const uses = () => {
     }
   `)
 
-  console.log(markdownRemark)
-
   return (
     <Layout>
       <Link to="/">Home</Link>
