@@ -2,13 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  @apply bg-pink-300;
+}
+
 html,
 body {
   @apply font-sans font-light m-0 text-gray-700;
 }
 
 .markdown h2 {
-  @apply pb-4 mb-4 border-b border-gray-300;
+  @apply pb-4 mb-4 mt-10 border-b border-gray-300;
+}
+
+.markdown ul {
+  @apply ml-5;
+}
+
+.markdown li {
+  @apply list-disc;
+}
+
+.markdown li:not(:last-of-type) {
+  @apply mb-4;
 }
 
 .grid {
@@ -31,6 +47,7 @@ p:not(:last-of-type) {
   @apply border-b border-gray-700 text-gray-700;
 }
 
+.markdown a,
 .link {
   @apply border-b border-gray-900 pb-1 text-gray-900 bg-transparent relative;
 
@@ -39,6 +56,11 @@ p:not(:last-of-type) {
   transition-timing-function: ease-in-out;
 }
 
+.markdown a {
+  @apply pb-0;
+}
+
+.markdown a:hover,
 .link:hover {
   @apply bg-pink-300 border-pink-300;
 }

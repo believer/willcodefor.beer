@@ -1,9 +1,11 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { work, projects } from '../data'
+import SEO from '../components/SEO'
 
 const IndexPage = () => (
   <>
+    <SEO title="" />
     <Layout>
       <header className="text-3xl font-light">
         Hi there! I'm Rickard Laurin, a developer from Sweden. I enjoy making
