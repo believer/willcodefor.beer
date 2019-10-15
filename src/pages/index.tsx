@@ -5,7 +5,7 @@ import SEO from '../components/SEO'
 
 const IndexPage = () => (
   <>
-    <SEO title="" />
+    <SEO title="Home" />
     <Layout>
       <header className="text-3xl font-light">
         Hi there! I'm Rickard Laurin, a developer from Sweden. I enjoy making

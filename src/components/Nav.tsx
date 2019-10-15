@@ -8,7 +8,7 @@ const Nav = () => {
         Home
       </Link>
       <Link className="" activeClassName="text-pink-300" to="/uses">
-        What I use
+        What I Use
       </Link>
     </div>
   )

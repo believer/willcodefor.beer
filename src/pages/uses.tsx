@@ -21,7 +21,7 @@ const uses = () => {
 
   return (
     <Layout>
-      <SEO title="Uses" />
+      <SEO title="What I Use" />
 
       <div
         className="markdown"
