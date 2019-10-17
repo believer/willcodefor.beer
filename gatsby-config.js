@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Rickard Laurin`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `I am a developer from Sweden. I enjoy making user-friendly websites and creating tools that make life easier for other developers.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,11 +27,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Rickard Laurin`,
+        short_name: `rlaurin`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fbb6ce`,
+        theme_color: `#fbb6ce`,
         display: `minimal-ui`,
       },
     },
