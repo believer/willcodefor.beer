@@ -1,7 +1,7 @@
-import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
+import React from 'react'
 import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
 import favicon from '../images/favicon.ico'
 
 function SEO({ description, lang, meta, title }) {
@@ -10,9 +10,8 @@ function SEO({ description, lang, meta, title }) {
       query {
         site {
           siteMetadata {
-            title
             description
-            author
+            title
           }
         }
       }
