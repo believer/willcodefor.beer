@@ -8,7 +8,7 @@
   I used to love [Dank Mono](https://dank.sh/) but was suffering from
   integration problems with my terminal.
 
-- My editor theme is a port of [Night Owl](https://github.com/haishanh/night-owl.vim) by [Sarah Dresner](https://sarahdrasnerdesign.com/) to vim.
+- My editor theme is a port of [Night Owl](https://github.com/haishanh/night-owl.vim) by [Sarah Drasner](https://sarahdrasnerdesign.com/) to vim.
 
 - My terminal of choice is [kitty](https://github.com/kovidgoyal/kitty) with
   [tmux](https://github.com/tmux/tmux) on top of it. I've
