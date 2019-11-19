@@ -9,8 +9,9 @@ export const work = [
       in-house.</p><p>My work focuses on front-end, but also
       backend (Node) whenever there's a need. We use React and React Native
       with TypeScript, but recently we've also started using ReasonML.
-      We write all code using TDD and Jest. API integrations are made
-      using GraphQL, with some REST.</p><p>I've had the opportunity to work with clients including Taxi Stockholm, Vimla, Arbetsförmedlingen, and Swedbank.</p>`,
+      We write all code using TDD and Jest. API integrations are made using GraphQL, with some REST.</p>`,
+    link: '/iteam',
+    linkDescription: `Here's a list of all the projects I've a been a part of at Iteam`,
   },
   {
     id: 'ck0xmzz5k000101mo68vl4152',

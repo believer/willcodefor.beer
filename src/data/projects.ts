@@ -2,9 +2,9 @@ export const projects = [
   {
     id: 'ck0xnamdi000201mohdaj78n6',
     name: 'Workout of the Day',
-    description: `A collection of competition and benchmark CrossFit workouts,
+    description: `<p>A collection of competition and benchmark CrossFit workouts,
       but also workouts that I've made. A combination of two of my passions,
-      code and CrossFit.`,
+      code and CrossFit.</p><p>I've also made a version of the app in <a href="https://github.com/believer/wod-elm">Elm</a>.</p>`,
     tech: ['reasonreact', 'now', 'travis'],
     link: 'https://github.com/believer/wod',
   },
@@ -44,14 +44,14 @@ visual impairment. This includes people who are legally blind and people with
     id: 'ck0xkc0q4000001l45p5a0svu',
     name: 'Clearingnummer',
     description: `Sort codes, clearingnummer in Swedish, are four or five digit identifiers for Swedish banks. This package helps you find the bank related to a specific number.`,
-    tech: ['typescript', 'travis'],
+    tech: ['typescript', 'github actions'],
     link: 'https://github.com/believer/clearingnummer',
   },
   {
     id: 'ck0xkc94f000101l4eshq0j9i',
     name: 'Telefonnummer',
     description: `Telefonnummer is phone number in Swedish. This package formats all Swedish phone numbers, both mobile and landline, to a standard format.`,
-    tech: ['typescript', 'travis'],
+    tech: ['typescript', 'github actions'],
     link: 'https://github.com/believer/telefonnummer',
   },
 ]
