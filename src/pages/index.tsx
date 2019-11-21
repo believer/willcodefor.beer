@@ -84,6 +84,9 @@ const IndexPage = () => (
                 {w.position} ~ {w.start} - {w.end}
               </div>
               <div dangerouslySetInnerHTML={{ __html: w.description }}></div>
+              <p className="mt-4">
+                {w.link && <Link to={w.link}>{w.linkDescription}</Link>}
+              </p>
             </li>
           ))}
         </ul>
@@ -123,7 +126,7 @@ const IndexPage = () => (
               <div className="mt-4 flex flex-wrap">
                 {p.tech.map(t => (
                   <div
-                    className="text-xs bg-gray rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2 sm:mb-0 last:mr-0"
+                    className="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2 sm:mb-0 last:mr-0"
                     key={t}
                   >
                     {t}
