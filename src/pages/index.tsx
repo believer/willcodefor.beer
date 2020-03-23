@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { work, projects } from '../data'
 import SEO from '../components/SEO'
+import { External } from '../components/Icon'
+import SocialMedia from '../components/SocialMedia'
 import { Link } from 'gatsby'
 
 const IndexPage = () => (
@@ -24,72 +26,20 @@ const IndexPage = () => (
       </header>
 
       <section className="flex items-center mt-10">
-        <a
-          className="flex items-center mr-8"
+        <SocialMedia
+          className="mr-8"
           href="https://github.com/believer"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          GitHub
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4 ml-2"
-          >
-            <path d="M19.5 11V21.5H2.5V4.5H13" stroke="#1A202C" />
-            <path
-              d="M7.5 16.5L21.5 2.5"
-              stroke="#1A202C"
-              strokeLinecap="round"
-            />
-            <path d="M15 2.5H21.5V9" stroke="#1A202C" />
-          </svg>
-        </a>
-        <a
-          className="flex items-center mr-8"
+          name="GitHub"
+        />
+        <SocialMedia
+          className="mr-8"
           href="https://twitter.com/rickardlaurin"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Twitter
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4 ml-2"
-          >
-            <path d="M19.5 11V21.5H2.5V4.5H13" stroke="#1A202C" />
-            <path
-              d="M7.5 16.5L21.5 2.5"
-              stroke="#1A202C"
-              strokeLinecap="round"
-            />
-            <path d="M15 2.5H21.5V9" stroke="#1A202C" />
-          </svg>
-        </a>
-        <a
-          className="flex items-center"
+          name="Twitter"
+        />
+        <SocialMedia
           href="https://www.linkedin.com/in/rickardlaurin/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          LinkedIn
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4 ml-2"
-          >
-            <path d="M19.5 11V21.5H2.5V4.5H13" stroke="#1A202C" />
-            <path
-              d="M7.5 16.5L21.5 2.5"
-              stroke="#1A202C"
-              strokeLinecap="round"
-            />
-            <path d="M15 2.5H21.5V9" stroke="#1A202C" />
-          </svg>
-        </a>
+          name="LinkedIn"
+        />
       </section>
 
       <section className="mt-10">
@@ -129,20 +79,7 @@ const IndexPage = () => (
                   ></div>
                 </div>
                 <a href={p.link}>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                  >
-                    <path d="M19.5 11V21.5H2.5V4.5H13" stroke="#1A202C" />
-                    <path
-                      d="M7.5 16.5L21.5 2.5"
-                      stroke="#1A202C"
-                      strokeLinecap="round"
-                    />
-                    <path d="M15 2.5H21.5V9" stroke="#1A202C" />
-                  </svg>
+                  <External className="w-6 h-6" />
                 </a>
               </div>
               <div className="mt-4 flex flex-wrap">
