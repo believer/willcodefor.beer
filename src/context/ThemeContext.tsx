@@ -22,6 +22,8 @@ export const ThemeContext = React.createContext({
   changeTheme: () => {},
 } as State)
 
+const query = '(prefers-color-scheme: dark)'
+
 export const ThemeProvider: React.FC = ({ children }) => {
   const [state, dispatch] = React.useReducer(
     (state: State, action: Actions) => {
@@ -45,6 +47,24 @@ export const ThemeProvider: React.FC = ({ children }) => {
 
     document.body.classList.add(state.theme)
   }, [state])
+
+  React.useEffect(() => {
+    if (!window.matchMedia) {
+      return
+    }
+
+    const updateTheme = (event: MediaQueryListEvent) => {
+      dispatch({ type: 'ChangeTheme', theme: event.matches ? 'dark' : 'light' })
+    }
+
+    window.matchMedia(query).addListener(updateTheme)
+
+    if (window.matchMedia(query).matches) {
+      dispatch({ type: 'ChangeTheme', theme: 'dark' })
+    }
+
+    return () => window.matchMedia(query).removeListener(updateTheme)
+  }, [])
 
   return (
     <ThemeContext.Provider value={{ changeTheme, ...state }}>
