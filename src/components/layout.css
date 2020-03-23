@@ -63,7 +63,8 @@ p:not(:last-of-type) {
 }
 
 body.dark .markdown a,
-body.dark .link {
+body.dark .link,
+body.dark .list-item p a {
   @apply text-blue-400;
 }
 
