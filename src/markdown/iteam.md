@@ -1,6 +1,6 @@
 ## Energiföretagen
 
-<p class="text-sm text-gray-500">Full stack developer ~ 2019-</p>
+<p class="text-sm text-gray-500">Full stack developer ~ 2019</p>
 
 Complete rebuild of Energiföretagens publications website, EBR-e, on top of their existing Episerver.
 
@@ -19,7 +19,7 @@ Complete rebuild of Energiföretagens publications website, EBR-e, on top of the
 ## Motorbranschens Riksförbund
 
 <p class="text-sm text-gray-500">
-  Full stack developer ~ 2019-
+  Full stack developer ~ 2019-2020
 </p>
 
 Development of a new web-based system for car service workshops and billing insurance companies. The challenges of this project include supporting all legal requirements of GDPR, bookkeeping law and building a system with the end user in focus.
