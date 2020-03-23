@@ -1,10 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './layout.css'
 import BlobSvg from './BlobSvg'
 import Nav from './Nav'
 
-const Layout = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <>
       <BlobSvg />
@@ -15,10 +14,6 @@ const Layout = ({ children }) => {
       </main>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

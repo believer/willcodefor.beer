@@ -5,99 +5,118 @@ import SEO from '../components/SEO'
 import { External } from '../components/Icon'
 import SocialMedia from '../components/SocialMedia'
 import { Link } from 'gatsby'
+import { ThemeContext } from '../context/ThemeContext'
 
-const IndexPage = () => (
-  <>
-    <SEO title="Home" />
-    <Layout>
-      <header className="text-3xl font-light">
-        Hi there! I'm Rickard Laurin, a developer from Sweden. I enjoy making
-        user-friendly websites and creating tools that make life easier for
-        other developers. I currently love working in{' '}
-        <a
-          className="link"
-          href="https://reasonml.github.io/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          ReasonML
-        </a>
-        .
-      </header>
+const IndexPage = () => {
+  const { theme } = React.useContext(ThemeContext)
 
-      <section className="flex items-center mt-10">
-        <SocialMedia
-          className="mr-8"
-          href="https://github.com/believer"
-          name="GitHub"
-        />
-        <SocialMedia
-          className="mr-8"
-          href="https://twitter.com/rickardlaurin"
-          name="Twitter"
-        />
-        <SocialMedia
-          href="https://www.linkedin.com/in/rickardlaurin/"
-          name="LinkedIn"
-        />
-      </section>
-
-      <section className="mt-10">
-        <header className="pb-4 mb-4 border-b border-gray-300">
-          Experience
+  return (
+    <>
+      <SEO title="Home" />
+      <Layout>
+        <header className="text-3xl font-light">
+          Hi there! I'm Rickard Laurin, a developer from Sweden. I enjoy making
+          user-friendly websites and creating tools that make life easier for
+          other developers. I currently love working in{' '}
+          <a
+            className="link"
+            href="https://reasonml.github.io/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            ReasonML
+          </a>
+          .
         </header>
-        <ul className="mb-6">
-          {work.map((w) => (
-            <li className="mb-10 last:mb-0 list-item" key={w.id}>
-              <h2 className="text-lg font-normal text-gray-900 mb-2">
-                {w.name}
-              </h2>
-              <div className="text-sm text-gray-500 mb-2">
-                {w.position} ~ {w.start} - {w.end}
-              </div>
-              <div dangerouslySetInnerHTML={{ __html: w.description }}></div>
-              <p className="mt-4">
-                {w.link && <Link to={w.link}>{w.linkDescription}</Link>}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </section>
 
-      <section className="mt-10">
-        <header className="pb-4 mb-4 border-b border-gray-300">Projects</header>
-        <ul>
-          {projects.map((p) => (
-            <li className="mb-8 last:mb-0 list-item" key={p.id}>
-              <div className="flex items-center">
-                <div className="flex-1 mr-5">
-                  <h2 className="text-lg font-normal text-gray-900 mb-2">
-                    {p.name}
-                  </h2>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: p.description }}
-                  ></div>
+        <section className="flex items-center mt-10">
+          <SocialMedia
+            className="mr-8"
+            href="https://github.com/believer"
+            name="GitHub"
+          />
+          <SocialMedia
+            className="mr-8"
+            href="https://twitter.com/rickardlaurin"
+            name="Twitter"
+          />
+          <SocialMedia
+            href="https://www.linkedin.com/in/rickardlaurin/"
+            name="LinkedIn"
+          />
+        </section>
+
+        <section className="mt-10">
+          <header className="pb-4 mb-4 border-b border-gray-300">
+            Experience
+          </header>
+          <ul className="mb-6">
+            {work.map((w) => (
+              <li className="mb-10 last:mb-0 list-item" key={w.id}>
+                <h2
+                  className={`text-lg font-normal mb-2 ${
+                    theme === 'light' ? 'text-gray-900' : 'text-gray-100'
+                  }`}
+                >
+                  {w.name}
+                </h2>
+                <div className="text-sm text-gray-500 mb-2">
+                  {w.position} ~ {w.start} - {w.end}
                 </div>
-                <a href={p.link}>
-                  <External className="w-6 h-6" />
-                </a>
-              </div>
-              <div className="mt-4 flex flex-wrap">
-                {p.tech.map((t) => (
-                  <div
-                    className="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2 sm:mb-0 last:mr-0"
-                    key={t}
-                  >
-                    {t}
+                <div dangerouslySetInnerHTML={{ __html: w.description }}></div>
+                {w.link && (
+                  <p className="mt-4">
+                    <Link className="link" to={w.link}>
+                      {w.linkDescription}
+                    </Link>
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mt-10">
+          <header className="pb-4 mb-4 border-b border-gray-300">
+            Projects
+          </header>
+          <ul>
+            {projects.map((p) => (
+              <li className="mb-8 last:mb-0 list-item" key={p.id}>
+                <div className="flex items-center">
+                  <div className="flex-1 mr-5">
+                    <h2
+                      className={`text-lg font-normal mb-2 ${
+                        theme === 'light' ? 'text-gray-900' : 'text-gray-100'
+                      }`}
+                    >
+                      {p.name}
+                    </h2>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: p.description }}
+                    ></div>
                   </div>
-                ))}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </Layout>
-  </>
-)
+                  <a href={p.link}>
+                    <External className="w-6 h-6" />
+                  </a>
+                </div>
+                <div className="mt-4 flex flex-wrap">
+                  {p.tech.map((t) => (
+                    <div
+                      className="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2 sm:mb-0 last:mr-0"
+                      key={t}
+                    >
+                      {t}
+                    </div>
+                  ))}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </Layout>
+    </>
+  )
+}
 
 export default IndexPage

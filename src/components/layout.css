@@ -9,6 +9,12 @@
 html,
 body {
   @apply font-sans font-light m-0 text-gray-700;
+
+  transition: background-color 300ms ease-in-out;
+}
+
+body.dark {
+  @apply bg-gray-800 text-gray-400;
 }
 
 .markdown h2 {
@@ -44,16 +50,21 @@ p:not(:last-of-type) {
 }
 
 .list-item p a {
-  @apply border-b border-gray-700 text-gray-700;
+  @apply border-b border-gray-700 text-blue-800;
 }
 
 .markdown a,
 .link {
-  @apply border-b border-gray-900 pb-1 text-gray-900 bg-transparent relative;
+  @apply border-b border-gray-900 pb-1 text-blue-800 bg-transparent relative;
 
   transition-property: background-color, border-color;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
+}
+
+body.dark .markdown a,
+body.dark .link {
+  @apply text-blue-400;
 }
 
 .markdown a {

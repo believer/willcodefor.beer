@@ -1,9 +1,17 @@
 export const work = [
   {
-    id: 'ck0xmynw6000001mo9xgichrd',
+    id: '4aeacd6b-e045-4cf7-bcd5-a305a9da6b70',
+    name: 'Hemnet',
+    start: 'Apr 2020',
+    end: 'Present',
+    position: 'Frontend Developer',
+    description: `With 2,8 miljon unique vistors each week, Hemnet is Sweden's biggest website when you're looking to buy or sell your appartment or house.`,
+  },
+  {
+    id: 'a8d2be27-b2ac-47fa-84dd-4cd06391ac40',
     name: 'Iteam',
     start: 'Nov 2012',
-    end: 'Present',
+    end: 'Apr 2020',
     position: 'Developer / Head of Technology',
     description: `<p>Iteam is a development consultancy working mostly
       in-house.</p><p>My work focuses on front-end, but also
@@ -14,7 +22,7 @@ export const work = [
     linkDescription: `Here's a list of all the projects I've a been a part of at Iteam`,
   },
   {
-    id: 'ck0xmzz5k000101mo68vl4152',
+    id: '7bd6fe20-ec4c-49a1-90f8-3ad43e3f4079',
     name: 'MatHem',
     start: 'Dec 2011',
     end: 'Nov 2012',
