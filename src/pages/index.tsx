@@ -47,6 +47,28 @@ const IndexPage = () => (
           </svg>
         </a>
         <a
+          className="flex items-center mr-8"
+          href="https://twitter.com/rickardlaurin"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Twitter
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-4 h-4 ml-2"
+          >
+            <path d="M19.5 11V21.5H2.5V4.5H13" stroke="#1A202C" />
+            <path
+              d="M7.5 16.5L21.5 2.5"
+              stroke="#1A202C"
+              strokeLinecap="round"
+            />
+            <path d="M15 2.5H21.5V9" stroke="#1A202C" />
+          </svg>
+        </a>
+        <a
           className="flex items-center"
           href="https://www.linkedin.com/in/rickardlaurin/"
           rel="noopener noreferrer"
@@ -75,7 +97,7 @@ const IndexPage = () => (
           Experience
         </header>
         <ul className="mb-6">
-          {work.map(w => (
+          {work.map((w) => (
             <li className="mb-10 last:mb-0 list-item" key={w.id}>
               <h2 className="text-lg font-normal text-gray-900 mb-2">
                 {w.name}
@@ -95,7 +117,7 @@ const IndexPage = () => (
       <section className="mt-10">
         <header className="pb-4 mb-4 border-b border-gray-300">Projects</header>
         <ul>
-          {projects.map(p => (
+          {projects.map((p) => (
             <li className="mb-8 last:mb-0 list-item" key={p.id}>
               <div className="flex items-center">
                 <div className="flex-1 mr-5">
@@ -124,7 +146,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="mt-4 flex flex-wrap">
-                {p.tech.map(t => (
+                {p.tech.map((t) => (
                   <div
                     className="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2 sm:mb-0 last:mr-0"
                     key={t}
