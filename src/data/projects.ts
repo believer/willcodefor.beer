@@ -1,6 +1,13 @@
 export const projects = [
   {
     id: 'ck0xnamdi000201mohdaj78n6',
+    name: 're-intl',
+    description: `re-intl helps you with date, number and currency formatting in ReasonML (BuckleScript). Everything is built on top of Intl which comes built-in with browsers >= IE11 as well as Node.`,
+    tech: ['reasonml', 'github actions'],
+    link: 'https://github.com/believer/re-intl',
+  },
+  {
+    id: 'ck0xnamdi000201mohdaj78n6',
     name: 'Workout of the Day',
     description: `<p>A collection of competition and benchmark CrossFit workouts,
       but also workouts that I've made. A combination of two of my passions,
