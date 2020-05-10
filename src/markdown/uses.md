@@ -6,7 +6,7 @@
 
 - My editor font is [Cascadia Code](https://github.com/microsoft/cascadia-code).
   I used to love [Dank Mono](https://dank.sh/) but was suffering from
-  integration problems with my terminal. Want to use [MonoLisa](http://monolisa.dev/) when the issues with kitty have been fixed.
+  integration problems with my terminal. I want to use [MonoLisa](http://monolisa.dev/) when the issues with kitty have been fixed.
 
 - My editor theme is a port of [Night Owl](https://github.com/haishanh/night-owl.vim) by [Sarah Drasner](https://sarahdrasnerdesign.com/) to vim.
 
