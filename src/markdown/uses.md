@@ -6,7 +6,7 @@
 
 - My editor font is [Cascadia Code](https://github.com/microsoft/cascadia-code).
   I used to love [Dank Mono](https://dank.sh/) but was suffering from
-  integration problems with my terminal.
+  integration problems with my terminal. Want to use [MonoLisa](http://monolisa.dev/) when the issues with kitty have been fixed.
 
 - My editor theme is a port of [Night Owl](https://github.com/haishanh/night-owl.vim) by [Sarah Drasner](https://sarahdrasnerdesign.com/) to vim.
 
@@ -16,7 +16,7 @@
 
 ## Desktop
 
-- My browser is currently [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
+- My browser is currently Chrome
 
 ## Desk setup
 
@@ -26,5 +26,4 @@
   MX Clear switches and a custom color design. I've used it for {{keyboardDate}}
   years and couldn't love it more. I've paired it with an Apple Magic Trackpad 2. I also have a [Razer Goliathus Control](https://www.razer.com/eu-en/gaming-mouse-mats/razer-goliathus-control) mouse mat because I like the feel of it.
 
-- At work I have a [Swedstyle](http://www.swedstyle.com/en) desk and a [RH Logic
-  400](https://store.flokk.com/global/en-gb/products/rh-logic?model=3550-STD&code=017Q5K) chair. Dreaming of a home office with a Jarvis desk and a Hermin Miller chair.
+- I have a [IKEA Skarsta](https://www.ikea.com/se/sv/p/skarsta-skrivbord-sitt-sta-vit-s59324818/) desk and a [IKEA Markus](https://www.ikea.com/se/sv/p/markus-kontorsstol-vissle-moerkgra-70261150/) chair. Dreaming of a home office with a Jarvis desk and a Herman Miller chair.
