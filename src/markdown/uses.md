@@ -16,14 +16,14 @@
 
 ## Desktop
 
-- My browser is currently Chrome
+- My browser is currently Brave
 
 ## Desk setup
 
-- I use a 15" MacBook Pro. 2,7 GHz i7, 16 GB RAM, Radeon Pro 460 4 GB, 500 GB HDD. Really dislike the touch bar and built-in keyboard, so it's mostly used tethered.
+- I use a 16" MacBook Pro. 2,6 GHz i7, 32 GB RAM, Radeon Pro 5300M 4 GB, 500 GB HDD. Really disliked the touch bar and built-in keyboard of the old 15", so I mostly used that tethered, but the new 16" has a really great keyboard. Feels awesome to be able to work on the actual laptop again.
 
 - My keyboard is a [WASD](http://www.wasdkeyboards.com/index.php/) with Cherry
   MX Clear switches and a custom color design. I've used it for {{keyboardDate}}
   years and couldn't love it more. I've paired it with an Apple Magic Trackpad 2. I also have a [Razer Goliathus Control](https://www.razer.com/eu-en/gaming-mouse-mats/razer-goliathus-control) mouse mat because I like the feel of it.
 
-- I have a [IKEA Skarsta](https://www.ikea.com/se/sv/p/skarsta-skrivbord-sitt-sta-vit-s59324818/) desk and a [IKEA Markus](https://www.ikea.com/se/sv/p/markus-kontorsstol-vissle-moerkgra-70261150/) chair. Dreaming of a home office with a Jarvis desk and a Herman Miller chair.
+- I have a [IKEA Skarsta](https://www.ikea.com/se/sv/p/skarsta-skrivbord-sitt-sta-vit-s59324818/) desk and a [IKEA Markus](https://www.ikea.com/se/sv/p/markus-kontorsstol-vissle-moerkgra-70261150/) chair. Dreaming of a home office with a Jarvis desk and a Herman Miller Aeron chair.
