@@ -1,0 +1,17 @@
+body {
+  @apply bg-gray-800 text-gray-400;
+}
+
+.nav-item {
+  @apply text-pink-300;
+}
+
+.markdown a,
+.link,
+.list-item p a {
+  @apply text-blue-400;
+}
+
+.experience-header {
+  @apply text-gray-100;
+}
