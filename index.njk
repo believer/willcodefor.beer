@@ -189,7 +189,7 @@ projects:
   </header>
   <ul>
     {% for p in projects %}
-      <li class="mb-8 last:mb-0 list-item" key={p.id}>
+      <li class="mb-8 last:mb-0 list-item">
         <div class="flex items-center">
           <div class="flex-1 mr-5">
             <h2 class="experience-header">
@@ -197,7 +197,7 @@ projects:
             </h2>
             {{ p.description | safe }}
           </div>
-          <a href={{p.link}}>
+          <a href={{p.link}} aria-label="Source code for {{p.name}} on GitHub">
             <svg
               viewBox="0 0 24 24"
               fill="none"
