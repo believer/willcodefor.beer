@@ -15,11 +15,10 @@ title: What I Use
   I used to love [Dank Mono](https://dank.sh/) but was suffering from
   integration problems with my terminal. I want to use [MonoLisa](http://monolisa.dev/) when the issues with kitty have been fixed.
 
-- My editor theme is a port of [Night Owl](https://github.com/haishanh/night-owl.vim) by [Sarah Drasner](https://sarahdrasnerdesign.com/) to vim.
+- My editor theme is [a modified version](https://github.com/believer/night-owl) of [Night Owl](https://github.com/haishanh/night-owl.vim) by [Sarah Drasner](https://sarahdrasnerdesign.com/) to vim.
 
 - My terminal of choice is [kitty](https://github.com/kovidgoyal/kitty) with
-  [tmux](https://github.com/tmux/tmux) on top of it. I've
-  tried going back to Iterm2, but it feels so sluggish after using kitty.
+  [tmux](https://github.com/tmux/tmux) on top of it. The color scheme I use in kitty can be found in [this Gist](https://gist.github.com/believer/386b977c3363e73073d4d14848dc1af7). Tmux configuration can be found in my [Dotfiles](https://github.com/believer/dotfiles/blob/master/.tmux.conf).
 
 ## Desktop
 
