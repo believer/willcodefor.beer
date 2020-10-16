@@ -16,6 +16,7 @@
 
     {% block head %}{% endblock %}
     <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
+    <script async src="https://cdn.splitbee.io/sb.js"></script>
   </head>
   <body>
       <div class="flex items-center px-4 py-1">
@@ -29,7 +30,7 @@
       </div>
 
       <svg
-        class="blob hidden lg:block"
+        class="hidden blob lg:block"
         width="684"
         height="646"
         viewBox="0 0 684 646"
@@ -60,7 +61,7 @@
       </svg>
 
 
-    <main class="grid grid-template-main mt-8 mb-12 lg:my-32">
+    <main class="mt-8 mb-12 grid grid-template-main lg:my-32">
       <div class="grid-column-main">
         {% block content %}
           {{ content | safe }}
