@@ -27,7 +27,7 @@ experience:
       We write all code using TDD and Jest. API integrations are made using
       GraphQL, with some REST.</p>
     link: /iteam
-    linkDescription: Here's a list of all the projects Ive a been a part of at Iteam
+    linkDescription: Here's a list of all the projects I've a been a part of at Iteam
   - name: MatHem
     start: Dec 2011
     end: Nov 2012
@@ -167,7 +167,7 @@ projects:
         <h2 class="experience-header">
           {{ w.name }}
         </h2>
-        <div class="text-sm text-gray-500 mb-2">
+        <div class="mb-2 text-sm text-gray-500">
           {{ w.position }} ~ {{ w.start }} - {{ w.end }}
         </div>
         {{ w.description | safe }}
@@ -214,10 +214,10 @@ projects:
             </svg>
           </a>
         </div>
-        <div class="mt-4 flex flex-wrap">
+        <div class="flex flex-wrap mt-4">
           {% for t in p.tech %}
             <div
-              class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2 sm:mb-0 last:mr-0"
+              class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full sm:mb-0 last:mr-0"
             >
               {{t}}
             </div>
