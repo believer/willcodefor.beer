@@ -4,20 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve & postcss styles/**/*.css --base styles --dir _tmp --watch",
-    "build": "NODE_ENV=production eleventy & NODE_ENV=production postcss styles/**/*.css --dir _site"
+    "start": "eleventy --serve",
+    "css": "npx tailwindcss-cli@latest build styles/style.css -o _tmp/style.css",
+    "css:prod": "NODE_ENV=production npx tailwindcss-cli@latest build styles/style.css -o _site/style.css",
+    "build": "NODE_ENV=production eleventy && css:prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "9.8.5",
+    "autoprefixer": "10.1.0",
     "html-minifier": "4.0.0",
     "postcss-clean": "1.1.0",
-    "postcss-cli": "7.1.1",
-    "tailwindcss": "1.5.1"
+    "postcss-cli": "8.3.0",
+    "tailwindcss": "2.0.2"
   },
   "dependencies": {
-    "@11ty/eleventy": "0.11.0"
+    "@11ty/eleventy": "0.11.1"
   }
 }

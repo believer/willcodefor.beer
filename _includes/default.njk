@@ -1,68 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{title}} | Rickard Natt och Dag</title>
+    <title>{{title}} | Rickard Natt och Dag</title>
     <meta charset="UTF-8" />
     <meta name="description" content="I am a developer from Sweden. I enjoy making user-friendly websites and creating tools that make life easier for other developers." />
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-    <meta name="supported-color-schemes" content="dark light" />
-    <meta name="color-scheme" content="dark light" />
-    <meta name="theme-color" content="white" />
-    <link rel="stylesheet" href="/style.css?v={% version %}"/>
-    <link rel="stylesheet" href="/light.css" media="(prefers-color-scheme: light)" />
-    <link rel="stylesheet" href="/dark.css" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="/style.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
 
     {% block head %}{% endblock %}
-    <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
     <script async src="https://cdn.splitbee.io/sb.js"></script>
   </head>
   <body>
-      <div class="flex items-center px-4 py-1">
-        <a class="mr-8 {{ 'nav-item' if '/' === page.url }}" href="/" >
-          Home
+    <main class="mt-8 md:px-8 grid grid-template-main">
+      <div class="flex items-center justify-end col-start-3 col-end-4 space-x-8">
+        <a class="font-bold text-indigo-600 dark:text-indigo-400 {{ 'nav-item' if '/' === page.url }}" href="/" >
+          @rnattochdag
         </a>
-        <a class="mr-4 {{ 'nav-item' if '/uses' in page.url }}" href="/uses">
+        <a class="font-bold {{ 'nav-item' if '/uses' in page.url }}" href="/uses">
           What I Use
         </a>
-        <dark-mode-toggle appearance="toggle" mode="dark" permanent></dark-mode-toggle>
       </div>
-
-      <svg
-        class="hidden blob lg:block"
-        width="684"
-        height="646"
-        viewBox="0 0 684 646"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M73.2766 342.858C-65.0688 276.898 32.3295 149.741 98.3219 94.408C130.921
-          55.5647 160.065 -112.814 483.5 136.5C579.5 210.5 746.5 136.5 653.35
-          443.998C512.375 909.373 246.208 425.309 73.2766 342.858Z"
-          stroke="#FBB6CE"
-          stroke-width="5"
-        />
-        <path
-          d="M100.153 340.788C-24.1692 281.482 63.3566 167.151 122.66 117.399C151.954
-          82.4736 178.145 -68.9206 468.795 155.245C555.065 221.781 705.137 155.245
-          621.429 431.726C494.743 850.159 255.556 414.922 100.153 340.788Z"
-          stroke="#FED7E2"
-          stroke-width="5"
-        />
-        <path
-          d="M122.346 339.652C9.45552 285.802 88.933 181.991 142.783 136.817C169.384
-          105.105 193.166 -32.3585 457.09 171.181C535.427 231.594 671.699 171.181
-          595.689 422.222C480.652 802.153 263.459 406.964 122.346 339.652Z"
-          stroke="#FFF5F7"
-          stroke-width="5"
-        />
-      </svg>
-
-
-    <main class="mt-8 mb-12 grid grid-template-main lg:my-32">
-      <div class="grid-column-main">
+      <div class="my-10 md:my-32 col-start-3 col-end-4">
         {% block content %}
           {{ content | safe }}
         {% endblock %}
