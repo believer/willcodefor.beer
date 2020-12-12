@@ -7,7 +7,7 @@
     "start": "eleventy --serve",
     "css": "npx tailwindcss-cli@latest build styles/style.css -o _tmp/style.css",
     "css:prod": "NODE_ENV=production npx tailwindcss-cli@latest build styles/style.css -o _site/style.css",
-    "build": "NODE_ENV=production eleventy && css:prod"
+    "build": "NODE_ENV=production eleventy && npm run css:prod"
   },
   "keywords": [],
   "author": "",
