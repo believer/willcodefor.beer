@@ -1,6 +1,8 @@
 const htmlmin = require("html-minifier");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addPassthroughCopy("assets");
@@ -9,11 +11,20 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./_tmp/style.css": "./style.css",
   });
-  eleventyConfig.addPassthroughCopy({ "./_tmp/light.css": "./light.css" });
-  eleventyConfig.addPassthroughCopy({ "./_tmp/dark.css": "./dark.css" });
+  eleventyConfig.addPassthroughCopy({
+    "./styles/dracula.css": "./dracula.css",
+  });
 
   eleventyConfig.addShortcode("version", function() {
     return String(Date.now());
+  });
+
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    return new Intl.DateTimeFormat("sv-SE").format(dateObj);
+  });
+
+  eleventyConfig.addFilter("noPostTag", (tags) => {
+    return tags.filter((t) => t !== "post");
   });
 
   // Calculate days I've owned my keyboard

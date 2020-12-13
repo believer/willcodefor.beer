@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
     <link rel="stylesheet" href="/style.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link href="/dracula.css" rel="stylesheet">
 
     {% block head %}{% endblock %}
     <script async src="https://cdn.splitbee.io/sb.js"></script>
@@ -17,6 +18,10 @@
       <div class="flex items-center justify-end col-start-3 col-end-4 space-x-8">
         <a class="font-bold text-indigo-600 dark:text-indigo-400 {{ 'nav-item' if '/' === page.url }}" href="/" >
           @rnattochdag
+        </a>
+        <a class="font-bold {{ 'nav-item' if '/uses' in page.url }}"
+          href="/posts">
+          Blog
         </a>
         <a class="font-bold {{ 'nav-item' if '/uses' in page.url }}" href="/uses">
           What I Use

@@ -1,0 +1,20 @@
+---
+layout: default.njk
+---
+
+{% block content %}
+<div class="ml-auto mr-auto prose dark:prose-dark prose-indigo">
+  <h1>{{title}}</h1>
+
+  {{content | safe}}
+
+  <hr>
+
+  <div class="text-sm text-gray-600">
+    {{date | htmlDateString}}
+  </div>
+  <div class="text-sm text-gray-600">
+    <a href="{{url}}">Original post</a>
+  </div>
+</div>
+{% endblock %}

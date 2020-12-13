@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::selection {
-  @apply bg-pink-300;
+  @apply bg-indigo-300;
 }
 
 @layer components {
@@ -45,4 +45,3 @@
     @apply bg-pink-300 border-pink-300;
   }
 }
-
