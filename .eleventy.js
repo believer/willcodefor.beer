@@ -1,6 +1,8 @@
 const htmlmin = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
+const addLeadingZero = (v) => (v < 10 ? `0${v}` : v);
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.setUseGitIgnore(false);
@@ -20,7 +22,10 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-    return new Intl.DateTimeFormat("sv-SE").format(dateObj);
+    const date = new Date(dateObj);
+    return `${date.getFullYear()}-${addLeadingZero(
+      date.getMonth() + 1
+    )}-${addLeadingZero(date.getDate())}`;
   });
 
   eleventyConfig.addFilter("noPostTag", (tags) => {
