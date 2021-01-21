@@ -13,8 +13,10 @@ layout: default.njk
   <div class="text-sm text-gray-600">
     {{date | htmlDateString}}
   </div>
+  {% if url %}
   <div class="text-sm text-gray-600">
     <a href="{{url}}">Original post</a>
   </div>
+  {% endif %}
 </div>
 {% endblock %}
