@@ -1,0 +1,20 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - tagList
+  addAllPagesToCollections: true
+layout: default.njk
+eleventyComputed:
+  title: Tagged {{ tag }}
+permalink: /tags/{{ tag }}/
+---
+
+{% block content %}
+  {% set postslist = collections[tag] %}
+  {% include "postslist.njk" %}
+{% endblock %}
