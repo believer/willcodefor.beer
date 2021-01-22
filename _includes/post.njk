@@ -10,8 +10,14 @@ layout: default.njk
 
   <hr>
 
-  <div class="text-sm text-gray-600">
+  <div class="text-sm text-gray-600 dark:text-gray-300">
     {{date | htmlDateString}}
+
+    {% if updated %}
+    <span class="dark:text-gray-500">
+      (Updated {{updated | htmlDateString}})
+    </span>
+    {% endif %}
   </div>
   {% if url %}
   <div class="text-sm text-gray-600">

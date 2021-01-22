@@ -2,6 +2,7 @@
 layout: post.njk
 title: 'ReScript: Creating a React component'
 date: 2021-01-21
+updated: 2021-01-22
 tags:
   - post
   - rescript
