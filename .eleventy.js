@@ -1,63 +1,63 @@
-const htmlmin = require("html-minifier");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const htmlmin = require('html-minifier')
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const pluginRss = require('@11ty/eleventy-plugin-rss')
 
-const addLeadingZero = (v) => (v < 10 ? `0${v}` : v);
+const addLeadingZero = (v) => (v < 10 ? `0${v}` : v)
 
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.setUseGitIgnore(false);
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginRss)
+  eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.setUseGitIgnore(false)
 
-  eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addWatchTarget("./_tmp/style.css");
+  eleventyConfig.addPassthroughCopy('assets')
+  eleventyConfig.addWatchTarget('./_tmp/style.css')
 
   eleventyConfig.addPassthroughCopy({
-    "./_tmp/style.css": "./style.css",
-  });
+    './_tmp/style.css': './style.css',
+  })
   eleventyConfig.addPassthroughCopy({
-    "./styles/dracula.css": "./dracula.css",
-  });
+    './styles/dracula.css': './dracula.css',
+  })
 
-  eleventyConfig.addShortcode("version", function() {
-    return String(Date.now());
-  });
+  eleventyConfig.addShortcode('version', function () {
+    return String(Date.now())
+  })
 
-  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-    const date = new Date(dateObj);
+  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+    const date = new Date(dateObj)
     return `${date.getFullYear()}-${addLeadingZero(
       date.getMonth() + 1
-    )}-${addLeadingZero(date.getDate())}`;
-  });
+    )}-${addLeadingZero(date.getDate())}`
+  })
 
-  eleventyConfig.addFilter("noPostTag", (tags) => {
-    return tags.filter((t) => t !== "post");
-  });
+  eleventyConfig.addFilter('noPostTag', (tags) => {
+    return tags.filter((t) => t !== 'post')
+  })
 
   // Calculate days I've owned my keyboard
-  eleventyConfig.addShortcode("keyboardDays", function() {
+  eleventyConfig.addShortcode('keyboardDays', function () {
     const keyboardTime =
-      new Date().getTime() - new Date("2016-09-21T00:00:00.000Z").getTime();
-    const keyboardDays = (keyboardTime / (1000 * 60 * 60 * 24 * 365)).toFixed(
-      2
-    );
+      new Date().getTime() - new Date('2016-09-21T00:00:00.000Z').getTime()
+    const keyboardDays = (keyboardTime / (1000 * 60 * 60 * 24 * 365)).toFixed(2)
 
-    return keyboardDays;
-  });
+    return keyboardDays
+  })
 
   // Minify HTML
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (
-      process.env.NODE_ENV === "production" &&
+      process.env.NODE_ENV === 'production' &&
       outputPath &&
-      outputPath.endsWith(".html")
+      outputPath.endsWith('.html')
     ) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
-      });
-      return minified;
+      })
+      return minified
     }
 
-    return content;
-  });
-};
+    return content
+  })
+}
