@@ -100,4 +100,12 @@ module.exports = function (eleventyConfig) {
 
     return content
   })
+
+  // Add reading time calculation
+  eleventyConfig.addFilter('reading_time', (content) => {
+    const wordsPerMinute = 200
+    const words = content.split(' ').length
+
+    return `${Math.ceil((words / wordsPerMinute).toFixed(2))} min read`
+  })
 }

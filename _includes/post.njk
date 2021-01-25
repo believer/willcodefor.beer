@@ -3,19 +3,12 @@ layout: default.njk
 ---
 
 {% block content %}
-<div class="ml-auto mr-auto max-w-prose">
+<article class="ml-auto mr-auto max-w-prose">
   <div class="prose dark:prose-dark prose-indigo">
     <h1>{{title}}</h1>
-
-    {{content | safe}}
   </div>
 
-  <hr class="my-8">
-
-  <div class="text-sm text-gray-600 dark:text-gray-300">
-    <span class="font-bold">
-      Published:
-    </span>
+  <div class="my-5 text-sm text-gray-600 dark:text-gray-400">
     {{date | htmlDateString}}
 
     {% if updated %}
@@ -23,22 +16,27 @@ layout: default.njk
       (Updated {{updated | htmlDateString}})
     </span>
     {% endif %}
-  </div>
 
-  {% if url %}
-  <div class="text-sm text-gray-600 dark:text-gray-300">
-    <span class="font-bold">Original post:</span> <a href="{{url}}">URL</a>
-  </div>
-  {% endif %}
+    • {{ content | striptags | reading_time }}
 
-  <ul class="flex text-sm space-x-2">
-    <li class="font-bold">Tags:</li>
-    {% for tag in tags | noPostTag %}
+    {% if url %}
+      • <a class="text-indigo-600 dark:text-indigo-400" href="{{url}}">Original post</a>
+    {% endif %}
+
+    <ul class="flex text-sm space-x-2">
+      <li>Tags:</li>
+      {% for tag in tags | noPostTag %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
       <li>
         <a class="text-indigo-600 dark:text-indigo-400" href="{{ tagUrl | url }}">{{tag}}</a>
       </li>
-    {% endfor %}
-  </ul>
-</div>
+      {% endfor %}
+    </ul>
+
+  </div>
+
+  <div class="prose dark:prose-dark prose-indigo">
+    {{content | safe}}
+  </div>
+</article>
 {% endblock %}
