@@ -1,12 +1,22 @@
 const htmlmin = require('html-minifier')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
+const pluginSEO = require('eleventy-plugin-seo')
 
 const addLeadingZero = (v) => (v < 10 ? `0${v}` : v)
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss)
   eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.addPlugin(pluginSEO, {
+    title: 'Rickard Natt och Dag',
+    description:
+      'I am a developer from Sweden. I enjoy making user-friendly websites and creating tools that make life easier for other developers.',
+    url: 'https://willcodefor.beer',
+    author: 'Rickard Natt och Dag',
+    twitter: 'rnattochdag',
+  })
+
   eleventyConfig.setUseGitIgnore(false)
 
   eleventyConfig.addPassthroughCopy('assets')
