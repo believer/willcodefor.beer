@@ -5,14 +5,13 @@ date: 2021-01-25
 tags:
   - post
   - rescript
-  - react
 ---
 
 Sometimes we want to include a library that extends our code. To add a
 third-party library to our ReScript code we use `npm` as we would in a JavaScript project, but after installing we need to adjust our ReScript configuration to include the new code.
 
 We start by installing the library using `npm` or `yarn`. For this example, I'll be using
-`@opendevtools/rescript-telefonnummer`.
+[`@opendevtools/rescript-telefonnummer`](https://github.com/opendevtools/rescript-telefonnummer).
 
 ```shell
 npm install --save @opendevtools/rescript-telefonnummer
@@ -22,6 +21,7 @@ After the installation is complete we need to add the library name in our
 `bsconfig.json` in the `bs-dependencies` array.
 
 ```json
+// bsconfig.json
 {
   ...
   "bs-dependencies": [
