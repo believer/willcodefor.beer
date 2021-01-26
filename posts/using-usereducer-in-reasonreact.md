@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: 'ReScript: Using useReducer in ReasonReact'
-excerpt: How to use React's useReducer in ReScript using ReasonReact
+excerpt: How to switch from React's useState to useReducer in ReScript using ReasonReact
 date: 2021-01-26
 tags:
   - post
