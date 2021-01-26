@@ -14,7 +14,7 @@ One great part of the [ReScript](https://rescript-lang.org/) ecosystem is the bi
 in a project called [ReasonReact](https://reasonml.github.io/reason-react/).
 This is an introductory post on how to create a React component.
 
-```jsx
+```reason
 // Button.res
 @react.component
 let make = (~onClick) => {

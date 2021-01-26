@@ -14,7 +14,7 @@ ReasonReact also has this hook, but the API is a bit different in that it only c
 the function variations of `useState`. Here's a basic example that extends the
 example we [created previously](/posts/using-react-components-in-rescript/).
 
-```jsx
+```reason
 @react.component
 let make = () => {
   let (displayValue, setDisplayValue) = React.useState(() => false)
@@ -40,4 +40,4 @@ To update the value we call the setter function, defined as `setDisplayValue` in
 our example. In this case, we toggle the `displayValue` based on the previous
 value.
 
-The [bindings for `useState`](https://github.com/reasonml/reason-react/blob/master/src/React.re#L192) to the React implementation acknowledges that the API isn't the best, but the only way to implement the state with type safety. The recommendation is to use `useReducer` whenever possible.
+The [bindings for `useState`](https://github.com/reasonml/reason-react/blob/master/src/React.re#L192) to the React implementation acknowledges that the API isn't the best, but the only way to implement the state with type safety. The recommendation is to [use `useReducer`](/posts/using-usereducer-in-reasonreact/) whenever possible.

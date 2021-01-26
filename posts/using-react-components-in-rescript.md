@@ -13,7 +13,7 @@ In [the previous post](/posts/create-a-rescript-react-component/), we learned ho
 In this post, we'll learn how to import and use them in other components. We'll
 start by making some adjustments to the `<Button>` we created.
 
-```jsx
+```reason
 // Button.res
 @react.component
 let make = (~children, ~onClick) => {
@@ -26,7 +26,7 @@ and added a prop for `~children` in the component function. This way we can
 reuse the button with different contents. The type of the `children` prop is inferred as
 `React.element` and it is **required**.
 
-```jsx
+```reason
 // App.res
 @react.component
 let make = () => {
@@ -56,7 +56,7 @@ required properties for the `<Button>`.
 
 Let's add the props to satisfy the compiler.
 
-```jsx
+```reason
 @react.component
 let make = () => {
   <div>

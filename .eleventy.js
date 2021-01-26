@@ -26,7 +26,7 @@ module.exports = function (eleventyConfig) {
     './_tmp/style.css': './style.css',
   })
   eleventyConfig.addPassthroughCopy({
-    './styles/dracula.css': './dracula.css',
+    './styles/coldark.css': './coldark.css',
   })
 
   eleventyConfig.addShortcode('version', function () {
