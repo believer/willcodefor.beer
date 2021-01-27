@@ -52,7 +52,7 @@ The types of
   | DisplayValue => React.string("The best value")
   | HideValue => React.null
   }}
-  <Button onClick={_ => dispatch(Toggle)}> {React.string("Click me")} </Button>
+  <Button onClick={_ => dispatch(Toggle)}> {React.string("Toggle value")} </Button>
 </div>
 ```
 
@@ -84,12 +84,12 @@ let make = () => {
     | DisplayValue => React.string("The best value")
     | HideValue => React.null
     }}
-    <Button onClick={_ => dispatch(Toggle)}> {React.string("Click me")} </Button>
+    <Button onClick={_ => dispatch(Toggle)}> {React.string("Toggle value")} </Button>
   </div>
 }
 ```
 
 This is a simple example that achieves the same thing as our `useState`
-component did but in a more complex manner. However, if we wanted to add a dedicated `Display` or
-`Hide` action the compiler would be able to help us so that we don't miss
+component did but in a more complex manner. However, if we wanted to [add a dedicated `Display` or
+`Hide`](/posts/compiler-help-when-updating-variants-in-rescript/) action the compiler would be able to help us so that we don't miss
 handling any cases in our implementation.

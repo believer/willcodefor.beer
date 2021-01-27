@@ -66,8 +66,7 @@ let make = () => {
 ```
 
 `onClick` gets a function defined as `_event => ()`. The underscore before
-`event` tells the compiler that the variable is unused and we return a
-[unit](https://rescript-lang.org/docs/manual/latest/primitive-types#unit), `()`, which compiles to JavaScript's `undefined`.
+`event` tells the compiler that the variable is unused and we return a [unit](https://rescript-lang.org/docs/manual/latest/primitive-types#unit), `()`, which compiles to JavaScript's `undefined`.
 
 Lastly, we re-add the button text from before as a child to `<Button>`, and we
 have successfully used our `<Button>` component!

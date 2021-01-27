@@ -22,7 +22,7 @@ let make = () => {
   <div>
     {displayValue ? React.string("The best value") : React.null}
     <Button onClick={_ => setDisplayValue(displayValue => !displayValue)}>
-      {React.string("Click me")}
+      {React.string("Toggle value")}
     </Button>
   </div>
 }
