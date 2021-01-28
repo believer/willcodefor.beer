@@ -63,6 +63,7 @@ the value or display nothing. The `onClick` function now uses `dispatch` to pass
 The complete code would look like this
 
 ```reason
+// App.res
 type state = DisplayValue | HideValue
 
 type action = Toggle
