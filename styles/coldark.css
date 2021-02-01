@@ -14,7 +14,7 @@ pre[class*='language-'] {
   text-align: left;
   white-space: pre;
   word-spacing: normal;
-  word-break: break-word;
+  word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
   -moz-tab-size: 4;
@@ -24,7 +24,14 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  white-space: pre-wrap;
+}
+
+@media (max-width: 480px) {
+  code[class*='language-'],
+  pre[class*='language-'] {
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
 }
 
 pre[class*='language-']::-moz-selection,
