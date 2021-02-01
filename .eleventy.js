@@ -40,9 +40,9 @@ module.exports = function (eleventyConfig) {
     )}-${addLeadingZero(date.getDate())}`
   })
 
-  eleventyConfig.addFilter('noPostTag', (tags) => {
-    return tags.filter((t) => t !== 'post')
-  })
+  eleventyConfig.addFilter('noPostTag', (tags) =>
+    tags.filter((t) => t !== 'post')
+  )
 
   eleventyConfig.addCollection('tagList', (collection) => {
     let tagSet = new Set()
@@ -102,10 +102,13 @@ module.exports = function (eleventyConfig) {
   })
 
   // Add reading time calculation
-  eleventyConfig.addFilter('reading_time', (content) => {
+  eleventyConfig.addFilter('readingTime', (content) => {
     const wordsPerMinute = 200
     const words = content.split(' ').length
 
     return `${Math.ceil((words / wordsPerMinute).toFixed(2))} min read`
   })
+
+  // Filter out the latest three latest posts
+  eleventyConfig.addFilter('latestPosts', (posts) => posts.slice(0, 3))
 }

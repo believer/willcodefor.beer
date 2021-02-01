@@ -17,7 +17,7 @@ layout: default.njk
     </span>
     {% endif %}
 
-    • {{ content | striptags | reading_time }}
+    • {{ content | striptags | readingTime }}
 
     {% if url %}
       • <a class="text-indigo-600 dark:text-indigo-400" href="{{url}}">Original post</a>
