@@ -3,31 +3,46 @@
   <head>
     {% seo "" %}
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width"/>
-    <link rel="stylesheet" href="/style.css"/>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <link href="/coldark.css" rel="stylesheet">
+    <link href="/coldark.css" rel="stylesheet" />
 
     {% block head %}{% endblock %}
     <script async data-no-cookie src="https://cdn.splitbee.io/sb.js"></script>
   </head>
   <body>
     <main class="mt-8 md:px-8 grid grid-template-main">
-      <div class="flex items-center justify-end col-start-3 col-end-4 space-x-8">
-        <a class="font-bold text-indigo-600 dark:text-indigo-400 {{ 'nav-item' if '/' === page.url }}" href="/" >
+      <div
+        class="flex items-center justify-end col-start-3 col-end-4 space-x-8"
+      >
+        <a
+          class="font-bold text-indigo-600 dark:text-indigo-400 {{ 'nav-item' if '/' === page.url }}"
+          href="/"
+        >
           @rnattochdag
         </a>
-        <a class="font-bold {{ 'nav-item' if '/uses' in page.url }}"
-          href="/posts">
+        <a
+          class="font-bold {{ 'nav-item' if '/uses' in page.url }}"
+          href="/posts"
+        >
           Posts
         </a>
-        <a class="font-bold {{ 'nav-item' if '/uses' in page.url }}" href="/uses">
+        <a
+          class="font-bold {{ 'nav-item' if '/uses' in page.url }}"
+          href="/uses"
+        >
           What I Use
         </a>
+        <a
+          class="font-bold {{ 'nav-item' if '/uses' in page.url }}"
+          href="https://snippets.willcodefor.beer"
+          >Snippets</a
+        >
       </div>
       <div class="my-10 md:my-32 col-start-3 col-end-4">
         {% block content %}
-          {{ content | safe }}
+        {{ content | safe }}
         {% endblock %}
       </div>
     </main>
