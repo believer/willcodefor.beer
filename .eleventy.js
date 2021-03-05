@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
     url: 'https://willcodefor.beer',
     author: 'Rickard Natt och Dag',
     twitter: 'rnattochdag',
+    image: '/assets/ogimage.png',
   })
 
   eleventyConfig.setUseGitIgnore(false)
