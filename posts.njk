@@ -63,17 +63,10 @@ title: Posts
     }
   };
 
-  const focusField = (e) => {
-    if (e.target.value !== '') {
-      resEl.style.display = 'block'
-    }
-  }
-
   fetch("/search-index.json").then((response) =>
     response.json().then((rawIndex) => {
       window.searchIndex = elasticlunr.Index.load(rawIndex);
       document.getElementById("searchField").addEventListener("input", search);
-      document.getElementById("searchField").addEventListener("focus", focusField);
     })
   );
 })(window, document);
