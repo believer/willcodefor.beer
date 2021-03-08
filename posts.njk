@@ -20,7 +20,7 @@ title: Posts
 (function (window, document) {
   "use strict";
 
-    const resEl = document.getElementById("searchResults");
+  const resEl = document.getElementById("searchResults");
 
   const search = (e) => {
     if (e.target.value === '') {
@@ -63,10 +63,6 @@ title: Posts
     }
   };
 
-  const blurField = () => {
-    resEl.style.display = 'none'
-  }
-
   const focusField = (e) => {
     if (e.target.value !== '') {
       resEl.style.display = 'block'
@@ -77,7 +73,6 @@ title: Posts
     response.json().then((rawIndex) => {
       window.searchIndex = elasticlunr.Index.load(rawIndex);
       document.getElementById("searchField").addEventListener("input", search);
-      document.getElementById("searchField").addEventListener("blur", blurField);
       document.getElementById("searchField").addEventListener("focus", focusField);
     })
   );
