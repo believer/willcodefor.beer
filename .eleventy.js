@@ -2,13 +2,14 @@ const htmlmin = require('html-minifier')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginSEO = require('eleventy-plugin-seo')
+const searchFilter = require('./filters/searchFilter')
 
 const addLeadingZero = (v) => (v < 10 ? `0${v}` : v)
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(pluginRss)
-  eleventyConfig.addPlugin(syntaxHighlight)
-  eleventyConfig.addPlugin(pluginSEO, {
+module.exports = function (config) {
+  config.addPlugin(pluginRss)
+  config.addPlugin(syntaxHighlight)
+  config.addPlugin(pluginSEO, {
     title: 'Rickard Natt och Dag',
     description:
       'I am a developer from Sweden. I enjoy making user-friendly websites and creating tools that make life easier for other developers.',
@@ -18,34 +19,32 @@ module.exports = function (eleventyConfig) {
     image: '/assets/ogimage.png',
   })
 
-  eleventyConfig.setUseGitIgnore(false)
+  config.setUseGitIgnore(false)
 
-  eleventyConfig.addPassthroughCopy('assets')
-  eleventyConfig.addWatchTarget('./_tmp/style.css')
+  config.addPassthroughCopy('assets')
+  config.addWatchTarget('./_tmp/style.css')
 
-  eleventyConfig.addPassthroughCopy({
+  config.addPassthroughCopy({
     './_tmp/style.css': './style.css',
   })
-  eleventyConfig.addPassthroughCopy({
+  config.addPassthroughCopy({
     './styles/coldark.css': './coldark.css',
   })
 
-  eleventyConfig.addShortcode('version', function () {
+  config.addShortcode('version', function () {
     return String(Date.now())
   })
 
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+  config.addFilter('htmlDateString', (dateObj) => {
     const date = new Date(dateObj)
     return `${date.getFullYear()}-${addLeadingZero(
       date.getMonth() + 1
     )}-${addLeadingZero(date.getDate())}`
   })
 
-  eleventyConfig.addFilter('noPostTag', (tags) =>
-    tags.filter((t) => t !== 'post')
-  )
+  config.addFilter('noPostTag', (tags) => tags.filter((t) => t !== 'post'))
 
-  eleventyConfig.addCollection('tagList', (collection) => {
+  config.addCollection('tagList', (collection) => {
     let tagSet = new Set()
 
     collection.getAll().forEach(function (item) {
@@ -76,7 +75,7 @@ module.exports = function (eleventyConfig) {
   })
 
   // Calculate days I've owned my keyboard
-  eleventyConfig.addShortcode('keyboardDays', function () {
+  config.addShortcode('keyboardDays', function () {
     const keyboardTime =
       new Date().getTime() - new Date('2016-09-21T00:00:00.000Z').getTime()
     const keyboardDays = (keyboardTime / (1000 * 60 * 60 * 24 * 365)).toFixed(2)
@@ -85,7 +84,7 @@ module.exports = function (eleventyConfig) {
   })
 
   // Minify HTML
-  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+  config.addTransform('htmlmin', function (content, outputPath) {
     if (
       process.env.NODE_ENV === 'production' &&
       outputPath &&
@@ -103,7 +102,7 @@ module.exports = function (eleventyConfig) {
   })
 
   // Add reading time calculation
-  eleventyConfig.addFilter('readingTime', (content) => {
+  config.addFilter('readingTime', (content) => {
     const wordsPerMinute = 200
     const words = content.split(' ').length
 
@@ -111,5 +110,10 @@ module.exports = function (eleventyConfig) {
   })
 
   // Filter out the latest three latest posts
-  eleventyConfig.addFilter('latestPosts', (posts) => posts.slice(0, 3))
+  config.addFilter('latestPosts', (posts) => posts.slice(0, 3))
+
+  config.addFilter('search', searchFilter)
+  config.addCollection('blog', (collection) => {
+    return [...collection.getFilteredByGlob('./posts/*.md')]
+  })
 }

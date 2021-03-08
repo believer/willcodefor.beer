@@ -4,6 +4,82 @@ title: Posts
 ---
 
 {% block content %}
+  <div class="relative mb-12">
+    <label class="block mb-2 text-sm font-bold" for="searchField">Search blog posts</label>
+    <input class="w-full px-4 py-2 bg-transparent border-2 border-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-4 focus:ring-pink-300 dark:focus:ring-offset-gray-800" type="text" id="searchField" />
+    <ol class="absolute left-0 right-0 hidden p-4 mt-4 bg-gray-700 rounded top-full space-y-4" id="searchResults"></ol>
+  </div>
+
   {% set postslist = collections.post %}
   {% include "postslist.njk" %}
 {% endblock %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+
+<script>
+(function (window, document) {
+  "use strict";
+
+    const resEl = document.getElementById("searchResults");
+
+  const search = (e) => {
+    if (e.target.value === '') {
+      resEl.style.display = 'none'
+      return
+    }
+
+    const results = window.searchIndex.search(e.target.value, {
+      bool: "OR",
+      expand: true,
+    });
+
+    resEl.innerHTML = "";
+
+    if (results.length > 0) {
+      results.map((r) => {
+        const { id, title, excerpt } = r.doc;
+        const el = document.createElement("li");
+
+        const h3 = document.createElement("h3");
+        el.appendChild(h3);
+
+        const a = document.createElement("a");
+        a.classList.add('font-bold', 'text-indigo-300', 'text-sm')
+        a.setAttribute("href", id);
+        a.textContent = title;
+        h3.appendChild(a);
+
+        const p = document.createElement("p");
+        p.classList.add('text-xs', 'text-gray-300')
+        p.textContent = excerpt;
+        el.appendChild(p);
+
+        resEl.appendChild(el);
+      });
+
+      resEl.style.display = 'block'
+    } else {
+      resEl.style.display = 'none'
+    }
+  };
+
+  const blurField = () => {
+    resEl.style.display = 'none'
+  }
+
+  const focusField = (e) => {
+    if (e.target.value !== '') {
+      resEl.style.display = 'block'
+    }
+  }
+
+  fetch("/search-index.json").then((response) =>
+    response.json().then((rawIndex) => {
+      window.searchIndex = elasticlunr.Index.load(rawIndex);
+      document.getElementById("searchField").addEventListener("input", search);
+      document.getElementById("searchField").addEventListener("blur", blurField);
+      document.getElementById("searchField").addEventListener("focus", focusField);
+    })
+  );
+})(window, document);
+</script>
