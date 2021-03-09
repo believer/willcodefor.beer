@@ -17,6 +17,9 @@ module.exports = function (config) {
     author: 'Rickard Natt och Dag',
     twitter: 'rnattochdag',
     image: '/assets/ogimage.png',
+    options: {
+      imageWithBaseUrl: true,
+    },
   })
 
   config.setUseGitIgnore(false)
