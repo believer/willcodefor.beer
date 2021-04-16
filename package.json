@@ -6,7 +6,7 @@
   "scripts": {
     "start": "eleventy --serve",
     "css": "NODE_ENV=development postcss styles/style.css -o _tmp/style.css -w",
-    "css:prod": "NODE_ENV=production postcss styles/style.css -o _tmp/style.css",
+    "css:prod": "NODE_ENV=production postcss styles/style.css -o _site/style.css",
     "build": "NODE_ENV=production eleventy && npm run css:prod"
   },
   "keywords": [],
