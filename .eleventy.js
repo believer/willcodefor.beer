@@ -113,7 +113,7 @@ module.exports = function (config) {
   })
 
   // Filter out the latest three latest posts
-  config.addFilter('latestPosts', (posts) => posts.slice(0, 3))
+  config.addFilter('latestPosts', (posts) => posts.slice(0, 4))
 
   config.addFilter('search', searchFilter)
   config.addCollection('blog', (collection) => {
