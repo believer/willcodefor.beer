@@ -11,9 +11,7 @@ title: What I Use
   editors over the years, but neovim makes me work most efficiently. Here
   are my [dotfiles](https://rlaur.in/dotfiles) for the curious.
 
-- My editor font is [Cascadia Code](https://github.com/microsoft/cascadia-code).
-  I used to love [Dank Mono](https://dank.sh/) but was suffering from
-  integration problems with my terminal. I want to use [MonoLisa](http://monolisa.dev/) when the issues with kitty have been fixed.
+- My editor font is [MonoLisa](http://monolisa.dev/).
 
 - My editor theme is [a modified version](https://github.com/believer/night-owl) of [Night Owl](https://github.com/haishanh/night-owl.vim) by [Sarah Drasner](https://sarahdrasnerdesign.com/) to vim.
 
