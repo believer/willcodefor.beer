@@ -192,7 +192,7 @@ projects:
         <h2 class="mb-2 text-lg font-medium text-gray-800 dark:text-gray-400">
           <a href="{{ post.url | url }}">{{ post.data.title }}</a>
         </h2>
-        <div class="mb-2 text-sm text-gray-500">
+        <div class="mb-2 text-sm text-gray-600 dark:text-gray-400">
           {{ post.date | htmlDateString }}
         </div>
         {{ post.data.excerpt | safe }}
@@ -211,7 +211,7 @@ projects:
         <h2 class="mb-2 text-lg font-medium text-gray-800 dark:text-gray-400">
           {{ w.name }}
         </h2>
-        <div class="mb-2 text-sm text-gray-500">
+        <div class="mb-2 text-sm text-gray-600 dark:text-gray-400">
           {{ w.position }} ~ {{ w.start }} - {{ w.end }}
         </div>
         {{ w.description | safe }}
@@ -239,7 +239,7 @@ projects:
             </h2>
             <div class="flex mb-2 space-x-2">
             {% for t in p.tech %}
-              <div class="text-xs text-gray-500">
+              <div class="text-xs text-gray-600 dark:text-gray-400">
                 {{t}}
               </div>
             {% endfor %}
