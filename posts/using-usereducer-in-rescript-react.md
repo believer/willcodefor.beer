@@ -1,7 +1,7 @@
 ---
 layout: post.njk
-title: 'ReScript: Using useReducer in ReasonReact'
-excerpt: How to switch from React's useState to useReducer in ReScript using ReasonReact
+title: 'ReScript: Using useReducer in rescript-react'
+excerpt: How to switch from React's useState to useReducer in ReScript using rescript-react
 date: 2021-01-26
 tags:
   - post
@@ -10,9 +10,9 @@ tags:
 ---
 
 React's `useReducer` is great when the states get more complex than a simple
-value. ReasonReact `useReducer` is even better with ReScript's [variants](https://rescript-lang.org/docs/manual/latest/variant).
+value. rescript-react `useReducer` is even better with ReScript's [variants](https://rescript-lang.org/docs/manual/latest/variant).
 
-Let's update the code from our [`useState`](/posts/using-usestate-in-reasonreact/)
+Let's update the code from our [`useState`](/posts/using-usestate-in-rescript-react/)
 implementation step by step to use `useReducer`.
 
 ```reason

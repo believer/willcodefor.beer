@@ -34,7 +34,7 @@ functions. Let's walk through the parts of one of them.
   JavaScript end. This works together with the scope to bind to
   `localStorage.getItem`
 
-The return value of `getItem` isn't very easy to work with as it could potentially be **any** `string` or `null`. We can improve this by using a [functor](https://rescript-lang.org/docs/manual/latest/module#module-functions-functors), like we [previously used for React Context](/posts/using-usecontext-in-reasonreact), which returns a nice custom hook that uses [variants](https://rescript-lang.org/docs/manual/v8.0.0/variant) instead.
+The return value of `getItem` isn't very easy to work with as it could potentially be **any** `string` or `null`. We can improve this by using a [functor](https://rescript-lang.org/docs/manual/latest/module#module-functions-functors), like we [previously used for React Context](/posts/using-usecontext-in-rescript-react), which returns a nice custom hook that uses [variants](https://rescript-lang.org/docs/manual/v8.0.0/variant) instead.
 
 ```reason
 // Storage.res

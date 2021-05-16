@@ -13,14 +13,14 @@ Complete rebuild of Energiföretagens publications website, EBR-e, on top of the
 
 <div class="flex flex-wrap mt-4">
   <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">React</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">TypeScript</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Node</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">GraphQL</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">AWS</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Docker</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">PostgreSQL</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">.NET</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">ElasticSearch</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">TypeScript</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Node</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">GraphQL</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">AWS</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Docker</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">PostgreSQL</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">.NET</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">ElasticSearch</div>
 </div>
 
 ## Motorbranschens Riksförbund
@@ -32,10 +32,10 @@ Complete rebuild of Energiföretagens publications website, EBR-e, on top of the
 Development of a new web-based system for car service workshops and billing insurance companies. The challenges of this project include supporting all legal requirements of GDPR, bookkeeping law and building a system with the end user in focus.
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">ReasonML (ReasonReact)</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Node</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">GraphQL</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">PostgreSQL</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">ReasonML (rescript-react)</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Node</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">GraphQL</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">PostgreSQL</div>
 </div>
 
 ## Arbetsförmedlingen
@@ -47,11 +47,11 @@ Development of a new web-based system for car service workshops and billing insu
 A service that made it easier for people who are new in Sweden to establish themselves on the Swedish job market.
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">React</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Node</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">GraphQL</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Docker</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">PostgreSQL</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">React</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Node</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">GraphQL</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Docker</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">PostgreSQL</div>
 </div>
 
 ## Vimla
@@ -63,14 +63,14 @@ A service that made it easier for people who are new in Sweden to establish them
 Vimla is Telenors fighter brand. I was with them from the beginning and have helped them build multiple platforms including their website, app, API, forum, knowledge base and much more.
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">React</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">React Native</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Node</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Docker</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">MongoDB</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">NodeBB</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Flow</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">TypeScript</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">React</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">React Native</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Node</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Docker</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">MongoDB</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">NodeBB</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Flow</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">TypeScript</div>
 </div>
 
 ## Playpilot
@@ -82,9 +82,9 @@ Vimla is Telenors fighter brand. I was with them from the beginning and have hel
 Help them get started with setting up a GraphQL API on top of their existing REST API.
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Node</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">GraphQL</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">TypeScript</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Node</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">GraphQL</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">TypeScript</div>
 </div>
 
 ## Läkare utan gränser (MSF)
@@ -96,8 +96,8 @@ Help them get started with setting up a GraphQL API on top of their existing RES
 Digitalization of the recruitment process. Before there was a lot of paperwork and manual labor, but we helped MSF by building a web app that the recruiters could use on a tablet. These applications were then automatically processed through the system.
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">React</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">PWA</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">React</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">PWA</div>
 </div>
 
 ## Kvalitetsbygg
@@ -109,8 +109,8 @@ Digitalization of the recruitment process. Before there was a lot of paperwork a
 Assisting an existing team of developers abroad with development and writing testable Angular.
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">AngularJS</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Mocha</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">AngularJS</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Mocha</div>
 </div>
 
 ## Taxi Stockholm
@@ -122,9 +122,9 @@ Assisting an existing team of developers abroad with development and writing tes
 Multiple frontend and backend projects.
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">React</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">React Native</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Node</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">React</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">React Native</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Node</div>
 </div>
 
 ## Svensk Förening för Allmänmedicin
@@ -144,8 +144,8 @@ Rebuild of their website
 Building their new internet bank and mentoring their Java developers in JavaScript and CSS.
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">AngularJS</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Mentoring</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">AngularJS</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Mentoring</div>
 </div>
 
 ## Besedo
@@ -157,8 +157,8 @@ Building their new internet bank and mentoring their Java developers in JavaScri
 Auditing system for ads on services like Blocket.
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">AngularJS</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">Node</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">AngularJS</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">Node</div>
 </div>
 
 ## Radical FM
@@ -170,8 +170,8 @@ Auditing system for ads on services like Blocket.
 Built a webapp for music streaming with all the basic features of a music streaming service we know today, but also with the ability to add your voice and stream to each other to make it more like your own radio station.
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">AngularJS</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">ElasticSearch</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">AngularJS</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">ElasticSearch</div>
 </div>
 
 ## Beckers
@@ -183,9 +183,9 @@ Built a webapp for music streaming with all the basic features of a music stream
 Rebuilding the user-facing websites for customer and companies
 
 <div class="flex flex-wrap mt-4">
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">HTML</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">CSS</div>
-  <div class="text-xs rounded-full px-3 py-1 bg-blue-100 text-blue-700 mr-2 mb-2">jQuery</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">HTML</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">CSS</div>
+  <div class="px-3 py-1 mb-2 mr-2 text-xs text-blue-700 bg-blue-100 rounded-full">jQuery</div>
 </div>
 
 </div>

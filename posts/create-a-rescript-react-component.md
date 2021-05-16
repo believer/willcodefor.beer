@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: 'ReScript: Creating a React component'
-excerpt: How to create React components in ReScript using ReasonReact
+excerpt: How to create React components in ReScript using rescript-react
 date: 2021-01-21
 updated: 2021-01-22
 tags:
@@ -11,7 +11,7 @@ tags:
 ---
 
 One great part of the [ReScript](https://rescript-lang.org/) ecosystem is the bindings to React. These bindings live
-in a project called [ReasonReact](https://reasonml.github.io/reason-react/).
+in a project called [rescript-react](https://rescript-lang.org/docs/react/latest/introduction).
 This is an introductory post on how to create a React component.
 
 ```reason
@@ -24,7 +24,7 @@ let make = (~onClick) => {
 
 Let's step through the code line-by-line and see what's happening.
 
-`@react.component` is a decorator that tells ReasonReact that you're writing a
+`@react.component` is a decorator that tells rescript-react that you're writing a
 component and it creates some code behind the scenes to get the props setup
 correctly.
 
@@ -35,13 +35,13 @@ file in ReScript is a module. `onClick` is a _named argument_ – it can be comp
 
 `<button onClick>` is the start of our JSX and it works just like regular React.
 The difference is in the `onClick` prop we send to the button. In React we would need to
-do `onClick={onClick}`, but ReasonReact JSX has [punning](https://rescript-lang.org/docs/manual/latest/jsx#punning). This works like objects in JavaScript that allows you to do `return { onClick }` instead of `return { onClick: onClick }`.
+do `onClick={onClick}`, but rescript-react JSX has [punning](https://rescript-lang.org/docs/manual/latest/jsx#punning). This works like objects in JavaScript that allows you to do `return { onClick }` instead of `return { onClick: onClick }`.
 
 The type of `onClick` is inferred by its usage as `ReactEvent.Mouse.t => unit`
 so we don't need to define the type of the prop ourselves. The type also
 indicates that the prop is **required**.
 
-To display a text inside the button, we use `React.string("Click me")`. ReScript needs every JSX child to have the same type, `React.element`. `React.string` converts the regular `"Click me"` string to a `React.element`. ReasonReact has helper methods for converting most primitive values like `int`, `float`, `string`, and `array` to React elements.
+To display a text inside the button, we use `React.string("Click me")`. ReScript needs every JSX child to have the same type, `React.element`. `React.string` converts the regular `"Click me"` string to a `React.element`. rescript-react has helper methods for converting most primitive values like `int`, `float`, `string`, and `array` to React elements.
 
 This is the resulting generated (ES6) code:
 

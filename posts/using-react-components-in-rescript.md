@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: 'ReScript: Using React components'
-excerpt: How to use React components in ReScript using ReasonReact
+excerpt: How to use React components in ReScript using rescript-react
 date: 2021-01-22
 tags:
   - post

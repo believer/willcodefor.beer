@@ -1,7 +1,7 @@
 ---
 layout: post.njk
-title: 'ReScript: Using useState in ReasonReact'
-excerpt: How to use React's useState in ReScript using ReasonReact
+title: 'ReScript: Using useState in rescript-react'
+excerpt: How to use React's useState in ReScript using rescript-react
 date: 2021-01-25
 tags:
   - post
@@ -10,7 +10,7 @@ tags:
 ---
 
 React has a `useState` hook that's great for keeping track of some simple state.
-ReasonReact also has this hook, but the API is a bit different in that it only contains
+rescript-react also has this hook, but the API is a bit different in that it only contains
 the function variations of `useState`. Here's a basic example that extends the
 example we [created previously](/posts/using-react-components-in-rescript/).
 
@@ -40,4 +40,4 @@ To update the value we call the setter function, defined as `setDisplayValue` in
 our example. In this case, we toggle the `displayValue` based on the previous
 value.
 
-The [bindings for `useState`](https://github.com/reasonml/reason-react/blob/master/src/React.re#L192) to the React implementation acknowledges that the API isn't the best, but the only way to implement the state with type safety. The recommendation is to [use `useReducer`](/posts/using-usereducer-in-reasonreact/) whenever possible.
+The [bindings for `useState`](https://github.com/reasonml/reason-react/blob/master/src/React.re#L192) to the React implementation acknowledges that the API isn't the best, but the only way to implement the state with type safety. The recommendation is to [use `useReducer`](/posts/using-usereducer-in-rescript-react/) whenever possible.

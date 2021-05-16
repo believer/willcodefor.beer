@@ -2,7 +2,7 @@
 layout: post.njk
 title: 'ReScript: Adding new actions to an existing useReducer'
 excerpt: 'How the ReScript compiler helps us when adding new variants to a
-useReducer in ReasonReact'
+useReducer in rescript-react'
 date: 2021-01-27
 tags:
   - post
@@ -10,8 +10,8 @@ tags:
   - react
 ---
 
-[Previously](/posts/using-usereducer-in-reasonreact/) we updated a
-React component to use the `useReducer` hook in ReasonReact. In this post, we'll
+[Previously](/posts/using-usereducer-in-rescript-react/) we updated a
+React component to use the `useReducer` hook in rescript-react. In this post, we'll
 add a couple of new actions to our reducer and see how the compiler helps us
 with adding these new features.
 
