@@ -1,6 +1,12 @@
 module.exports = {
   mode: 'jit',
-  purge: ['./**/*.njk'],
+  purge: [
+    './*.njk',
+    './_includes/*.njk',
+    './*.md',
+    './posts/*.md',
+    './styles/style.css',
+  ],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
