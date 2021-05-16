@@ -13,7 +13,7 @@
   }
 
   .markdown h2 {
-    @apply pb-4 mt-10 mb-4 border-b border-gray-300;
+    @apply pb-4 mt-10 mb-4 border-b border-gray-300 dark:border-gray-500;
   }
 
   .markdown ul {
