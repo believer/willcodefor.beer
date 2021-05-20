@@ -10,7 +10,7 @@ tags:
 
 If we want to position fixed content safely on a mobile device that has a
 notch and/or a home bar, such as the iPhone X or iPhone 12, we need to take into account the safe
-area of the device. This is especially important if you have interactive
+area of the device. This is especially important if we have interactive
 elements, such as links or buttons, in the content. Luckily, there's a CSS property that can help us!
 
 Let's say we're creating a cookie consent that contains a link.
