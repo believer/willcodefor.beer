@@ -2,7 +2,7 @@
 layout: post.njk
 title: Safely position fixed content on newer mobile devices
 excerpt: 'Use one CSS property to safely position fixed content on mobile devices with notches and home bars'
-date: 2021-05-20
+date: 2021-05-21
 tags:
   - post
   - css
