@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: Safely position fixed content on newer mobile devices
-excerpt: 'Use one CSS property to safely position fixed content on mobile devices with notches and home bars'
+excerpt: 'Use one CSS function to safely position fixed content on mobile devices with notches and home bars'
 date: 2021-05-21
 tags:
   - post
@@ -11,7 +11,7 @@ tags:
 If we want to position fixed content safely on a mobile device that has a
 notch and/or a home bar, such as the iPhone X or iPhone 12, we need to take into account the safe
 area of the device. This is especially important if we have interactive
-elements, such as links or buttons, in the content. Luckily, there's a CSS property that can help us!
+elements, such as links or buttons, in the content. Luckily, there's a CSS function that can help us!
 
 Let's say we're creating a cookie consent that contains a link.
 
@@ -47,7 +47,7 @@ If we don't add any specific spacing the link would fall below the safe area and
 </div>
 
 The padding needed to move the content above the safe area can vary between devices, but here's where the magic
-CSS property comes to the rescue. We just need one line to fix this on every device:
+CSS function comes to the rescue. We just need one line to fix this on every device:
 
 ```css
 .cookie-consent {
