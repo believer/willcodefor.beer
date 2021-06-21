@@ -12,8 +12,9 @@ module.exports = {
     extend: {
       colors: {
         github: '#181717',
-        linkedin: '#0077B5',
-        twitter: '#1DA1F2',
+        linkedin: '#0077b5',
+        twitter: '#1da1f2',
+        polywork: '#66ba8c',
       },
       typography: (theme) => ({
         DEFAULT: {
