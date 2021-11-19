@@ -8,12 +8,25 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
 
     {% block head %}{% endblock %}
-    <script async data-respect-dnt data-no-cookie src="https://cdn.splitbee.io/sb.js"></script>
+    <script
+      async
+      data-respect-dnt
+      data-no-cookie
+      src="https://cdn.splitbee.io/sb.js"
+    ></script>
   </head>
   <body>
     <main class="mt-8 md:px-8 grid grid-template-main">
       <div
-        class="flex flex-col pb-8 border-b border-gray-200 md:flex-row md:items-center md:justify-end col-start-3 col-end-4 space-y-2 md:space-y-0 md:space-x-8 md:border-0 md:pb-0"
+        class="
+          flex flex-col
+          pb-8
+          border-b border-gray-200
+          md:flex-row md:items-center md:justify-end
+          col-start-3 col-end-4
+          space-y-2
+          md:space-y-0 md:space-x-8 md:border-0 md:pb-0
+        "
       >
         <a
           class="font-bold text-indigo-600 dark:text-indigo-400 {{ 'nav-item' if '/' === page.url }}"
@@ -45,5 +58,12 @@
         {% endblock %}
       </div>
     </main>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "8ccd48ccef414fa0ba993937bfb7986a"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>
