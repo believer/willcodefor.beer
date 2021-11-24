@@ -18,18 +18,10 @@
   <body>
     <main class="mt-8 md:px-8 grid grid-template-main">
       <div
-        class="
-          flex flex-col
-          pb-8
-          border-b border-gray-200
-          md:flex-row md:items-center md:justify-end
-          col-start-3 col-end-4
-          space-y-2
-          md:space-y-0 md:space-x-8 md:border-0 md:pb-0
-        "
+        class="flex flex-col pb-8 border-b border-gray-200  md:flex-row md:items-center md:justify-end col-start-3 col-end-4 space-y-2 md:space-y-0 md:space-x-8 md:border-0 md:pb-0"
       >
         <a
-          class="font-bold text-indigo-600 dark:text-indigo-400 {{ 'nav-item' if '/' === page.url }}"
+          class="font-bold text-blue-600 dark:text-blue-400 {{ 'nav-item' if '/' === page.url }}"
           href="/"
         >
           @rnattochdag
@@ -38,7 +30,7 @@
           class="font-bold {{ 'nav-item' if '/uses' in page.url }}"
           href="/posts"
         >
-          Posts
+          Writing
         </a>
         <a
           class="font-bold {{ 'nav-item' if '/uses' in page.url }}"

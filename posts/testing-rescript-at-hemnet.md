@@ -56,7 +56,7 @@ Reason forces us, in a good way, to address all possible states and since the ca
     <span className="signup-toplisting-promo__price">
       <PriceBox price={price} originalPrice={originalPrice} />
     </span>
-  );
+  )
 }
 ```
 
@@ -116,7 +116,7 @@ Testing remains the same as we can still use the same setup with Jest and target
 
 ## Metrics
 
-A clean build, running `bsb -clean-world` to the remove all the compiled code and then `bsb -make-world`, compiles the Reason code in about **200 ms**.
+A clean build, running `bsb -clean-world` to remove all the compiled code and then `bsb -make-world`, compiles the Reason code in about **200 ms**.
 
 ![Screenshot 2020-05-14 09 36 57](https://user-images.githubusercontent.com/1478102/81910514-5a5af980-95cc-11ea-8951-3aa466ac423d.png)
 

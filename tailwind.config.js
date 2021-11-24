@@ -1,12 +1,6 @@
 module.exports = {
   mode: 'jit',
-  purge: [
-    './*.njk',
-    './_includes/*.njk',
-    './*.md',
-    './posts/*.md',
-    './styles/style.css',
-  ],
+  purge: ['./*.njk', './_includes/*.njk', './*.md', './posts/*.md'],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
@@ -21,10 +15,11 @@ module.exports = {
           css: {
             color: theme('colors.gray.900'),
             a: {
-              color: theme('colors.blue.700'),
+              color: theme('colors.blue.600'),
+              textDecoration: 'none',
               '&:hover': {
-                color: theme('colors.blue.700'),
-                textDecoration: 'none',
+                color: theme('colors.blue.600'),
+                textDecoration: 'underline',
               },
             },
             'h2 a': {
@@ -34,6 +29,9 @@ module.exports = {
             '.tag a': {
               textDecoration: 'none',
             },
+            code: {
+              color: theme('colors.indigo.600'),
+            },
           },
         },
 
@@ -41,12 +39,12 @@ module.exports = {
           css: {
             color: theme('colors.gray.200'),
             a: {
-              color: theme('colors.indigo.400'),
+              color: theme('colors.blue.400'),
               '&:hover': {
-                color: theme('colors.indigo.400'),
+                color: theme('colors.blue.400'),
               },
               code: {
-                color: theme('colors.indigo.300'),
+                color: theme('colors.blue.300'),
               },
             },
             strong: {
@@ -76,7 +74,7 @@ module.exports = {
               color: theme('colors.gray.200'),
             },
             code: {
-              color: theme('colors.indigo.300'),
+              color: theme('colors.indigo.400'),
             },
             pre: {
               backgroundColor: theme('colors.gray.200'),
@@ -84,7 +82,7 @@ module.exports = {
             },
             blockquote: {
               backgroundColor: theme('colors.gray.700'),
-              borderColor: theme('colors.indigo.300'),
+              borderColor: theme('colors.blue.300'),
               color: theme('colors.gray.300'),
             },
             figcaption: {

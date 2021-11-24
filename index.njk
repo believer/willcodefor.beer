@@ -6,23 +6,21 @@ socials:
     url: https://github.com/believer
   - name: Twitter
     url: https://twitter.com/rnattochdag
-  - name: LinkedIn
-    url: https://www.linkedin.com/in/rickardnattochdag/
   - name: Polywork
     url: https://updates.willcodefor.beer
 experience:
   - name: Hemnet
-    start: Apr 2020
-    end: Present
+    start: 2020
+    end: '&nbsp;&nbsp;'
     position: Frontend Developer
     description: |
       <p>With 2.8 miljon unique vistors each week, Hemnet is Sweden's biggest website when you're looking to buy or sell your appartment or house.</p>
 
       <p>I was part of the Seller's Experience team. This team handles the "behind the scenes" of a sale. Everything from the broker adding your listing, you purchasing additional packages for better exposure of your listing to a dashboard where you can follow statistics on the sale.</p>
   - name: Iteam
-    start: Nov 2012
-    end: Apr 2020
-    position: Developer / Head of Technology
+    start: 2012
+    end: 20
+    position: Developer / Head of Tech
     description: |
       <p>Iteam is a development consultancy working mostly in-house.</p>
 
@@ -34,8 +32,8 @@ experience:
     link: /iteam
     linkDescription: Here's a list of all the projects I've a been a part of at Iteam
   - name: MatHem
-    start: Dec 2011
-    end: Nov 2012
+    start: 2011
+    end: 12
     position: Interaction designer
     description: |
       <p>MatHem delivers groceries directly to your door, either as a
@@ -119,154 +117,159 @@ projects:
 ---
 
 {% block content %}
-<h1 class="mb-5 text-4xl font-bold md:text-5xl">Rickard Natt och Dag</h1>
 
-<header class="text-2xl font-light">
-  Hi there! I'm a developer from Sweden. I enjoy making
-  user-friendly websites and creating tools that make life easier for
-  other developers. I currently love working in 
-  <a
-    class="text-indigo-600 dark:text-indigo-400"
-    href="https://rescript-lang.org/"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    ReScript
-  </a> and 
-  <a
-    class="text-indigo-600 dark:text-indigo-400"
-    href="https://www.rust-lang.org/"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    Rust
-  </a>.
-</header>
+  <section class="grid grid-cols-12 gap-6">
+    <div class="col-span-12 md:col-start-3 md:col-end-13"> 
+      <header class="text-2xl font-light">
+        <h1 class="mb-5 text-4xl font-bold md:text-5xl">Rickard Natt och Dag</h1>
+        Hej! I'm a developer from Sweden. I enjoy making
+        user-friendly websites and creating tools that make life easier for
+        other developers. I currently love working in 
+        <a
+          class="text-blue-600 dark:text-blue-400 hover:underline"
+          href="https://rescript-lang.org/"
+          rel="noopener noreferrer"
+          target="_blank"
+          >
+          ReScript
+        </a> and 
+        <a
+          class="text-blue-600 dark:text-blue-400 hover:underline"
+          href="https://www.rust-lang.org/"
+          rel="noopener noreferrer"
+          target="_blank"
+          >
+          Rust
+        </a>.
+      </header>
+      <section class="flex items-center mt-10 space-x-6">
+        {% for social in socials %}
+          {% if social.name == "GitHub" %}
+            <a
+              class="flex items-center p-2 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-github hover:text-white"
+              href={{social.url}}
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg"><title>{{
+                                                  social.name }}</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          {% endif %}
 
-<section class="flex items-center mt-10 space-x-6">
-  {% for social in socials %}
-      {% if social.name == "GitHub" %}
-    <a
-      class="flex items-center p-2 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-github hover:text-white"
-      href={{social.url}}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
-                                             xmlns="http://www.w3.org/2000/svg"><title>{{
-                                               social.name }}</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-    </a>
-      {% endif %}
+          {% if social.name == "Twitter" %}
+            <a
+              class="flex items-center p-2 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-twitter hover:text-white"
+              href={{social.url}}
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24
+              24"><title>{{ social.name }}</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+          {% endif %}
 
-      {% if social.name == "Twitter" %}
-    <a
-      class="flex items-center p-2 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-twitter hover:text-white"
-      href={{social.url}}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24
-                             24"><title>{{ social.name }}</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-    </a>
-      {% endif %}
+          {% if social.name == "Polywork" %}
+            <a
+              class="flex items-center p-2 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-polywork hover:text-white"
+              href={{social.url}}
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 37 37" fill="none"><title>{{ social.name }}</title><g clip-path="url(#clip0)"><path d="M12.719 36.063V25.01H24.28v4.52a6.544 6.544 0 01-6.544 6.533h-5.018z" fill="#88CFB0"/><path d="M17.714 37h-5.897V24.073h13.366v5.458a7.48 7.48 0 01-7.47 7.47zm-4.035-1.873h4.035a5.608 5.608 0 005.608-5.596v-3.585h-9.643v9.181z" fill="#2F2F3A"/><path d="M24.559 24.698V12.974H36.12v5.18a6.534 6.534 0 01-6.533 6.544h-5.03z" fill="#F2C94C"/><path d="M29.53 25.635h-5.908V12.037H37v6.117a7.481 7.481 0 01-7.47 7.48zm-4.035-1.873h4.036a5.608 5.608 0 005.596-5.608v-4.278h-9.632v9.886z" fill="#2F2F3A"/><path d="M24.247 12.974H12.742v11.724h11.505V12.974z" fill="#BD83CE"/><path d="M25.183 25.635H11.817V12.037h13.366v13.598zm-11.562-1.873h9.643v-9.886h-9.585l-.058 9.886z" fill="#2F2F3A"/><path d="M.937 12.719v-5.25A6.533 6.533 0 017.469.937h4.972v11.782H.937z" fill="#40BE88"/><path d="M13.378 13.598H0V7.469A7.48 7.48 0 017.47 0h5.908v13.598zM1.873 11.723h9.69v-9.85H7.468a5.596 5.596 0 00-5.596 5.595v4.255z" fill="#2F2F3A"/><path d="M24.559 12.719V.937h4.972a6.533 6.533 0 016.532 6.532v5.25H24.56z" fill="#FF7474"/><path d="M37 13.598H23.622V0h5.909A7.48 7.48 0 0137 7.47v6.128zm-11.505-1.874h9.632V7.47a5.596 5.596 0 00-5.596-5.596h-4.036v9.851z" fill="#2F2F3A"/><path d="M24.247.937H12.742V12.66h11.505V.937z" fill="#6776F9"/><path d="M25.183 13.598H11.817V0h13.366v13.598zm-11.562-1.874h9.643v-9.85h-9.585l-.058 9.85z" fill="#2F2F3A"/><path d="M.937 29.53v-4.52h11.562v11.053h-5.03a6.533 6.533 0 01-6.532-6.532z" fill="#37C2E2"/><path d="M13.378 37H7.469A7.48 7.48 0 010 29.53v-5.457h13.378V37zM1.873 25.946v3.585a5.596 5.596 0 005.596 5.596h4.093v-9.18H1.873z" fill="#2F2F3A"/><path d="M12.441 12.974H.937v11.724H12.44V12.974z" fill="#F2994A"/><path d="M13.378 25.635H0V12.037h13.378v13.598zM1.873 23.762h9.69v-9.886h-9.69v9.886z" fill="#2F2F3A"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h37v37H0z"/></clipPath></defs></svg>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </section>
+    </div></section>
 
-      {% if social.name == "LinkedIn" %}
-    <a
-      class="flex items-center p-2 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-linkedin hover:text-white"
-      href={{social.url}}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"><title>{{ social.name
-                        }}</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-    </a>
-      {% endif %}
 
-      {% if social.name == "Polywork" %}
-    <a
-      class="flex items-center p-2 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-polywork hover:text-white"
-      href={{social.url}}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 37 37" fill="none"><title>{{ social.name }}</title><g clip-path="url(#clip0)"><path d="M12.719 36.063V25.01H24.28v4.52a6.544 6.544 0 01-6.544 6.533h-5.018z" fill="#88CFB0"/><path d="M17.714 37h-5.897V24.073h13.366v5.458a7.48 7.48 0 01-7.47 7.47zm-4.035-1.873h4.035a5.608 5.608 0 005.608-5.596v-3.585h-9.643v9.181z" fill="#2F2F3A"/><path d="M24.559 24.698V12.974H36.12v5.18a6.534 6.534 0 01-6.533 6.544h-5.03z" fill="#F2C94C"/><path d="M29.53 25.635h-5.908V12.037H37v6.117a7.481 7.481 0 01-7.47 7.48zm-4.035-1.873h4.036a5.608 5.608 0 005.596-5.608v-4.278h-9.632v9.886z" fill="#2F2F3A"/><path d="M24.247 12.974H12.742v11.724h11.505V12.974z" fill="#BD83CE"/><path d="M25.183 25.635H11.817V12.037h13.366v13.598zm-11.562-1.873h9.643v-9.886h-9.585l-.058 9.886z" fill="#2F2F3A"/><path d="M.937 12.719v-5.25A6.533 6.533 0 017.469.937h4.972v11.782H.937z" fill="#40BE88"/><path d="M13.378 13.598H0V7.469A7.48 7.48 0 017.47 0h5.908v13.598zM1.873 11.723h9.69v-9.85H7.468a5.596 5.596 0 00-5.596 5.595v4.255z" fill="#2F2F3A"/><path d="M24.559 12.719V.937h4.972a6.533 6.533 0 016.532 6.532v5.25H24.56z" fill="#FF7474"/><path d="M37 13.598H23.622V0h5.909A7.48 7.48 0 0137 7.47v6.128zm-11.505-1.874h9.632V7.47a5.596 5.596 0 00-5.596-5.596h-4.036v9.851z" fill="#2F2F3A"/><path d="M24.247.937H12.742V12.66h11.505V.937z" fill="#6776F9"/><path d="M25.183 13.598H11.817V0h13.366v13.598zm-11.562-1.874h9.643v-9.85h-9.585l-.058 9.85z" fill="#2F2F3A"/><path d="M.937 29.53v-4.52h11.562v11.053h-5.03a6.533 6.533 0 01-6.532-6.532z" fill="#37C2E2"/><path d="M13.378 37H7.469A7.48 7.48 0 010 29.53v-5.457h13.378V37zM1.873 25.946v3.585a5.596 5.596 0 005.596 5.596h4.093v-9.18H1.873z" fill="#2F2F3A"/><path d="M12.441 12.974H.937v11.724H12.44V12.974z" fill="#F2994A"/><path d="M13.378 25.635H0V12.037h13.378v13.598zM1.873 23.762h9.69v-9.886h-9.69v9.886z" fill="#2F2F3A"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h37v37H0z"/></clipPath></defs></svg>
-    </a>
-      {% endif %}
-  {% endfor %}
-</section>
-
-<section class="mt-10">
-  <header class="pb-4 mb-4 border-b border-gray-300 dark:border-gray-500">
+<section class="mt-10 grid md:grid-cols-12 gap-6">
+  <header class="text-gray-600 dark:text-gray-400 md:text-right col-span-12 md:col-span-2">
     Latest posts
   </header>
 
-  <ul class="mb-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+  <ul class="mb-6 grid grid-cols-1 md:grid-cols-2 gap-10 col-span-12 md:col-span-10">
     {%for post in collections.post | reverse | latestPosts %}
-      <li class="list-item">
-        <h2 class="mb-2 text-lg font-medium text-gray-800 dark:text-gray-400">
+      <li class="list-item space-y-2">
+        <h2 class="font-medium text-gray-800 dark:text-gray-400">
           <a href="{{ post.url | url }}">{{ post.data.title }}</a>
         </h2>
-        <div class="mb-2 text-sm text-gray-600 dark:text-gray-400">
+        <p class="text-sm">
+          {{ post.data.excerpt | safe }}
+        </p>
+        <div class="text-xs text-gray-600 dark:text-gray-400">
           {{ post.date | htmlDateString }}
         </div>
-        {{ post.data.excerpt | safe }}
       </li>
     {% endfor %}
   </ul>
 </section>
 
-<section class="mt-10">
-  <header class="pb-4 mb-4 border-b border-gray-300 dark:border-gray-500">
-    Experience
+<section class="mt-10 grid md:grid-cols-12 gap-6">
+  <header class="text-gray-600 dark:text-gray-400 md:text-right col-span-12 md:col-span-2">
+    Work
   </header>
-  <ul class="mb-6 md:w-9/12 space-y-10">
-    {%for w in experience %}
-      <li class="list-item">
-        <h2 class="mb-2 text-lg font-medium text-gray-800 dark:text-gray-400">
-          {{ w.name }}
-        </h2>
-        <div class="mb-2 text-sm text-gray-600 dark:text-gray-400">
-          {{ w.position }} ~ {{ w.start }} - {{ w.end }}
-        </div>
-        {{ w.description | safe }}
-        {% if w.link %}
-        <a class="inline-block mt-4 text-indigo-600 dark:text-indigo-400" href={{ w.link }}>
+  <div class="space-y-2 col-span-12 md:col-span-10">
+  {%for w in experience %}
+  <details>
+    <summary class="flex items-center mb-2 text-gray-800 cursor-pointer group dark:text-gray-400 space-x-4">
+      <span class="flex-none font-medium group-hover:underline group-hover:text-blue-600 dark:group-hover:text-blue-400">
+      {{ w.name }}
+      </span>
+      <span class="flex-shrink w-full border-t border-gray-300 border-dashed dark:border-gray-500"></span>
+      <span class="flex-none text-gray-600 dark:text-gray-400">
+        {{ w.position }} 
+      </span>
+      <span class="flex-none font-mono text-sm text-gray-500">
+        {{ w.start }}-{{ w.end | safe }}
+      </span>
+    </summary>
+    <div class="mb-8 text-sm">
+      {{ w.description | safe }}
+      {% if w.link %}
+        <a class="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline" href={{ w.link }}>
           {{ w.linkDescription }}
         </a>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+      {% endif %}
+    </div>
+  </details>
+  {% endfor %}
+  </div>
 </section>
 
-<section class="mt-10">
-  <header class="pb-4 mb-4 border-b border-gray-300 dark:border-gray-500">
-    Projects
+<section class="mt-10 grid grid-cols-1 md:grid-cols-12 gap-6">
+  <header class="text-gray-600 dark:text-gray-400 md:text-right col-span-12 md:col-span-2">
+    Selected projects
   </header>
-  <ul class="space-y-10 md:w-9/12">
+  <div class="space-y-2 col-span-12 md:col-span-10">
     {% for p in projects %}
-      <li class="list-item">
-        <div class="flex items-center">
-          <div class="flex-1 mr-5">
-            <h2 class="mb-2 text-lg font-medium text-gray-800 dark:text-gray-400">
-              {{p.name}}
-            </h2>
-            <div class="flex mb-2 space-x-2">
-            {% for t in p.tech %}
-              <div class="text-xs text-gray-600 dark:text-gray-400">
-                {{t}}
+      <details>
+        <summary class="flex items-center mb-2 text-gray-800 cursor-pointer group dark:text-gray-400 space-x-4">
+      <span class="flex-none font-medium group-hover:underline group-hover:text-blue-600 dark:group-hover:text-blue-400">
+          {{ p.name }}
+          </span>
+          <span class="flex-shrink w-full border-t border-gray-300 border-dashed dark:border-gray-500"></span>
+        </summary>
+        <div class="mb-8 text-sm">
+          <div class="flex items-center">
+            <div class="flex-1 mr-5">
+              <div class="flex mb-2 space-x-2">
+                {% for t in p.tech %}
+                  <div class="text-xs text-gray-600 dark:text-gray-400">
+                    {{t}}
+                  </div>
+                {% endfor %}
               </div>
-            {% endfor %}
+              {{ p.description | safe }}
             </div>
-            {{ p.description | safe }}
+          </div>
+          <div class="flex flex-wrap mt-4">
+            <a class="text-blue-600 dark:text-blue-400 hover:underline" href={{p.link}} aria-label="Source code for {{p.name}} on GitHub">Link</a>
           </div>
         </div>
-        <div class="flex flex-wrap mt-4">
-          <a class="text-indigo-600 dark:text-indigo-400" href={{p.link}} aria-label="Source code for {{p.name}} on GitHub">Link</a>
-        </div>
-      </li>
+      </details>
     {% endfor %}
-  </ul>
+  </div>
 </section>
 {% endblock %}

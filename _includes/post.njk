@@ -8,7 +8,7 @@ layout: default.njk
 
 {% block content %}
 <article class="ml-auto mr-auto max-w-prose">
-  <div class="prose dark:prose-dark prose-indigo">
+  <div class="prose dark:prose-dark prose-blue">
     <h1>{{title}}</h1>
   </div>
 
@@ -24,7 +24,7 @@ layout: default.njk
     • {{ content | striptags | readingTime }}
 
     {% if url %}
-      • <a class="text-indigo-600 dark:text-indigo-400" href="{{url}}">Original post</a>
+      • <a class="text-blue-600 dark:text-blue-400" href="{{url}}">Original post</a>
     {% endif %}
 
     <ul class="flex text-sm space-x-2">
@@ -32,13 +32,13 @@ layout: default.njk
       {% for tag in tags | noPostTag %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
       <li>
-        <a class="text-indigo-600 dark:text-indigo-400" href="{{ tagUrl | url }}">{{tag}}</a>
+        <a class="text-blue-600 dark:text-blue-400" href="{{ tagUrl | url }}">{{tag}}</a>
       </li>
       {% endfor %}
     </ul>
   </div>
 
-  <div class="prose dark:prose-dark prose-indigo">
+  <div class="prose dark:prose-dark prose-blue">
     {{content | safe}}
   </div>
 </article>
