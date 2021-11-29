@@ -18,7 +18,7 @@ I finally got it working by creating an A-record and a [page rule](https://www.c
 
 ## Create a DNS record
 
-If you don't have an A-record, I didn't, then create a dummy A-record in the DNS of your domain. Set its name to `www` and
+If you don't have an A-record, I didn't, then create a dummy A-record in your domain's DNS. Set its name to `www` and
 the IPv4 address to `192.0.2.1`. Make sure that it's proxied (the orange
 cloud). The page rule we are going to create will run before this record is
 resolved so the value shouldn't matter, but the page rule won't run if we don't have this record.
@@ -32,4 +32,4 @@ resolved so the value shouldn't matter, but the page rule won't run if we don't 
 1. Select "Forwarding URL" and "301 - Permanent Redirect"
 1. Set the destination URL to `https://mydomain.com/$1`
 
-The asterisk combined with the `$1` will match any paths. For example, `www.mydomain.com/sub/path` will redirect to `mydomain.com/sub/path`. If we don't include this part we would be redirected to the root, i.e. `www.mydomain.com/sub/path` would redirect to `mydomain.com`.
+The asterisk combined with the `$1` will match and keep any routes. For example, `www.mydomain.com/sub/path` will redirect to `mydomain.com/sub/path`. If we don't include this part we would be redirected to the root, i.e. `www.mydomain.com/sub/path` would redirect to `mydomain.com`.
