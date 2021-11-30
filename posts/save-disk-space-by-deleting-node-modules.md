@@ -9,9 +9,7 @@ tags:
   - shell
 ---
 
-I quickly understood that I had forgotten to remove `node_modules` when I wanted to copy my projects
-folder to a new computer and the process was going to take multiple hours.
-Luckily, [my dotfiles](https://github.com/believer/dotfiles/commit/a440d8abcdb47cf6fe5d9af69519f960f7c96ce0) already contained a command to remove all the `node_modules` folders at once. This time the command saved me ~40 GB.
+If you're like me and have a bunch of side projects, chances are that you also have a ton of `node_modules` folders taking up unnecessary space. I'm going to show you a command to delete all of them at once. Last time I used it I saved ~40 GB. I would recommend deleting all of them and then reinstalling in the projects you're actively developing. Start off with a clean slate.
 
 ```bash
 # Use the command at you own risk
