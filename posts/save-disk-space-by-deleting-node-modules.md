@@ -1,7 +1,7 @@
 ---
 layout: post.njk
-title: Save disk space by deleting node_modules
-excerpt: 'Reclaim a lot of disk space by deleting node_modules from projects
+title: Save disk space by deleting unused node_modules
+excerpt: 'Reclaim a lot of disk space by deleting unused node_modules from projects
 that you are not actively using'
 date: 2021-11-13
 tags:
