@@ -9,13 +9,13 @@ tags:
   - advent-of-code
 ---
 
-It's that time of year again. [Advent of Code](https://adventofcode.com/) is
+It's that time of year, [Advent of Code](https://adventofcode.com/) is
 here! Advent of Code is an advent calendar of programming puzzles. It's been
 held from December 1st to December 25th since 2015.
 
 Last year I did the solutions using Rust and had such a great time doing
 them that I'm going to use Rust again this year. This year, if I got the time
-for it, I'll try to do a post about my solution each day. My hope is that it
+for it, I'll also try to do a post about my solution each day. My hope is that it
 might help someone and make me retain the solution better. A bit of [Learning in
 public](https://devlog.willcodefor.beer/pages/learning-in-public/).
 
@@ -54,12 +54,12 @@ pub fn solve_part_01(input: &[u32]) -> u32 {
 ```
 
 This was my fastest solve ever with a time of `04:17` putting me at rank 2376.
-My previous fastest time was 11 minutes last year, albeit with a better rank.
+My previous fastest time was 11 minutes (last year), albeit with a better rank.
 
 ## Part 2
 
 The second part of each puzzle always builds on or slightly alters the solution of part 1. This
-time we're told to compare sums of a three-measurement sliding window instead of
+time we're told to compare sums of a _three-measurement sliding window_ instead of
 each single entry.
 
 We're given the hint to use "sliding window" which is a technique that can help
@@ -97,9 +97,9 @@ pub fn solve_part_02(input: &[u32]) -> u32 {
 }
 ```
 
-### Performance
+## Performance
 
-For fun, and since it's included in [cargo-aoc](https://github.com/gobanos/cargo-aoc), I like to run benchmarks on my solutions. It's also hilarious to see how fast Rust is.
+For fun I benchmark my solutions. It's also hilarious to see how fast Rust is. Benchmarking comes included with [cargo-aoc](https://github.com/gobanos/cargo-aoc) which means there's no hassle to do it either, just run `cargo aoc bench`.
 
 | Part | Time                                  |
 | ---- | ------------------------------------- |
