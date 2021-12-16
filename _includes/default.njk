@@ -28,22 +28,16 @@
           @rnattochdag
         </a>
         <a
-          class="font-bold {{ 'nav-item' if '/uses' in page.url }}"
+          class="font-bold {{ 'nav-item' if '/posts' in page.url }}"
           href="/posts"
         >
           Writing
         </a>
         <a
-          class="font-bold {{ 'nav-item' if '/uses' in page.url }}"
+          class="font-bold"
           href="https://devlog.willcodefor.beer"
           >Devlog</a
         >
-        <a
-          class="font-bold {{ 'nav-item' if '/uses' in page.url }}"
-          href="/uses"
-        >
-          What I Use
-        </a>
       </div>
       <div class="my-10 md:my-32 col-start-3 col-end-4">
         {% block content %}
