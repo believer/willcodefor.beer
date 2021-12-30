@@ -6,6 +6,12 @@
   @apply bg-indigo-300;
 }
 
+@layer base {
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
 @layer components {
   html,
   body {
