@@ -48,7 +48,7 @@
 
   .list-item p a,
   .markdown a {
-    @apply pb-0 text-blue-600 dark:text-blue-400;
+    @apply pb-0 text-blue-600 dark:text-blue-400 underline;
   }
 
   .markdown a:hover {

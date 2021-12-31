@@ -126,21 +126,17 @@ projects:
         user-friendly websites and creating tools that make life easier for
         other developers. I currently love working in 
         <a
-          class="text-blue-600 dark:text-blue-400 hover:underline"
+          class="text-blue-600 underline dark:text-blue-400"
           href="https://rescript-lang.org/"
           rel="noopener noreferrer"
           target="_blank"
-          >
-          ReScript
-        </a> and 
+          >ReScript</a> and 
         <a
-          class="text-blue-600 dark:text-blue-400 hover:underline"
+          class="text-blue-600 underline dark:text-blue-400"
           href="https://www.rust-lang.org/"
           rel="noopener noreferrer"
           target="_blank"
-          >
-          Rust
-        </a>.
+          >Rust</a>.
       </header>
       <section class="flex items-center mt-10 space-x-6">
         {% for social in socials %}
@@ -228,7 +224,7 @@ projects:
     <div class="mb-8 text-sm">
       {{ w.description | safe }}
       {% if w.link %}
-        <a class="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline" href={{ w.link }}>
+        <a class="inline-block mt-4 text-blue-600 underline dark:text-blue-400" href={{ w.link }}>
           {{ w.linkDescription }}
         </a>
       {% endif %}
@@ -265,7 +261,7 @@ projects:
             </div>
           </div>
           <div class="flex flex-wrap mt-4">
-            <a class="text-blue-600 dark:text-blue-400 hover:underline" href={{p.link}} aria-label="Source code for {{p.name}} on GitHub">Link</a>
+            <a class="text-blue-600 underline dark:text-blue-400" href={{p.link}} aria-label="Source code for {{p.name}} on GitHub">Link</a>
           </div>
         </div>
       </details>

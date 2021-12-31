@@ -16,7 +16,6 @@ module.exports = {
             color: theme('colors.gray.900'),
             a: {
               color: theme('colors.blue.600'),
-              textDecoration: 'none',
               '&:hover': {
                 color: theme('colors.blue.600'),
                 textDecoration: 'underline',

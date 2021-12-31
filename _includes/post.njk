@@ -24,7 +24,7 @@ layout: default.njk
     • {{ content | striptags | readingTime }}
 
     {% if url %}
-      • <a class="text-blue-600 dark:text-blue-400" href="{{url}}">Original post</a>
+      • <a class="text-blue-600 underline dark:text-blue-400" href="{{url}}">Original post</a>
     {% endif %}
 
     <ul class="flex text-sm space-x-2">
@@ -32,7 +32,7 @@ layout: default.njk
       {% for tag in tags | noPostTag %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
       <li>
-        <a class="text-blue-600 dark:text-blue-400" href="{{ tagUrl | url }}">{{tag}}</a>
+        <a class="text-blue-600 underline dark:text-blue-400" href="{{ tagUrl | url }}">{{tag}}</a>
       </li>
       {% endfor %}
     </ul>
