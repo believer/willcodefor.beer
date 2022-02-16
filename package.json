@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "css": "NODE_ENV=development postcss styles/style.css -o _tmp/style.css -w",
-    "css:prod": "NODE_ENV=production postcss styles/style.css -o _site/style.css",
+    "build:css": "tailwindcss -i ./css/style.css -o ./_site/css/style.css --minify",
+    "css": "tailwindcss -i ./css/style.css -o ./_site/css/style.css --watch",
     "build": "NODE_ENV=production eleventy && npm run css:prod"
   },
   "keywords": [],
@@ -27,6 +27,7 @@
     "@11ty/eleventy": "0.12.1",
     "@tailwindcss/typography": "0.5.0",
     "elasticlunr": "0.9.5",
-    "eleventy-plugin-seo": "0.5.2"
+    "eleventy-plugin-seo": "0.5.2",
+    "front-matter": "4.0.2"
   }
 }

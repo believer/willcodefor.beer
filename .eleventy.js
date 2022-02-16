@@ -25,14 +25,8 @@ module.exports = function (config) {
   config.setUseGitIgnore(false)
 
   config.addPassthroughCopy('assets')
+  config.addPassthroughCopy('css')
   config.addWatchTarget('./_tmp/style.css')
-
-  config.addPassthroughCopy({
-    './_tmp/style.css': './style.css',
-  })
-  config.addPassthroughCopy({
-    './styles/coldark.css': './coldark.css',
-  })
 
   config.addShortcode('version', function () {
     return String(Date.now())
@@ -114,6 +108,8 @@ module.exports = function (config) {
 
   // Filter out the latest three latest posts
   config.addFilter('latestPosts', (posts) => posts.slice(0, 4))
+
+  config.addFilter('latestTil', (posts) => posts.slice(0, 10))
 
   config.addFilter('search', searchFilter)
   config.addCollection('blog', (collection) => {

@@ -4,7 +4,7 @@
     {% seo "" %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
 
     {% block head %}{% endblock %}
@@ -22,35 +22,23 @@
         class="flex flex-col pb-8 border-b border-gray-200 md:flex-row md:items-center md:justify-end col-start-3 col-end-4 space-y-2 md:space-y-0 md:space-x-8 md:border-0 md:pb-0"
       >
         <a
-          class="font-bold text-blue-600 dark:text-blue-400 hover:underline {{ 'nav-item' if '/' === page.url }}"
+          class="font-bold text-brandBlue-600 no-underline hover:underline dark:text-brandBlue-300 {{ 'nav-item' if '/' === page.url }}"
           href="/"
         >
           @rnattochdag
         </a>
         <a
-          class="font-bold {{ 'nav-item' if '/posts' in page.url }} dark:hover:text-blue-400 hover:text-blue-600 hover:underline"
+          class="font-bold {{ 'nav-item' if '/posts' in page.url }} text-gray-700 no-underline hover:underline dark:text-white"
           href="/posts"
         >
           Writing
         </a>
-        <a
-          class="font-bold dark:hover:text-blue-400 hover:text-blue-600 hover:underline"
-          href="https://til.nattochdag.dev"
-          >Today I Learned</a
-        >
       </div>
-      <div class="my-10 md:my-32 col-start-3 col-end-4">
+      <div class="my-10 md:my-12 col-start-3 col-end-4">
         {% block content %}
         {{ content | safe }}
         {% endblock %}
       </div>
     </main>
-    <!-- Cloudflare Web Analytics -->
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "8ccd48ccef414fa0ba993937bfb7986a"}'
-    ></script>
-    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>

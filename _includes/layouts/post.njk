@@ -1,0 +1,42 @@
+---
+layout: default.njk
+templateClass: tmpl-post
+---
+
+{% block head %}
+<link href="/css/prism-nightowl.css" rel="stylesheet" />
+{% endblock %}
+
+<section class="max-w-xl mx-5 sm:mx-auto">
+  <article class="prose dark:prose-dark">
+    <h1 class="flex mb-5 text-2xl">
+      <a href="/posts">til</a>
+      <span class="mx-1 font-normal text-gray-400">/</span>
+      <span>{{title}}</span>
+    </h1>
+
+    {{ content | safe }}
+  </article>
+
+  {%- if collections.til %}
+    {%- set nextPost = collections.til | getNextCollectionItem(page) %}
+    {%- set previousPost = collections.til | getPreviousCollectionItem(page) %}
+    {%- if nextPost or previousPost %}
+      <hr>
+      <ul class="flex flex-col items-center justify-between text-sm space-y-3 sm:space-y-0 sm:flex-row">
+        <li>{%- if nextPost %}<a href="{{ nextPost.url | url }}">← {{ nextPost.data.title }}</a>{% endif %}</li>
+        <li>{%- if previousPost %}<a href="{{ previousPost.url | url }}">{{ previousPost.data.title }} →</a>{% endif %}</li>
+      </ul>
+    {%- endif %}
+  {%- endif %}
+
+  <footer class="mt-8 text-xs text-center text-gray-600">
+    This til was created 
+    <time class="font-semibold" datetime="{{createdDateTime}}">{{ createdDateTime }}</time>
+    {%- if created !== modified %}
+    and last modified 
+    <time class="font-semibold" datetime="{{modifiedDateTime}}">{{ modifiedDateTime }}</time>
+    {% endif %}
+  </footer>
+</section>
+

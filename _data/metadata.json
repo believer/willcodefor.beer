@@ -1,3 +1,21 @@
 {
-  "url": "https://willcodefor.beer/"
+  "title": "willcodefor.beer",
+  "url": "https://willcodefor.beer",
+  "language": "en",
+  "description": "Things I learn while browsing the web",
+  "feed": {
+    "subtitle": "Things I learn while browsing the web",
+    "filename": "til_feed.xml",
+    "path": "/feed/til_feed.xml",
+    "id": "https://willcodefor.beer/"
+  },
+  "jsonfeed": {
+    "path": "/feed/til_feed.json",
+    "url": "https://willcodefor.beer/feed/til_feed.json"
+  },
+  "author": {
+    "name": "Rickard Natt och Dag",
+    "email": "rickard@willcodefor.dev",
+    "url": "https://willcodefor.beer"
+  }
 }

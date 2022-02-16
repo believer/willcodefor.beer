@@ -7,17 +7,42 @@
 }
 
 @layer base {
-  details summary::-webkit-details-marker {
-    display: none;
-  }
-}
-
-@layer components {
   html,
   body {
     @apply m-0 font-sans text-gray-600 dark:bg-gray-800 dark:text-gray-200;
   }
 
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  ul,
+  ol {
+    @apply space-y-1;
+  }
+
+  h1 {
+    @apply mb-5 flex text-2xl font-semibold;
+  }
+
+  h2 {
+    @apply mb-5 text-lg font-semibold;
+  }
+
+  a {
+    @apply text-brandBlue-600 underline dark:text-brandBlue-300;
+  }
+
+  hr {
+    @apply my-4;
+  }
+}
+
+@layer components {
   .markdown h2 {
     @apply pb-4 mt-10 mb-4 border-b border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-300 font-medium;
   }
@@ -36,6 +61,10 @@
 
   .markdown li:not(:last-of-type) {
     @apply mb-4;
+  }
+
+  .grid-post {
+    grid-template-columns: 1fr max-content;
   }
 
   .grid-template-main {

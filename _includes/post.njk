@@ -8,7 +8,7 @@ layout: default.njk
 
 {% block content %}
 <article class="ml-auto mr-auto max-w-prose">
-  <div class="prose dark:prose-dark prose-blue">
+  <div>
     <h1>{{title}}</h1>
   </div>
 
@@ -27,7 +27,7 @@ layout: default.njk
       • <a class="text-blue-600 underline dark:text-blue-400" href="{{url}}">Original post</a>
     {% endif %}
 
-    <ul class="flex text-sm space-x-2">
+    <ul class="flex items-center text-sm space-x-2">
       <li>Tags:</li>
       {% for tag in tags | noPostTag %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}

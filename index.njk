@@ -132,13 +132,11 @@ projects:
         user-friendly websites and creating tools that make life easier for
         other developers. I currently love working in 
         <a
-          class="text-blue-600 underline dark:text-blue-400"
           href="https://rescript-lang.org/"
           rel="noopener noreferrer"
           target="_blank"
           >ReScript</a> and 
         <a
-          class="text-blue-600 underline dark:text-blue-400"
           href="https://www.rust-lang.org/"
           rel="noopener noreferrer"
           target="_blank"
@@ -148,7 +146,7 @@ projects:
         {% for social in socials %}
           {% if social.name == "GitHub" %}
             <a
-              class="flex items-center p-2 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-github hover:text-white"
+              class="flex items-center p-2 text-gray-700 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-github hover:text-white dark:text-white"
               href={{social.url}}
               rel="noopener noreferrer"
               target="_blank"
@@ -161,7 +159,7 @@ projects:
 
           {% if social.name == "Twitter" %}
             <a
-              class="flex items-center p-2 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-twitter hover:text-white"
+              class="flex items-center p-2 text-gray-700 bg-gray-100 rounded dark:bg-gray-700 transition-colors hover:bg-twitter hover:text-white dark:text-white"
               href={{social.url}}
               rel="noopener noreferrer"
               target="_blank"
@@ -210,13 +208,32 @@ projects:
 
 <section class="mt-10 grid md:grid-cols-12 gap-6">
   <header class="text-gray-600 dark:text-gray-400 md:text-right col-span-12 md:col-span-2">
+    Latest TIL
+  </header>
+
+  <ul class="col-span-12 md:col-span-10">
+    {%for post in collections.til | reverse | latestTil %}
+      <li class="grid grid-post">
+        <h2 class="m-0 font-medium text-gray-800 dark:text-gray-400">
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </h2>
+        <div class="text-xs text-gray-600 dark:text-gray-400">
+          {{ post.date | htmlDateString }}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="mt-10 grid md:grid-cols-12 gap-6">
+  <header class="text-gray-600 dark:text-gray-400 md:text-right col-span-12 md:col-span-2">
     Work
   </header>
   <div class="space-y-2 col-span-12 md:col-span-10">
   {%for w in experience %}
   <details>
     <summary class="flex items-center mb-2 text-gray-800 cursor-pointer group dark:text-gray-400 space-x-4">
-      <span class="flex-none font-medium group-hover:underline group-hover:text-blue-600 dark:group-hover:text-blue-400">
+      <span class="flex-none font-medium group-hover:underline group-hover:text-brandBlue-600 dark:group-hover:text-brandBlue-300">
       {{ w.name }}
       </span>
       <span class="flex-shrink w-full border-t border-gray-300 border-dashed dark:border-gray-500"></span>
@@ -230,7 +247,7 @@ projects:
     <div class="mb-8 text-sm">
       {{ w.description | safe }}
       {% if w.link %}
-        <a class="inline-block mt-4 text-blue-600 underline dark:text-blue-400" href={{ w.link }}>
+        <a class="inline-block" href={{ w.link }}>
           {{ w.linkDescription }}
         </a>
       {% endif %}
@@ -248,7 +265,7 @@ projects:
     {% for p in projects %}
       <details>
         <summary class="flex items-center mb-2 text-gray-800 cursor-pointer group dark:text-gray-400 space-x-4">
-      <span class="flex-none font-medium group-hover:underline group-hover:text-blue-600 dark:group-hover:text-blue-400">
+      <span class="flex-none font-medium group-hover:underline group-hover:text-brandBlue-600 dark:group-hover:text-brandBlue-300">
           {{ p.name }}
           </span>
           <span class="flex-shrink w-full border-t border-gray-300 border-dashed dark:border-gray-500"></span>
