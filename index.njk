@@ -207,32 +207,49 @@ projects:
 </section>
 
 <section class="mt-10 grid md:grid-cols-12 gap-6">
-  <header class="text-gray-600 dark:text-gray-400 md:text-right col-span-12 md:col-span-2">
+  <header
+    class="text-gray-600 dark:text-gray-400 md:text-right col-span-12 md:col-span-2">
     Latest TIL
   </header>
 
-
-
   <div class="col-span-12 md:col-span-10">
-    <p class="mt-0">Here are interesting things I found while browsing the web. It's ideas and thoughts, new findings, and reminders regarding software development. I see it as a second brain for all things related to development and a way for me to practice <a href="/posts/learning-in-public">Learning in public</a>.</p>
+    <p class="mt-0">
+      Here are interesting things I found while browsing the web. It's ideas and
+      thoughts, new findings, and reminders regarding software development. I
+      see it as a second brain for all things related to development and a way
+      for me to practice
+      <a href="/posts/learning-in-public">Learning in public</a>
+      .
+    </p>
 
-<p>This page is heavily inspired by Lee Byron's <a href="https://leebyron.com/til" target="_blank" rel="noopener noreferrer">TIL</a> and builds on top of my initial attempt with my <a href="https://devlog.willcodefor.beer">Devlog</a>.</p>
+    <p>
+      This page is heavily inspired by Lee Byron's
+      <a
+        href="https://leebyron.com/til"
+        target="_blank"
+        rel="noopener noreferrer">
+        TIL
+      </a>
+      and builds on top of my initial attempt with my
+      <a href="https://devlog.willcodefor.beer">Devlog</a>
+      .
+    </p>
 
-
-    <ul>
+    <ul class="mt-8">
       {%for post in collections.til | reverse | latestTil %}
-        <li class="grid grid-post">
-          <h2 class="m-0 text-base font-medium text-gray-800 dark:text-gray-400">
-            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-          </h2>
-          <div class="text-xs text-gray-600 dark:text-gray-400">
-            {{ post.date | htmlDateString }}
-          </div>
-        </li>
+      <li class="grid grid-post">
+        <h2 class="m-0 text-base font-medium text-gray-800 dark:text-gray-400">
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </h2>
+        <div class="text-xs text-gray-600 dark:text-gray-400 tabular-nums">
+          {{ post.date | htmlDateString }}
+        </div>
+      </li>
       {% endfor %}
     </ul>
   </div>
 </section>
+
 
 <section class="mt-10 grid md:grid-cols-12 gap-6">
   <header class="text-gray-600 dark:text-gray-400 md:text-right col-span-12 md:col-span-2">
