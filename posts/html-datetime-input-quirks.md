@@ -7,7 +7,7 @@ tags:
   - til
 layout: layouts/post.njk
 modified: '2022-02-21'
-modifiedDateTime: '2022-02-21 14:13'
+modifiedDateTime: '2022-02-21 14:17'
 created: '2022-02-18'
 createdDateTime: '2022-02-18 19:02'
 ---
@@ -27,7 +27,7 @@ The second one was that the maximum year that can be used is 275 760, the upper 
  
 ---
 
-The third issue occurs when the `max` and `min` values are exactly the same, `2022-02-21T13:30` in the example below. All the parts, except the hours, are disabled, but when we change the hour value the input becomes invalid with the error “Value must be, 2022-02-21 13:30”. I haven't been able to find out why the hour part doesn't get disabled as well.
+The third issue occurs when the `max` and `min` values are exactly the same, `2022-02-21T13:30` in the example below. All the date parts, except the hours, are disabled, but when we change the hour value the input becomes invalid with the error “Value must be, 2022-02-21 13:30”. I haven't been able to find out why the hour part doesn't get disabled as well.
 
 ---
 
