@@ -6,8 +6,8 @@ tags:
   - topic/development
   - til
 layout: layouts/post.njk
-modified: '2022-02-18'
-modifiedDateTime: '2022-02-18 20:05'
+modified: '2022-02-21'
+modifiedDateTime: '2022-02-21 09:48'
 created: '2022-02-18'
 createdDateTime: '2022-02-18 19:02'
 ---
@@ -26,6 +26,8 @@ The second one was that the maximum year that can be used is 275 760, the upper 
 </div>
 
 ---
+
+**NOTE:** I was unable to reproduce the following issue in CodeSandbox. It might happen due to parsing functions between different formats, which creates an invalid value when the value turns to zero.
 
 The last issue we found was that when the input contains a value and the user inputs a zero (0), the input would completely reset. This might become a UX issue if a user types the date exactly like they would in any other place. The input does not allow zero as a valid value.
 
