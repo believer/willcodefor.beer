@@ -8,8 +8,8 @@ tags:
   - topic/development
   - topic/git
 layout: layouts/post.njk
-modified: '2022-02-09'
-modifiedDateTime: '2022-02-09 13:42'
+modified: '2022-02-21'
+modifiedDateTime: '2022-02-21 09:29'
 created: '2022-02-09'
 createdDateTime: '2022-02-09 11:18'
 ---
@@ -38,7 +38,7 @@ It fetches the latest branch information from remote and lists all the branches.
 
 Inside your git configuration file, you should now have something like this, and you are ready to use the benefits of `git up`.
 
-```
+```text
 [alias]
 	up = "!f() { git pull --all --rebase --autostash; git bclean; }; f"
 	bclean = "!f() { git fetch -p; git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D; }; f"
