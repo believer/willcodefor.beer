@@ -7,7 +7,7 @@ tags:
   - til
 layout: layouts/post.njk
 modified: '2022-02-21'
-modifiedDateTime: '2022-02-21 09:48'
+modifiedDateTime: '2022-02-21 14:13'
 created: '2022-02-18'
 createdDateTime: '2022-02-18 19:02'
 ---
@@ -24,9 +24,19 @@ The second one was that the maximum year that can be used is 275 760, the upper 
 <input type="datetime-local" style="border: 1px solid #ccc;padding:8px;" />
 <input type="datetime-local" max="9999-12-31T23:59" style="border: 1px solid #ccc;padding:8px;" />
 </div>
+ 
+---
+
+The third issue occurs when the `max` and `min` values are exactly the same, `2022-02-21T13:30` in the example below. All the parts, except the hours, are disabled, but when we change the hour value the input becomes invalid with the error “Value must be, 2022-02-21 13:30”. I haven't been able to find out why the hour part doesn't get disabled as well.
 
 ---
 
+<div style="display: flex; justify-content: center;">
+<input type="datetime-local" max="2022-02-21T13:30" min="2022-02-21T13:30" class="invalid:!border-red-500" style="border: 1px solid #ccc;padding:8px;" />
+</div>
+ 
+---
+ 
 **NOTE:** I was unable to reproduce the following issue in CodeSandbox. It might happen due to parsing functions between different formats, which creates an invalid value when the value turns to zero.
 
 The last issue we found was that when the input contains a value and the user inputs a zero (0), the input would completely reset. This might become a UX issue if a user types the date exactly like they would in any other place. The input does not allow zero as a valid value.
