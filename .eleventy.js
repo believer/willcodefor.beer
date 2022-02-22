@@ -3,6 +3,9 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginSEO = require('eleventy-plugin-seo')
 const searchFilter = require('./filters/searchFilter')
+const markdownIt = require('markdown-it')
+const markdownItAnchor = require('markdown-it-anchor')
+const mila = require('markdown-it-link-attributes')
 
 const addLeadingZero = (v) => (v < 10 ? `0${v}` : v)
 
@@ -79,6 +82,32 @@ module.exports = function (config) {
 
     return keyboardDays
   })
+
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+  })
+    .use(markdownItAnchor, {
+      permalink: markdownItAnchor.permalink.ariaHidden({
+        placement: 'after',
+        class: 'direct-link',
+        symbol: '#',
+        level: [1, 2, 3, 4],
+      }),
+      slugify: config.getFilter('slug'),
+    })
+    .use(mila, {
+      matcher(href, config) {
+        return href.startsWith('https:')
+      },
+      attrs: {
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      },
+    })
+
+  config.setLibrary('md', markdownLibrary)
 
   // Minify HTML
   config.addTransform('htmlmin', function (content, outputPath) {
