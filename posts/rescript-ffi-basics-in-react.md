@@ -1,12 +1,16 @@
 ---
-layout: post.njk
+layout: layouts/post.njk
 title: 'ReScript: FFI basics in React'
 excerpt: How to create bindings for common React patterns in ReScript
 date: 2021-03-09
 tags:
-  - post
-  - rescript
-  - react
+  - til
+  - topic/rescript
+  - topic/react
+modified: '2021-03-09'
+modifiedDateTime: '2021-03-09 12:34'
+created: '2021-03-09'
+createdDateTime: '2021-03-09 12:34'
 ---
 
 A foreign function interface (FFI) is a way for a program written in one language

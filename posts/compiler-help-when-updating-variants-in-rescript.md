@@ -1,13 +1,17 @@
 ---
-layout: post.njk
+layout: layouts/post.njk
 title: 'ReScript: Adding new actions to an existing useReducer'
 excerpt: 'How the ReScript compiler helps us when adding new variants to a
 useReducer in rescript-react'
 date: 2021-01-27
 tags:
-  - post
-  - rescript
-  - react
+  - til
+  - topic/rescript
+  - topic/react
+modified: '2021-01-27'
+modifiedDateTime: '2021-01-27 12:08'
+created: '2021-01-27'
+createdDateTime: '2021-01-27 12:08'
 ---
 
 [Previously](/posts/using-usereducer-in-rescript-react/) we updated a

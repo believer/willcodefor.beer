@@ -1,12 +1,16 @@
 ---
-layout: post.njk
+layout: layouts/post.njk
 title: 'ReScript: Connect to localStorage using FFI and functors'
 excerpt: Use ReScripts FFI to connect to the browsers localStorage
 date: 2021-03-05
 tags:
-  - post
-  - rescript
-  - react
+  - til
+  - topic/rescript
+  - topic/react
+modified: '2021-03-05'
+modifiedDateTime: '2021-03-05 12:01'
+created: '2021-03-05'
+createdDateTime: '2021-03-05 12:01'
 ---
 
 While creating my [snippets website](https://snippets.willcodefor.beer) I needed

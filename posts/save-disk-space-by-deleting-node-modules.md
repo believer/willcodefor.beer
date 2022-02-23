@@ -1,12 +1,16 @@
 ---
-layout: post.njk
-title: Save disk space by deleting unused node_modules
+layout: layouts/post.njk
+title: save disk space by deleting unused node_modules
 excerpt: 'Reclaim a lot of disk space by deleting unused node_modules from projects
 that you are not actively using'
 date: 2021-11-13
 tags:
-  - post
-  - shell
+  - til
+  - topic/shell
+modified: '2021-11-13'
+modifiedDateTime: '2021-11-13 13:50'
+created: '2021-11-13'
+createdDateTime: '2021-11-13 13:50'
 ---
 
 If you're like me and have a bunch of side projects, chances are that you also have a ton of `node_modules` folders taking up unnecessary space. I'm going to show you a command to delete all of them at once. Last time I used it I saved ~40 GB. I would recommend deleting all of them and then reinstalling in the projects you're actively developing. Start off with a clean slate.

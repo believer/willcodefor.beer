@@ -16,5 +16,5 @@ permalink: /tags/{{ tag }}/
 
 {% block content %}
   {% set postslist = collections[tag] %}
-  {% include "postslist.njk" %}
+  {% include "layouts/tillist.njk" %}
 {% endblock %}

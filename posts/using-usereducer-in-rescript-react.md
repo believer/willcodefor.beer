@@ -1,12 +1,16 @@
 ---
-layout: post.njk
+layout: layouts/post.njk
 title: 'ReScript: Using useReducer in rescript-react'
 excerpt: How to switch from React's useState to useReducer in ReScript using rescript-react
 date: 2021-01-26
 tags:
-  - post
-  - rescript
-  - react
+  - til
+  - topic/rescript
+  - topic/react
+modified: '2021-01-26'
+modifiedDateTime: '2021-01-26 15:19'
+created: '2021-01-26'
+createdDateTime: '2021-01-26 15:07'
 ---
 
 React's `useReducer` is great when the states get more complex than a simple

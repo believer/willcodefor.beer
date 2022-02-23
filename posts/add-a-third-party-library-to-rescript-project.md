@@ -1,11 +1,15 @@
 ---
-layout: post.njk
+layout: layouts/post.njk
 title: 'ReScript: Adding a third-party library'
 excerpt: How to add a third-party library to your ReScript code
 date: 2021-01-25
 tags:
-  - post
-  - rescript
+  - til
+  - topic/rescript
+modified: '2021-01-25'
+modifiedDateTime: '2021-01-25 11:02'
+created: '2021-01-25'
+createdDateTime: '2021-01-25 11:02'
 ---
 
 Sometimes we want to include a library that extends our code. To add a

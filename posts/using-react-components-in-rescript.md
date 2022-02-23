@@ -1,12 +1,16 @@
 ---
-layout: post.njk
+layout: layouts/post.njk
 title: 'ReScript: Using React components'
 excerpt: How to use React components in ReScript using rescript-react
 date: 2021-01-22
 tags:
-  - post
-  - rescript
-  - react
+  - til
+  - topic/rescript
+  - topic/react
+modified: '2021-01-22'
+modifiedDateTime: '2021-01-22 14:50'
+created: '2021-01-22'
+createdDateTime: '2021-01-22 14:50'
 ---
 
 In [the previous post](/posts/create-a-rescript-react-component/), we learned how to create React components in ReScript.

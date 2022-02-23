@@ -185,28 +185,6 @@ projects:
 
 
 <section class="mt-10 grid md:grid-cols-12 gap-6">
-  <header class="text-gray-600 dark:text-gray-400 md:text-right col-span-12 md:col-span-2">
-    Latest posts
-  </header>
-
-  <ul class="mb-6 grid grid-cols-1 md:grid-cols-2 gap-10 col-span-12 md:col-span-10">
-    {%for post in collections.post | reverse | latestPosts %}
-      <li class="list-item space-y-1">
-        <h2 class="mb-2 text-lg font-medium text-gray-800 dark:text-gray-402">
-          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-        </h2>
-        <p class="text-sm">
-          {{ post.data.excerpt | safe }}
-        </p>
-        <div class="text-xs text-gray-600 dark:text-gray-400">
-          {{ post.date | htmlDateString }}
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-
-<section class="mt-10 grid md:grid-cols-12 gap-6">
   <header
     class="text-gray-600 dark:text-gray-400 md:text-right col-span-12 md:col-span-2">
     Latest TIL
@@ -237,13 +215,19 @@ projects:
 
     <ul class="mt-8">
       {%for post in collections.til | reverse | latestTil %}
-      <li class="grid grid-post">
+      <li class="items-baseline grid grid-post gap-4 sm:gap-5">
         <h2 class="m-0 text-base font-medium text-gray-800 dark:text-gray-400">
           <a href="{{ post.url | url }}">{{ post.data.title }}</a>
         </h2>
-        <div class="text-xs text-gray-600 dark:text-gray-400 tabular-nums">
-          {{ post.date | htmlDateString }}
-        </div>
+        <hr class="hidden border-gray-300 border-dashed sm:block" />
+        <time class="font-mono text-xs text-gray-500 tabular-nums" datetime="{{ post.data.createdDateTime }}">
+          <span class="hidden sm:block">
+            {{ post.data.createdDateTime }}
+          </span>
+          <span class="block sm:hidden">
+            {{ post.data.created }}
+          </span>
+        </time>
       </li>
       {% endfor %}
     </ul>

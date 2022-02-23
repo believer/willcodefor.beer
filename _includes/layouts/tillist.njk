@@ -1,6 +1,6 @@
-<ol reversed>
+<ol reversed class="space-y-2 sm:space-y-1">
 {% for post in postslist | reverse %}
-  <li class="items-baseline grid grid-post gap-5">
+  <li class="items-baseline grid grid-post gap-4 sm:gap-5">
   <a href="{{ post.url | url }}">
     {% if post.data.title %}
       {{ post.data.title }}
@@ -8,6 +8,7 @@
       <code>{{ post.url }}</code>
     {% endif %}
   </a>
+  <hr class="hidden border-gray-300 border-dashed sm:block" />
     <time class="font-mono text-xs text-gray-500 tabular-nums" datetime="{{ post.data.createdDateTime }}">
       <span class="hidden sm:block">
         {{ post.data.createdDateTime }}

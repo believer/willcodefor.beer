@@ -1,12 +1,16 @@
 ---
-layout: post.njk
-title: 'Advent of Code 2021: Day 1 - Sonar Sweep'
+layout: layouts/post.njk
+title: 'advent of code 2021: day 1 - sonar sweep'
 excerpt: Solve day 1 of Advent of Code 2021 using Rust
 date: 2021-12-01
+modified: '2021-12-01'
+modifiedDateTime: '2021-12-12 13:23'
+created: '2021-12-12'
+createdDateTime: '2021-12-12 13:16'
 tags:
-  - post
-  - rust
-  - advent-of-code
+  - til
+  - topic/rust
+  - topic/advent-of-code
 ---
 
 It's that time of year, [Advent of Code](https://adventofcode.com/) is

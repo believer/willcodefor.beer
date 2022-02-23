@@ -4,18 +4,10 @@ title: Posts
 ---
 
 {% block content %}
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
-    <div>
-      <h2>Blog posts</h2>
-      {% set postslist = collections.post %}
-      {% include "postslist.njk" %}
-    </div>
-
-    <div>
-      <h2>Today I Learned</h2>
-      {% set postslist = collections.til %}
-      {% include "layouts/tillist.njk" %}
-    </div>
+  <div class="max-w-2xl mx-auto">
+    <h2>Today I Learned</h2>
+    {% set postslist = collections.til %}
+    {% include "layouts/tillist.njk" %}
   </div>
 {% endblock %}
 

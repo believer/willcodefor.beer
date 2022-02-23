@@ -1,13 +1,16 @@
 ---
-layout: post.njk
+layout: layouts/post.njk
 title: 'ReScript: Creating a React component'
 excerpt: How to create React components in ReScript using rescript-react
 date: 2021-01-21
-updated: 2021-01-22
 tags:
-  - post
-  - rescript
-  - react
+  - til
+  - topic/rescript
+  - topic/react
+modified: '2021-01-22'
+modifiedDateTime: '2021-01-22 13:24'
+created: '2021-01-21'
+createdDateTime: '2021-01-21 15:48'
 ---
 
 One great part of the [ReScript](https://rescript-lang.org/) ecosystem is the bindings to React. These bindings live

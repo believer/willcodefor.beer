@@ -1,13 +1,17 @@
 ---
-layout: post.njk
-title: How to lint HTML using CSS
+layout: layouts/post.njk
+title: how to lint HTML using CSS
 date: 2020-06-23
 url: https://dev.to/believer/how-to-lint-html-using-css-5dc
 tags:
-  - post
-  - html
-  - css
-  - a11y
+  - til
+  - topic/html
+  - topic/css
+  - topic/a11y
+modified: '2020-06-23'
+modifiedDateTime: '2020-06-23 13:37'
+created: '2020-06-23'
+createdDateTime: '2020-06-23 13:37'
 ---
 
 The following CSS rules will help you highlight potential semantic and [accessibility](https://a11yproject.com/) (a11y) issues you might have on your website.

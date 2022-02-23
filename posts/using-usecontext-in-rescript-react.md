@@ -1,12 +1,16 @@
 ---
-layout: post.njk
+layout: layouts/post.njk
 title: 'ReScript: Using useContext in rescript-react'
 excerpt: How to move a useReducer to useContext in ReScript using rescript-react
 date: 2021-01-28
 tags:
-  - post
-  - rescript
-  - react
+  - til
+  - topic/rescript
+  - topic/react
+modified: '2021-01-28'
+modifiedDateTime: '2021-01-28 09:02'
+created: '2021-01-28'
+createdDateTime: '2021-01-28 09:02'
 ---
 
 Sometimes we might need some state in multiple places in our app and for this we

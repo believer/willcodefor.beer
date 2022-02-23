@@ -1,13 +1,17 @@
 ---
-layout: post.njk
-title: Testing React createPortal with Testing Library
+layout: layouts/post.njk
+title: testing React createPortal with Testing Library
 date: 2020-10-22
 url: https://dev.to/believer/testing-react-createportal-with-testing-library-1mj6
 tags:
-  - post
-  - react
-  - jest
-  - testing
+  - til
+  - topic/react
+  - topic/jest
+  - topic/testing
+modified: '2020-10-22'
+modifiedDateTime: '2020-10-22 10:33'
+created: '2020-10-22'
+createdDateTime: '2020-10-22 10:33'
 ---
 
 I have a component that uses `ReactDOM.createPortal` and appends it to a DOM node that is passed as a prop. However, I couldn't find a good example of testing it using Testing Library.

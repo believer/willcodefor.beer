@@ -1,11 +1,15 @@
 ---
-layout: post.njk
-title: Safely position fixed content on newer mobile devices
+layout: layouts/post.njk
+title: safely position fixed content on newer mobile devices
 excerpt: 'Use one CSS function to safely position fixed content on mobile devices with notches and home bars'
-date: 2021-05-21
+date: 2021-05-20
 tags:
-  - post
-  - css
+  - til
+  - topic/css
+modified: '2021-05-21'
+modifiedDateTime: '2021-05-21 07:38'
+created: '2021-05-20'
+createdDateTime: '2021-05-20 16:17'
 ---
 
 If we want to position fixed content safely on a mobile device that has a

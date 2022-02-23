@@ -1,12 +1,16 @@
 ---
-layout: post.njk
-title: 'Redirect www to non-www in Cloudflare'
+layout: layouts/post.njk
+title: 'redirect www to non-www in Cloudflare'
 excerpt: 'Create a 301 permanent redirect from www to non-www in Cloudflare'
 date: 2021-11-29
+modified: '2021-11-29'
+modifiedDateTime: '2021-11-29 19:31'
+created: '2021-11-29'
+createdDateTime: '2021-11-29 19:48'
 tags:
-  - post
-  - cloudflare
-  - dns
+  - til
+  - topic/cloudflare
+  - topic/dns
 ---
 
 While setting up a new domain in Cloudflare I found that I wasn't handling `www` for the domains of this site. What I wanted was to

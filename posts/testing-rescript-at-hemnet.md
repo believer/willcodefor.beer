@@ -1,13 +1,17 @@
 ---
-layout: post.njk
-title: Testing ReasonML at Sweden's largest property portal, Hemnet
+layout: layouts/post.njk
+title: testing ReasonML at Sweden's largest property portal, Hemnet
 date: 2020-05-15
 url: https://dev.to/believer/testing-reasonml-at-sweden-s-largest-property-portal-hemnet-620
 tags:
-  - post
-  - reasonml
-  - react
-  - hemnet
+  - til
+  - topic/reasonml
+  - topic/react
+  - topic/hemnet
+modified: '2021-11-23'
+modifiedDateTime: '2021-11-23 13:31'
+created: '2020-05-15'
+createdDateTime: '2020-05-15 13:04'
 ---
 
 Each week [Hemnet](https://www.hemnet.se) has 2.8 million unique visitors, which is quite a lot in a country with about 10 million inhabitants.
