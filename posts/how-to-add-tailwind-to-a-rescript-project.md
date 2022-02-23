@@ -8,6 +8,7 @@ tags:
   - topic/rescript
   - topic/react
   - topic/css
+series: rescript/10
 modified: '2021-04-16'
 modifiedDateTime: '2021-04-16 07:59'
 created: '2021-04-16'
@@ -26,8 +27,8 @@ npm install --dev tailwindcss postcss autoprefixer
 
 We are now ready to run `npx tailwindcss init -p`, this will create two files for us:
 
-* `tailwind.config.js` - A default Tailwind configuration
-* `postcss.config.js` - A PostCSS configuration with Tailwind and Autoprefixer
+- `tailwind.config.js` - A default Tailwind configuration
+- `postcss.config.js` - A PostCSS configuration with Tailwind and Autoprefixer
 
 To add all of Tailwind's features we create a CSS file inside the `src` folder with the following content.
 
@@ -74,5 +75,5 @@ The feature is still in preview, but I haven't had any major issues with it. To 
 
 To make the process of integrating ReScript and Tailwind even easier, here are some tools and templates to help you.
 
-* [Supreme](https://github.com/opendevtools/supreme) - A CLI I've written that can quickly set up a ReScript template with Tailwind (JIT and dark mode included) and Vite. Just the way I like it.
-* [Next.js + Tailwind](https://github.com/ryyppy/rescript-nextjs-template) - A Next.js template with Tailwind created by [@ryyppy](https://twitter.com/ryyppy)
+- [Supreme](https://github.com/opendevtools/supreme) - A CLI I've written that can quickly set up a ReScript template with Tailwind (JIT and dark mode included) and Vite. Just the way I like it.
+- [Next.js + Tailwind](https://github.com/ryyppy/rescript-nextjs-template) - A Next.js template with Tailwind created by [@ryyppy](https://twitter.com/ryyppy)

@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block content %}
+
 <section class="mx-auto max-w-prose">
+
   <article class="prose dark:prose-dark">
     <h1 class="flex mb-5 text-2xl">
       <a href="/posts">til</a>
@@ -14,6 +16,29 @@
     </h1>
 
     {{ content | safe }}
+
+    {%- set seriesPosts = collections.postSeries | findSeries(series, title) %}
+    {%- if seriesPosts and series %}
+      <section class="p-5 text-sm rounded-lg shadow-lg bg-brandBlue-50 not-prose">
+        <h2 class="mb-2">{{series | seriesName}} series</h2>
+        <ul class="space-y-2">
+          {% for post in seriesPosts %}
+            <li>
+              {{ post.part }}:
+              {% if post.currentPage %}
+                <strong>
+                  {{ post.title }}
+                </strong>
+              {% else %}
+                <a href="{{ post.url | url }}">
+                  {{ post.title }}
+                </a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {%- endif %}
   </article>
 
   {%- if collections.til %}

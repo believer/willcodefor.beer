@@ -8,6 +8,7 @@ tags:
   - til
   - topic/rescript
   - topic/react
+series: rescript/6
 modified: '2021-01-27'
 modifiedDateTime: '2021-01-27 12:08'
 created: '2021-01-27'

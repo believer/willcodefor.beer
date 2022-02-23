@@ -44,6 +44,54 @@ module.exports = function (config) {
 
   config.addFilter('noPostTag', (tags) => tags.filter((t) => t !== 'post'))
 
+  config.addCollection('postSeries', (collection) => {
+    let seriesCollection = new Map()
+
+    for (const post of collection.getAll()) {
+      if (post.data.series) {
+        const [series, part] = post.data.series.split('/')
+        const listPost = {
+          title: post.data.title,
+          url: post.url,
+          part: parseInt(part, 10),
+        }
+
+        if (seriesCollection.has(series)) {
+          seriesCollection.set(
+            series,
+            seriesCollection.get(series).set(part, listPost)
+          )
+
+          continue
+        }
+
+        const newPost = new Map()
+
+        seriesCollection.set(series, newPost.set(part, listPost))
+      }
+    }
+
+    return seriesCollection
+  })
+
+  config.addFilter('findSeries', (posts, currentSeries, currentTitle) => {
+    if (currentSeries) {
+      const [series, part] = currentSeries.split('/')
+      const seriesPosts = posts.get(series)
+
+      if (seriesPosts.size) {
+        const filteredPosts = [...seriesPosts.values()]
+          .sort((a, b) => a.part - b.part)
+          .map((p) => ({
+            ...p,
+            currentPage: p.title === currentTitle,
+          }))
+
+        return filteredPosts
+      }
+    }
+  })
+
   config.addCollection('tagList', (collection) => {
     let tagSet = new Set()
 
@@ -133,6 +181,15 @@ module.exports = function (config) {
     const words = content.split(' ').length
 
     return `${Math.ceil((words / wordsPerMinute).toFixed(2))} min read`
+  })
+
+  config.addFilter('seriesName', (series) => {
+    const [s] = series.split('/')
+    const availableSeries = {
+      rescript: 'ReScript',
+    }
+
+    return availableSeries[s]
   })
 
   // Filter out the latest three latest posts
