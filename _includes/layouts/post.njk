@@ -23,9 +23,9 @@ templateClass: tmpl-post
     {%- set previousPost = collections.til | getPreviousCollectionItem(page) %}
     {%- if nextPost or previousPost %}
       <hr>
-      <ul class="flex flex-col items-center justify-between text-sm space-y-3 sm:space-y-0 sm:flex-row">
+      <ul class="flex flex-col items-center justify-between text-sm space-y-3 sm:space-y-0 sm:flex-row gap-5">
         <li>{%- if nextPost %}<a href="{{ nextPost.url | url }}">← {{ nextPost.data.title }}</a>{% endif %}</li>
-        <li>{%- if previousPost %}<a href="{{ previousPost.url | url }}">{{ previousPost.data.title }} →</a>{% endif %}</li>
+        <li class="text-right">{%- if previousPost %}<a href="{{ previousPost.url | url }}">{{ previousPost.data.title }} →</a>{% endif %}</li>
       </ul>
     {%- endif %}
   {%- endif %}
