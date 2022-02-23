@@ -1,12 +1,10 @@
----
-layout: default.njk
-templateClass: tmpl-post
----
+{% extends "default.njk" %}
 
 {% block head %}
 <link href="/css/coldark.css" rel="stylesheet" />
 {% endblock %}
 
+{% block content %}
 <section class="mx-auto max-w-prose">
   <article class="prose dark:prose-dark">
     <h1 class="flex mb-5 text-2xl">
@@ -39,4 +37,4 @@ templateClass: tmpl-post
     {% endif %}
   </footer>
 </section>
-
+{% endblock %}
