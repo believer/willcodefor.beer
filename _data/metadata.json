@@ -5,13 +5,13 @@
   "description": "Things I learn while browsing the web",
   "feed": {
     "subtitle": "Things I learn while browsing the web",
-    "filename": "til_feed.xml",
-    "path": "/feed/til_feed.xml",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
     "id": "https://willcodefor.beer/"
   },
   "jsonfeed": {
-    "path": "/feed/til_feed.json",
-    "url": "https://willcodefor.beer/feed/til_feed.json"
+    "path": "/feed/feed.json",
+    "url": "https://willcodefor.beer/feed/feed.json"
   },
   "author": {
     "name": "Rickard Natt och Dag",
