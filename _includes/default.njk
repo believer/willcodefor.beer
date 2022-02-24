@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% seo "" %}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    {% seo "" %} <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
-
-    {% block head %}{% endblock %}
-    <script
-      async
-      data-token="MWFWWD5X1WEC"
-      data-respect-dnt
-      data-no-cookie
-      src="https://cdn.splitbee.io/sb.js"
-    ></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"/> {% block head %}{% endblock %}
+    <script async data-token="MWFWWD5X1WEC" data-respect-dnt data-no-cookie src="https://cdn.splitbee.io/sb.js"></script>
   </head>
   <body>
     <main class="mt-8 md:px-8 grid grid-template-main">
-      <div
-        class="flex flex-col pb-8 border-b border-gray-200 md:flex-row md:items-center md:justify-end col-start-3 col-end-4 space-y-2 md:space-y-0 md:space-x-8 md:border-0 md:pb-0"
-      >
+      <div class="flex flex-col pb-8 border-b border-gray-200 md:flex-row md:items-center md:justify-end col-start-3 col-end-4
+          space-y-2 md:space-y-0 md:space-x-8 md:border-0 md:pb-0">
         <a
-          class="font-bold text-brandBlue-600 no-underline hover:underline dark:text-brandBlue-300 {{ 'nav-item' if '/' === page.url }}"
-          href="/"
-        >
+          class="font-bold text-brandBlue-600 no-underline hover:underline dark:text-brandBlue-300 {{ 'nav-item' if '/' ===
+            page.url }}"
+          href="/">
           @rnattochdag
         </a>
         <a
           class="font-bold {{ 'nav-item' if '/posts' in page.url }} text-gray-700 no-underline hover:underline dark:text-white"
-          href="/posts"
-        >
+          href="/posts">
           Writing
         </a>
       </div>
       <div class="my-10 md:my-12 col-start-3 col-end-4">
         {% block content %}
-        {{ content | safe }}
+          {{ content | safe }}
         {% endblock %}
       </div>
     </main>
