@@ -29,6 +29,7 @@ module.exports = function (config) {
 
   config.addPassthroughCopy('assets')
   config.addPassthroughCopy('css')
+  config.addPassthroughCopy('_redirects')
   config.addWatchTarget('./_tmp/style.css')
 
   config.addShortcode('version', function () {
