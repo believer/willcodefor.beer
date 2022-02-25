@@ -43,6 +43,7 @@ const obsidianLinkToMarkdownLink =
 
     return `[${title}](/posts/${title
       .toLowerCase()
+      .replace(/ - /g, ' ')
       .replace(/\s/g, '-')
       .replace(/[*'"]/g, '')})`
   }
@@ -81,6 +82,7 @@ createdDateTime: '${formatDateTime.format(birthtime)}'`
     const filename = path
       .basename(til)
       .toLowerCase()
+      .replace(/ - /g, ' ')
       .replace(/\s/g, '-')
       .replace(/[*']/g, '')
 

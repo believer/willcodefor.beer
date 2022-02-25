@@ -22,8 +22,10 @@ describe('#obsidianLinkToMarkdownLink', () => {
 
   test('fixes the url', () => {
     expect(
-      obsidianLinkToMarkdownLink(["Test's are nice*"])("[[Test's are nice*]]")
-    ).toEqual("[Test's are nice*](/posts/tests-are-nice)")
+      obsidianLinkToMarkdownLink(["Test's - are nice*"])(
+        "[[Test's - are nice*]]"
+      )
+    ).toEqual("[Test's - are nice*](/posts/tests-are-nice)")
   })
 
   test('handles links with quotation marks', () => {
