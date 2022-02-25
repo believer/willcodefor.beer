@@ -213,13 +213,13 @@ projects:
       .
     </p>
 
-    <ul class="mt-8">
+    <ul class="mt-8 space-y-3" style="counter-reset: section {{ collections.til | length + 1 }}">
       {%for post in collections.til | reverse | latestTil %}
-      <li class="items-baseline grid grid-post gap-4 sm:gap-5">
+      <li class="relative items-baseline grid grid-post gap-4 sm:gap-5 counter-decrement">
         <h2 class="m-0 text-base font-medium text-gray-800 dark:text-gray-400">
           <a href="{{ post.url | url }}">{{ post.data.title }}</a>
         </h2>
-        <hr class="hidden border-gray-300 border-dashed sm:block" />
+        <hr class="hidden m-0 border-gray-300 border-dashed sm:block" />
         <time class="font-mono text-xs text-gray-500 tabular-nums" datetime="{{ post.data.createdDateTime }}">
           <span class="hidden sm:block">
             {{ post.data.createdDateTime }}

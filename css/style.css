@@ -84,10 +84,25 @@
     @apply bg-pink-300 border-pink-300;
   }
 
+  .counter {
+    counter-reset: section;
+  }
+
+  .counter-decrement::before {
+    @apply text-gray-400 tabular-nums absolute -left-14 top-1/2 -translate-y-1/2 text-right w-12 text-xs hidden;
+
+    counter-increment: section -1;
+    content: '#' counter(section) ': ';
+  }
+
   /* SM */
   @media (min-width: 640px) {
     .grid-post {
       grid-template-columns: max-content 1fr max-content;
+    }
+
+    .counter-decrement::before {
+      @apply block;
     }
   }
 }
