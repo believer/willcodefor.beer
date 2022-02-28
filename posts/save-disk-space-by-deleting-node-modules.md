@@ -31,7 +31,7 @@ demystify it.
   look for `node_modules` inside `node_modules` and so on.
 - `-exec rm -rf '{}' +` - Runs the specified command, `rm`, with flags `r` (remove directory) and `f` (do not ask for confirmation no matter what the file permissions are). `'{}'` will be replaced by the pathname that's been found. `+` means that `find` will append all the file paths to a single command instead of running `rm` for each.
 
-If you just want to find `node_modules` folders and display their disk size use
+If you only want to find `node_modules` folders and display their disk size use
 the following command.
 
 ```bash

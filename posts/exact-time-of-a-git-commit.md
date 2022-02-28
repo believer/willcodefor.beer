@@ -6,8 +6,8 @@ tags:
   - til
   - topic/git
 layout: layouts/post.njk
-modified: '2022-02-24'
-modifiedDateTime: '2022-02-24 14:46'
+modified: '2022-02-28'
+modifiedDateTime: '2022-02-28 10:09'
 created: '2022-02-24'
 createdDateTime: '2022-02-24 09:22'
 ---
@@ -16,7 +16,7 @@ Yesterday I was combining my blog and TIL posts and I wanted to find out the exa
 
 ![exact-commit-time](/assets/exact-commit-time.png)
 
-If you want an even more precise time that includes seconds or if you just want to get the time using the terminal, you can use the following command.
+If you want an even more precise time that includes seconds or if you want to get the time using the terminal, you can use the following command.
 
 ```bash
 git show -s --format=%ci <commit-sha>

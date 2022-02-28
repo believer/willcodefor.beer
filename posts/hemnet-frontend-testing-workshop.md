@@ -1,6 +1,6 @@
 ---
 title: hemnet frontend testing workshop
-excerpt: This is a workshop in Frontend Testing that I held at Hemnet. The idea was to have it sort of like a Mob programming session so that each participant got to code and get a feel for the code instead of just sitting and listening to me talk about it.
+excerpt: This is a workshop in Frontend Testing that I held at Hemnet. The idea was to do it like a Mob programming session. That way, each participant got to get a feel for the code instead of having to sit and listen to me talk about it.
 date: '2021-06-16T15:55'
 tags:
   - topic/development
@@ -10,13 +10,13 @@ tags:
   - activity/writing
   - status/done
 layout: layouts/post.njk
-modified: '2022-02-08'
-modifiedDateTime: '2022-02-08 16:05'
+modified: '2022-02-28'
+modifiedDateTime: '2022-02-28 10:14'
 created: '2021-06-16'
 createdDateTime: '2021-06-16 15:55'
 ---
 
-This is a workshop in Frontend Testing that I held at Hemnet. The idea was to have it sort of like a Mob programming session so that each participant got to code and get a feel for the code instead of just sitting and listening to me talk about it.
+This is a workshop in Frontend Testing that I held at Hemnet. The idea was to do it like a Mob programming session. That way, each participant got to get a feel for the code instead of having to sit and listen to me talk about it.
 
 The focus of the workshop was for the participants to get better knowledge in testing some of the more uncommon/advanced testing paths.
 
