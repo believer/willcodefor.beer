@@ -14,9 +14,7 @@ created: '2021-01-21'
 createdDateTime: '2021-01-21 15:48'
 ---
 
-One great part of the [ReScript](https://rescript-lang.org/) ecosystem is the bindings to React. These bindings live
-in a project called [rescript-react](https://rescript-lang.org/docs/react/latest/introduction).
-This is an introductory post on how to create a React component.
+One great part of the [ReScript](https://rescript-lang.org/) ecosystem is the bindings to React. These bindings live in a project called [rescript-react](https://rescript-lang.org/docs/react/latest/introduction). This is an introductory post on how to create a React component.
 
 ```reason
 // Button.res
@@ -28,22 +26,13 @@ let make = (~onClick) => {
 
 Let's step through the code line-by-line and see what's happening.
 
-`@react.component` is a decorator that tells rescript-react that you're writing a
-component and it creates some code behind the scenes to get the props setup
-correctly.
+`@react.component` is a decorator that tells rescript-react that you're writing a component and it creates some code behind the scenes to get the props setup correctly.
 
-`let make = (~onClick) => {` defines the start of our component function. The
-name of the function needs to be `make` for everything to work
-correctly. `make` is also a convention for the "main" function of a module and every
-file in ReScript is a module. `onClick` is a _named argument_ – it can be compared to props defined as `... = ({ onClick }) =>` in JavaScript React – and in this case, it is our only prop to this component.
+`let make = (~onClick) => {` defines the start of our component function. The name of the function needs to be `make` for everything to work correctly. `make` is also a convention for the "main" function of a module and every file in ReScript is a module. `onClick` is a _named argument_ – it can be compared to props defined as `... = ({ onClick }) =>` in JavaScript React – and in this case, it is our only prop to this component.
 
-`<button onClick>` is the start of our JSX and it works just like regular React.
-The difference is in the `onClick` prop we send to the button. In React we would need to
-do `onClick={onClick}`, but rescript-react JSX has [punning](https://rescript-lang.org/docs/manual/latest/jsx#punning). This works like objects in JavaScript that allows you to do `return { onClick }` instead of `return { onClick: onClick }`.
+`<button onClick>` is the start of our JSX and it works just like regular React. The difference is in the `onClick` prop we send to the button. In React we would need to do `onClick={onClick}`, but rescript-react JSX has [punning](https://rescript-lang.org/docs/manual/latest/jsx#punning). This works like objects in JavaScript that allows you to do `return { onClick }` instead of `return { onClick: onClick }`.
 
-The type of `onClick` is inferred by its usage as `ReactEvent.Mouse.t => unit`
-so we don't need to define the type of the prop ourselves. The type also
-indicates that the prop is **required**.
+The type of `onClick` is inferred by its usage as `ReactEvent.Mouse.t => unit` so we don't need to define the type of the prop ourselves. The type also indicates that the prop is **required**.
 
 To display a text inside the button, we use `React.string("Click me")`. ReScript needs every JSX child to have the same type, `React.element`. `React.string` converts the regular `"Click me"` string to a `React.element`. rescript-react has helper methods for converting most primitive values like `int`, `float`, `string`, and `array` to React elements.
 

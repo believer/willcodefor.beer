@@ -14,9 +14,7 @@ created: '2021-01-22'
 createdDateTime: '2021-01-22 14:50'
 ---
 
-In [the previous post](/posts/create-a-rescript-react-component/), we learned how to create React components in ReScript.
-In this post, we'll learn how to import and use them in other components. We'll
-start by making some adjustments to the `<Button>` we created.
+In [the previous post](/posts/create-a-rescript-react-component/), we learned how to create React components in ReScript. In this post, we'll learn how to import and use them in other components. We'll start by making some adjustments to the `<Button>` we created.
 
 ```reason
 // Button.res
@@ -26,10 +24,7 @@ let make = (~children, ~onClick) => {
 }
 ```
 
-We have changed the button child from `React.string("Click me")` to `children`
-and added a prop for `~children` in the component function. This way we can
-reuse the button with different contents. The type of the `children` prop is inferred as
-`React.element` and it is **required**.
+We have changed the button child from `React.string("Click me")` to `children` and added a prop for `~children` in the component function. This way we can reuse the button with different contents. The type of the `children` prop is inferred as `React.element` and it is **required**.
 
 ```reason
 // App.res
@@ -39,13 +34,9 @@ let make = () => {
 }
 ```
 
-Here we use our `<Button>` component inside another component called `<App>`. As we saw in the
-last post, all files are modules and globally available in ReScript.
-Therefore we can add the `<Button>` to our JSX without having to import any
-files beforehand.
+Here we use our `<Button>` component inside another component called `<App>`. As we saw in the last post, all files are modules and globally available in ReScript. Therefore we can add the `<Button>` to our JSX without having to import any files beforehand.
 
-If we save now, we get an error in the compiler that we are missing the
-required properties for the `<Button>`.
+If we save now, we get an error in the compiler that we are missing the required properties for the `<Button>`.
 
 ```reason
   1 │ @react.component
@@ -70,8 +61,6 @@ let make = () => {
 }
 ```
 
-`onClick` gets a function defined as `_event => ()`. The underscore before
-`event` tells the compiler that the variable is unused and we return a [unit](https://rescript-lang.org/docs/manual/latest/primitive-types#unit), `()`, which compiles to JavaScript's `undefined`.
+`onClick` gets a function defined as `_event => ()`. The underscore before `event` tells the compiler that the variable is unused and we return a [unit](https://rescript-lang.org/docs/manual/latest/primitive-types#unit), `()`, which compiles to JavaScript's `undefined`.
 
-Lastly, we re-add the button text from before as a child to `<Button>`, and we
-have successfully used our `<Button>` component!
+Lastly, we re-add the button text from before as a child to `<Button>`, and we have successfully used our `<Button>` component!

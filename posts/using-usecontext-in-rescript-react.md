@@ -14,11 +14,7 @@ created: '2021-01-28'
 createdDateTime: '2021-01-28 09:02'
 ---
 
-Sometimes we might need some state in multiple places in our app and for this we
-can use React's Context API to share the data. For the sake
-of simplicity and building on previous examples, let's assume that we want
-to get the state from [our `useReducer`
-example](/posts/using-usereducer-in-rescript-react/) in two different locations.
+Sometimes we might need some state in multiple places in our app and for this we can use React's Context API to share the data. For the sake of simplicity and building on previous examples, let's assume that we want to get the state from [our `useReducer` example](/posts/using-usereducer-in-rescript-react/) in two different locations.
 
 First of all we need to create a way of sharing the state using context.
 
@@ -48,13 +44,9 @@ module Make = (Config: Config) => {
 }
 ```
 
-This might look a bit intimidating at first but bear with me. This new file
-creates a nice and general way for us to create React contexts using what's called
-a [functor](https://rescript-lang.org/docs/manual/latest/module#module-functions-functors).
+This might look a bit intimidating at first but bear with me. This new file creates a nice and general way for us to create React contexts using what's called a [functor](https://rescript-lang.org/docs/manual/latest/module#module-functions-functors).
 
-By adding this we only need to provide a `context` type and a `defaultValue`,
-the values defined in the `module type Config`, to
-create a new context. Here's an example of creating a context that holds a `bool` value with the default being `false`.
+By adding this we only need to provide a `context` type and a `defaultValue`, the values defined in the `module type Config`, to create a new context. Here's an example of creating a context that holds a `bool` value with the default being `false`.
 
 ```reason
 include ReactContext.Make({
@@ -63,12 +55,9 @@ include ReactContext.Make({
 })
 ```
 
-The `include` keyword includes all the parts of the `Make` module in
-`ReactContext`, which means we now have access to both a `<Provider>` and a
-`use` function that calls `useContext`.
+The `include` keyword includes all the parts of the `Make` module in `ReactContext`, which means we now have access to both a `<Provider>` and a `use` function that calls `useContext`.
 
-If we combine the newly created `ReactContext` with our state and reducer from
-the `useReducer` example we get this code.
+If we combine the newly created `ReactContext` with our state and reducer from the `useReducer` example we get this code.
 
 ```reason
 // ValueSettings.res
@@ -101,13 +90,9 @@ module Provider = {
 }
 ```
 
-We've moved the `state` and `action` types as well as the `useReducer`. We also
-define a custom `Provider`, instead of using the one from `<Context.Provider>`
-directly, because we want to be able to update the state using our reducer's
-`dispatch` function.
+We've moved the `state` and `action` types as well as the `useReducer`. We also define a custom `Provider`, instead of using the one from `<Context.Provider>` directly, because we want to be able to update the state using our reducer's `dispatch` function.
 
-Next, we need to include this provider somewhere **above** in the component tree
-from where we want to use it.
+Next, we need to include this provider somewhere **above** in the component tree from where we want to use it.
 
 ```reason
 // Index.res
@@ -120,10 +105,7 @@ let make = () => {
 }
 ```
 
-Finally, we can return to our `App.res` from the `useReducer` example and modify it
-to get state and dispatch from the context. Since `ReactContext` created a `use` hook for us,
-the easiest way to fetch the `state` is to use `ValueSettings.Context.use()`
-which returns a tuple with the state and dispatch.
+Finally, we can return to our `App.res` from the `useReducer` example and modify it to get state and dispatch from the context. Since `ReactContext` created a `use` hook for us, the easiest way to fetch the `state` is to use `ValueSettings.Context.use()` which returns a tuple with the state and dispatch.
 
 ```reason
 // App.res
@@ -141,8 +123,7 @@ let make = () => {
 }
 ```
 
-If we only wanted to display a value in `<AnotherPart>` we can ignore
-`dispatch` by adding an underscore and pattern match on the `state`.
+If we only wanted to display a value in `<AnotherPart>` we can ignore `dispatch` by adding an underscore and pattern match on the `state`.
 
 ```reason
 // AnotherPart.res
@@ -157,5 +138,4 @@ let make = () => {
 }
 ```
 
-This is the most complicated topic we've covered so far. If you have any
-questions or ways of clarifying a step feel free to reach out to me on [Twitter](https://twitter.com/rnattochdag).
+This is the most complicated topic we've covered so far. If you have any questions or ways of clarifying a step feel free to reach out to me on [Twitter](https://twitter.com/rnattochdag).

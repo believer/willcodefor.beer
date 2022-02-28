@@ -15,19 +15,13 @@ created: '2021-01-27'
 createdDateTime: '2021-01-27 12:08'
 ---
 
-[Previously](/posts/using-usereducer-in-rescript-react/) we updated a
-React component to use the `useReducer` hook in rescript-react. In this post, we'll
-add a couple of new actions to our reducer and see how the compiler helps us
-with adding these new features.
+[Previously](/posts/using-usereducer-in-rescript-react/) we updated a React component to use the `useReducer` hook in rescript-react. In this post, we'll add a couple of new actions to our reducer and see how the compiler helps us with adding these new features.
 
 ```reason
 type action = Toggle | Display | Hide
 ```
 
-We start by adding two new actions to the `action` type called `Display` and
-`Hide`. After we save we'll get an error in the compiler saying that we haven't
-covered all cases in our reducer's pattern match. It even tells us that we are
-missing `(Display|Hide)`. This is exactly what we want!
+We start by adding two new actions to the `action` type called `Display` and `Hide`. After we save we'll get an error in the compiler saying that we haven't covered all cases in our reducer's pattern match. It even tells us that we are missing `(Display|Hide)`. This is exactly what we want!
 
 ```reason
 Warning number 8 (configured as error)
@@ -57,16 +51,14 @@ switch action {
 }
 ```
 
-By handling both the `Display` and `Hide` case the compiler will be happy, but
-we don't have anything that triggers our new actions so let's add those next.
+By handling both the `Display` and `Hide` case the compiler will be happy, but we don't have anything that triggers our new actions so let's add those next.
 
 ```reason
 <Button onClick={_ => dispatch(Display)}> {React.string("Display value")} </Button>
 <Button onClick={_ => dispatch(Hide)}> {React.string("Hide value")} </Button>
 ```
 
-By adding two `<Button>` components that trigger our new actions when clicked we've successfully added the new functionality to our `useReducer`.
-The complete updated example looks like this
+By adding two `<Button>` components that trigger our new actions when clicked we've successfully added the new functionality to our `useReducer`. The complete updated example looks like this
 
 ```reason
 type state = DisplayValue | HideValue

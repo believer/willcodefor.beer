@@ -12,10 +12,7 @@ created: '2021-05-20'
 createdDateTime: '2021-05-20 16:17'
 ---
 
-If we want to position fixed content safely on a mobile device that has a
-notch and/or a home bar, such as the iPhone X or iPhone 12, we need to take into account the safe
-area of the device. This is especially important if we have interactive
-elements, such as links or buttons, in the content. Luckily, there's a CSS function that can help us!
+If we want to position fixed content safely on a mobile device that has a notch and/or a home bar, such as the iPhone X or iPhone 12, we need to take into account the safe area of the device. This is especially important if we have interactive elements, such as links or buttons, in the content. Luckily, there's a CSS function that can help us!
 
 Let's say we're creating a cookie consent that contains a link.
 
@@ -50,8 +47,7 @@ If we don't add any specific spacing the link would fall below the safe area and
   </div>
 </div>
 
-The padding needed to move the content above the safe area can vary between devices, but here's where the magic
-CSS function comes to the rescue. We just need one line to fix this on every device:
+The padding needed to move the content above the safe area can vary between devices, but here's where the magic CSS function comes to the rescue. We just need one line to fix this on every device:
 
 ```css
 .cookie-consent {
@@ -73,8 +69,6 @@ CSS function comes to the rescue. We just need one line to fix this on every dev
 
 > There's also `safe-area-inset-top`, `safe-area-inset-right`, and `safe-area-inset-left` if you have content that needs to be adjusted for other directions
 
-This uses [environment variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/env()>), `safe-area-inset-bottom` in this
-case, that are provided in the browser and adds that to the padding we already had.
+This uses [environment variables](<https://developer.mozilla.org/en-US/docs/Web/CSS/env()>), `safe-area-inset-bottom` in this case, that are provided in the browser and adds that to the padding we already had.
 
-The browser support for this is [very good](https://caniuse.com/css-env-function) and
-it should be supported on all devices that require the adjustment.
+The browser support for this is [very good](https://caniuse.com/css-env-function) and it should be supported on all devices that require the adjustment.
