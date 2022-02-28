@@ -8,13 +8,15 @@ tags:
   - topic/rescript
   - topic/react
 series: rescript
-modified: '2021-03-09'
-modifiedDateTime: '2021-03-09 12:34'
+modified: '2022-02-28'
+modifiedDateTime: '2022-02-28 13:28'
 created: '2021-03-09'
 createdDateTime: '2021-03-09 12:34'
 ---
 
 A foreign function interface (FFI) is a way for a program written in one language to speak with a program written in another language. In ReScript we are creating FFI bindings to JavaScript. We touched on the concept in the [post about connecting to localStorage](/posts/connect-to-localstorage-with-functors/), but in this post we'll learn some of the most common bindings we encounter while developing a React app in ReScript.
+
+When we write bindings we don't need to specify _all_ the props that a third-party component can receive. By **only binding to the props we use** we will reduce the amount of noise and keep our API cleaner.
 
 ## React components
 
@@ -159,3 +161,7 @@ Sometimes we need to reach out and connect to a global variable. This is exactly
 @val @scope("localStorage") external getItem: string => Js.Nullable.t<string> = "getItem"
 @val @scope("localStorage") external setItem: (string, string) => unit = "setItem"
 ```
+
+---
+
+- Cory House. (2022-02-19). [Tweet](https://twitter.com/housecor/status/1495023556358455298)
