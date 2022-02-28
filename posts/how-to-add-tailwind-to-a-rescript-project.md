@@ -8,7 +8,7 @@ tags:
   - topic/rescript
   - topic/react
   - topic/css
-series: rescript/10
+series: rescript
 modified: '2021-04-16'
 modifiedDateTime: '2021-04-16 07:59'
 created: '2021-04-16'

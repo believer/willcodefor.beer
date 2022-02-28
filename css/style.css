@@ -88,6 +88,13 @@
     counter-reset: section;
   }
 
+  .counter-increment::before {
+    @apply text-gray-600 tabular-nums text-right w-12 text-xs;
+
+    counter-increment: section;
+    content: '#' counter(section) ': ';
+  }
+
   .counter-decrement::before {
     @apply text-gray-400 tabular-nums absolute -left-14 top-1/2 -translate-y-1/2 text-right w-12 text-xs hidden;
 

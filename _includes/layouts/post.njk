@@ -13,12 +13,11 @@
       {{ content | safe }}
       {%- set seriesPosts = collections.postSeries | findSeries(series, title) %}
       {%- if seriesPosts and series %}
-        <section class="p-5 text-sm rounded-lg shadow-lg bg-brandBlue-50 not-prose">
+        <section class="p-5 mt-5 text-sm rounded-lg shadow-lg bg-brandBlue-50 not-prose">
           <h2 class="mb-2">{{ series | seriesName }} series</h2>
-          <ul class="space-y-2">
+          <ul class="space-y-2 counter">
             {% for post in seriesPosts %}
-              <li>
-                {{ post.part }}:
+              <li class="counter-increment">
                 {% if post.currentPage %}
                   <strong>
                     {{ post.title }}

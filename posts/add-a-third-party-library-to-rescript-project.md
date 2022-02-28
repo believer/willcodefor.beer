@@ -6,7 +6,7 @@ date: 2021-01-25
 tags:
   - til
   - topic/rescript
-series: rescript/3
+series: rescript
 modified: '2021-01-25'
 modifiedDateTime: '2021-01-25 11:02'
 created: '2021-01-25'

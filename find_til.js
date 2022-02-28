@@ -98,6 +98,7 @@ createdDateTime: '${formatDateTime.format(birthtime)}'`
       )
       .replace(/^layout\: layouts\/post\.njk$/gim, addFileDates(metadata))
 
+    // Add files for redirects
     redirects.push({
       filename: filename.replace('.md', ''),
       created: metadata.birthtimeMs,

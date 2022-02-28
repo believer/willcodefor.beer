@@ -45,16 +45,18 @@ module.exports = function (config) {
 
   config.addFilter('noPostTag', (tags) => tags.filter((t) => t !== 'post'))
 
+  // Collect all posts in a series
   config.addCollection('postSeries', (collection) => {
     let seriesCollection = new Map()
 
     for (const post of collection.getAll()) {
       if (post.data.series) {
-        const [series, part] = post.data.series.split('/')
+        const series = post.data.series
+        const part = post.data.createdDateTime
         const listPost = {
           title: post.data.title,
+          date: part,
           url: post.url,
-          part: parseInt(part, 10),
         }
 
         if (seriesCollection.has(series)) {
@@ -75,20 +77,21 @@ module.exports = function (config) {
     return seriesCollection
   })
 
+  // Find posts in a specific series
   config.addFilter('findSeries', (posts, currentSeries, currentTitle) => {
     if (currentSeries) {
-      const [series, part] = currentSeries.split('/')
+      const series = currentSeries
       const seriesPosts = posts.get(series)
 
       if (seriesPosts.size) {
-        const filteredPosts = [...seriesPosts.values()]
-          .sort((a, b) => a.part - b.part)
+        return [...seriesPosts.values()]
+          .sort(
+            (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+          )
           .map((p) => ({
             ...p,
             currentPage: p.title === currentTitle,
           }))
-
-        return filteredPosts
       }
     }
   })
