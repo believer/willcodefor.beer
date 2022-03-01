@@ -9,7 +9,7 @@ tags:
   - status/done
 layout: layouts/post.njk
 modified: '2022-02-28'
-modifiedDateTime: '2022-02-28 09:43'
+modifiedDateTime: '2022-02-28 10:15'
 created: '2022-02-25'
 createdDateTime: '2022-02-25 09:59'
 ---
@@ -32,7 +32,7 @@ And the core principles of the `Temporal` API are:
 - 24-hour clock time-of-day values
 - No [leap seconds](https://en.wikipedia.org/wiki/Leap_second) 
 
-From the extensive [proposal documentation](https://tc39.es/proposal-temporal/docs/index.html) and the [cookbook](https://tc39.es/proposal-temporal/docs/cookbook.html) we can find some nice ways on how the API is going to work. The API is stable and you can expect that no major changes should occur. I encourage you to look at the documentation yourselves, as these are just a few usages. I think the API looks very promising.
+From the extensive [proposal documentation](https://tc39.es/proposal-temporal/docs/index.html) and the [cookbook](https://tc39.es/proposal-temporal/docs/cookbook.html) we can find some nice ways on how the API is going to work. The API is stable and you can expect that no major changes should occur. I encourage you to look at the documentation yourselves, as these are only a few usages. I think the API looks very promising.
 
 ## Plain date
 

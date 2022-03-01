@@ -9,15 +9,15 @@ tags:
   - activity/writing
   - status/done
 layout: layouts/post.njk
-modified: '2022-02-08'
-modifiedDateTime: '2022-02-08 16:04'
+modified: '2022-02-28'
+modifiedDateTime: '2022-02-28 10:15'
 created: '2021-08-30'
 createdDateTime: '2021-08-30 14:00'
 ---
 
 Describe what you're going to do and why before actually doing it when you're teaching something to someone.
 
-The student will have a harder time following what you're doing if the code you're writing just "magically appears". This becomes even more relevant depending on the student's level of knowledge.
+The student will have a harder time following what you're doing if the code you're writing "magically appears". This becomes even more relevant depending on the student's level of knowledge.
 
 If they have any objections or questions, they'll also get the time to ask them.
 
