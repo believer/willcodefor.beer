@@ -5,10 +5,10 @@ date: 2022-02-28
 tags:
   - til
   - topic/cloudflare
-  - status/upnext
+  - status/done
 layout: layouts/post.njk
 modified: '2022-03-01'
-modifiedDateTime: '2022-03-01 10:20'
+modifiedDateTime: '2022-03-01 10:36'
 created: '2022-02-28'
 createdDateTime: '2022-02-28 16:22'
 ---
