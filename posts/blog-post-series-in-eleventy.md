@@ -1,6 +1,6 @@
 ---
 title: blog post series in eleventy
-excerpt: Sometimes posts on a subject can get long if you want to explain every part in one post. Shorter posts make it more manageable for the reader to handle a new subject. I wanted to be able to create short posts and connect them in a series. This would make it easier for readers to follow along to the next part.
+excerpt: Posts can get long if you want to explain every part of a subject in one post. I wanted to be able to create short posts and connect them in a series. This would make it more manageable for the readers, but also easy to follow along to the next part.
 date: 2022-03-01
 tags:
   - til
@@ -9,12 +9,12 @@ tags:
   - status/done
 layout: layouts/post.njk
 modified: '2022-03-01'
-modifiedDateTime: '2022-03-01 13:28'
+modifiedDateTime: '2022-03-01 14:04'
 created: '2022-03-01'
 createdDateTime: '2022-03-01 10:36'
 ---
 
-Sometimes posts on a subject can get long if you want to explain every part in one post. I wanted to be able to create short posts and connect them in a series. This would make it more manageable for the readers, but also easy to follow along to the next part.
+Posts can get long if you want to explain every part of a subject in one post. I wanted to be able to create short posts and connect them in a series. This would make it more manageable for the readers, but also easy to follow along to the next part.
 
 I use [Eleventy](https://www.11ty.dev/), a static site generator, to build this website. I couldn't find any guides on how to create a post series, so I created my own way. For starters, I had to create a custom [collection](https://www.11ty.dev/docs/collections/) to gather all posts that are in different series.
 
