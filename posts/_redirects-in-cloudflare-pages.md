@@ -1,14 +1,14 @@
 ---
 title: _redirects in Cloudflare Pages
 excerpt: Cloudflare Pages has support for creating redirects using a _redirects file. This was exactly what I needed to create short URLs for my “Today I Learned” posts.
-date: 2022-03-01
+date: 2022-02-28
 tags:
   - til
   - topic/cloudflare
   - status/upnext
 layout: layouts/post.njk
 modified: '2022-03-01'
-modifiedDateTime: '2022-03-01 10:14'
+modifiedDateTime: '2022-03-01 10:20'
 created: '2022-02-28'
 createdDateTime: '2022-02-28 16:22'
 ---
