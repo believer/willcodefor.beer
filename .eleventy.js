@@ -45,32 +45,21 @@ module.exports = function (config) {
 
   config.addFilter('noPostTag', (tags) => tags.filter((t) => t !== 'post'))
 
-  // Collect all posts in a series
+  // Collect all posts that are part of a series
   config.addCollection('postSeries', (collection) => {
-    let seriesCollection = new Map()
+    let seriesCollection = {}
 
     for (const post of collection.getAll()) {
-      if (post.data.series) {
-        const series = post.data.series
-        const part = post.data.createdDateTime
-        const listPost = {
-          title: post.data.title,
-          date: part,
-          url: post.url,
+      const { series, createdDateTime: date, title, url } = post.data
+
+      if (series) {
+        const seriesPost = { title, date, url }
+
+        if (seriesCollection[series]) {
+          seriesCollection[series].push(seriesPost)
+        } else {
+          seriesCollection[series] = [seriesPost]
         }
-
-        if (seriesCollection.has(series)) {
-          seriesCollection.set(
-            series,
-            seriesCollection.get(series).set(part, listPost)
-          )
-
-          continue
-        }
-
-        const newPost = new Map()
-
-        seriesCollection.set(series, newPost.set(part, listPost))
       }
     }
 
@@ -78,22 +67,24 @@ module.exports = function (config) {
   })
 
   // Find posts in a specific series
-  config.addFilter('findSeries', (posts, currentSeries, currentTitle) => {
-    if (currentSeries) {
-      const series = currentSeries
-      const seriesPosts = posts.get(series)
-
-      if (seriesPosts.size) {
-        return [...seriesPosts.values()]
-          .sort(
-            (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-          )
-          .map((p) => ({
-            ...p,
-            currentPage: p.title === currentTitle,
-          }))
-      }
+  config.addFilter('findSeries', (posts, postSeries, postTitle) => {
+    if (postSeries) {
+      return posts[postSeries]
+        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+        .map((post) => ({
+          ...post,
+          currentPage: post.title === postTitle,
+        }))
     }
+  })
+
+  // Series titles
+  config.addFilter('seriesName', (series) => {
+    const titles = {
+      rescript: 'ReScript',
+    }
+
+    return titles[series]
   })
 
   config.addCollection('tagList', (collection) => {
@@ -185,15 +176,6 @@ module.exports = function (config) {
     const words = content.split(' ').length
 
     return `${Math.ceil((words / wordsPerMinute).toFixed(2))} min read`
-  })
-
-  config.addFilter('seriesName', (series) => {
-    const [s] = series.split('/')
-    const availableSeries = {
-      rescript: 'ReScript',
-    }
-
-    return availableSeries[s]
   })
 
   // Filter out the latest three latest posts
