@@ -9,6 +9,14 @@ const mila = require('markdown-it-link-attributes')
 
 const addLeadingZero = (v) => (v < 10 ? `0${v}` : v)
 
+const getDate = (date) => {
+  const year = date.getFullYear()
+  const month = addLeadingZero(date.getMonth() + 1)
+  const day = addLeadingZero(date.getDate())
+
+  return `${year}-${month}-${day}`
+}
+
 module.exports = function (config) {
   config.addPlugin(pluginRss)
   config.addPlugin(syntaxHighlight)
@@ -32,18 +40,17 @@ module.exports = function (config) {
   config.addPassthroughCopy('_redirects')
   config.addWatchTarget('./_tmp/style.css')
 
-  config.addShortcode('version', function () {
-    return String(Date.now())
-  })
+  // Date parsing
+  config.addFilter('htmlDateString', (dateObj) => getDate(new Date(dateObj)))
 
-  config.addFilter('htmlDateString', (dateObj) => {
+  config.addFilter('htmlDateTime', (dateObj) => {
     const date = new Date(dateObj)
-    return `${date.getFullYear()}-${addLeadingZero(
-      date.getMonth() + 1
-    )}-${addLeadingZero(date.getDate())}`
-  })
+    const yearMonthDate = getDate(date)
+    const hours = addLeadingZero(date.getHours())
+    const minutes = addLeadingZero(date.getMinutes())
 
-  config.addFilter('noPostTag', (tags) => tags.filter((t) => t !== 'post'))
+    return `${yearMonthDate}T${hours}:${minutes}`
+  })
 
   // Collect all posts that are part of a series
   config.addCollection('postSeries', (collection) => {
@@ -90,31 +97,19 @@ module.exports = function (config) {
   config.addCollection('tagList', (collection) => {
     let tagSet = new Set()
 
-    collection.getAll().forEach(function (item) {
+    collection.getAll().forEach((item) => {
       if ('tags' in item.data) {
-        let tags = item.data.tags
-
-        tags = tags.filter(function (item) {
-          switch (item) {
-            // this list should match the `filter` list in tags.njk
-            case 'all':
-            case 'nav':
-            case 'post':
-            case 'posts':
-              return false
+        for (const tag of item.data.tags) {
+          if (['all', 'nav', 'til', 'tagList'].includes(tag)) {
+            continue
           }
 
-          return true
-        })
-
-        for (const tag of tags) {
           tagSet.add(tag)
         }
       }
     })
 
-    // returning an array in addCollection works in Eleventy 0.5.3
-    return [...tagSet]
+    return [...tagSet].sort((a, b) => a.localeCompare(b))
   })
 
   // Calculate days I've owned my keyboard

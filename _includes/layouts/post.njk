@@ -54,10 +54,10 @@
       {% endif %}
       <footer class="mt-8 text-xs text-center text-gray-600">
         This til was created
-        <time class="font-semibold" datetime="{{ createdDateTime }}">{{ createdDateTime }}</time>
+        <time class="font-semibold" datetime="{{ createdDateTime | htmlDateTime }}">{{ createdDateTime }}</time>
         {%- if created !== modified %}
           and last modified
-          <time class="font-semibold" datetime="{{ modifiedDateTime }}">{{ modifiedDateTime }}</time>
+          <time class="font-semibold" datetime="{{ modifiedDateTime | htmlDateTime}}">{{ modifiedDateTime }}</time>
         {% endif %}
       </footer>
     </section>

@@ -9,7 +9,7 @@
         {% endif %}
       </a>
       <hr class="hidden m-0 border-gray-300 border-dashed sm:block"/>
-      <time class="font-mono text-xs text-gray-500 tabular-nums" datetime="{{ post.data.createdDateTime }}">
+      <time class="font-mono text-xs text-gray-500 tabular-nums" datetime="{{ post.data.createdDateTime | htmlDateTime }}">
         <span class="hidden sm:block">
           {{ post.data.createdDateTime }}
         </span>
