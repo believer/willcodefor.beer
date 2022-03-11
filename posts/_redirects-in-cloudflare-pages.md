@@ -7,13 +7,13 @@ tags:
   - topic/cloudflare
   - status/done
 layout: layouts/post.njk
-modified: '2022-03-01'
-modifiedDateTime: '2022-03-01 10:36'
+modified: '2022-03-11'
+modifiedDateTime: '2022-03-11 15:09'
 created: '2022-02-28'
 createdDateTime: '2022-02-28 16:22'
 ---
 
-Cloudflare Pages has [support for creating redirects](https://developers.cloudflare.com/pages/platform/redirects/) using a `_redirects` file. This was exactly what I needed to create short URLs for my “Today I Learned” (TIL) posts. It won't be a permanent solution, as a project is **limited to 100 redirects**. We'll see what happens when I reach that amount.
+Cloudflare Pages has [support for creating redirects](https://developers.cloudflare.com/pages/platform/redirects/) using a `_redirects` file. This was exactly what I needed to create short URLs for my <dfn><abbr title="Today I Learned">TIL</abbr></dfn> posts. It won't be a permanent solution, as a project is **limited to 100 redirects**. We'll see what happens when I reach that amount.
 
 >Netlify also [supports using a `_redirects`](https://docs.netlify.com/routing/redirects/) file. Next.js supports redirects in [the config file](https://nextjs.org/docs/api-reference/next.config.js/redirects).
 

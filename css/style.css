@@ -20,6 +20,10 @@
     @apply my-4;
   }
 
+  p:not(:last-of-type) {
+    @apply mb-2;
+  }
+
   ul,
   ol {
     @apply space-y-1;
@@ -39,6 +43,23 @@
 
   hr {
     @apply my-4;
+  }
+
+  abbr[title] {
+    @apply border-b-2 border-dashed border-gray-400 no-underline cursor-help;
+  }
+
+  /* Display the abbr title on mobile devices when clicked */
+  abbr[title]:hover::after {
+    content: ' (' attr(title) ')';
+  }
+
+  /* SM */
+  @media (min-width: 640px) {
+    /* Remove abbr display on larger devices */
+    abbr[title]:hover::after {
+      content: '';
+    }
   }
 }
 
@@ -69,10 +90,6 @@
 
   .grid-template-main {
     grid-template-columns: 20px 1fr minmax(auto, 900px) 1fr 20px;
-  }
-
-  p:not(:last-of-type) {
-    @apply mb-2;
   }
 
   .list-item p a,

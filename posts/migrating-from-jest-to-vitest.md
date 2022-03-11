@@ -7,8 +7,8 @@ tags:
   - topic/jest
   - topic/vitest
 layout: layouts/post.njk
-modified: '2022-03-10'
-modifiedDateTime: '2022-03-10 13:52'
+modified: '2022-03-11'
+modifiedDateTime: '2022-03-11 15:08'
 created: '2022-03-10'
 createdDateTime: '2022-03-10 12:55'
 ---
@@ -25,7 +25,7 @@ While doing some naive tests, our test suite in Vitest ran 52% faster than it wo
 
 ## Coverage
 
-We have a script that automatically updates our coverage thresholds. If a <abbr title="Pull request">PR</abbr> falls below the thresholds, we can fail the tests in <abbr title="Continuous Integration">CI</abbr>. Vitest uses [c8](https://github.com/bcoe/c8) to create coverage statistics, but currently `c8` doesn't support Vue files, which means that our stats were way off. This is our only stopper in merging the new tests, but there's a [PR that fixes this](https://github.com/bcoe/c8/pull/357) which we hope will be merged soon.
+We have a script that automatically updates our coverage thresholds. If a <dfn><abbr title="Pull request">PR</abbr></dfn> falls below the thresholds, we can fail the tests in <dfn><abbr title="Continuous Integration">CI</abbr></dfn>. Vitest uses [c8](https://github.com/bcoe/c8) to create coverage statistics, but currently `c8` doesn't support Vue files, which means that our stats were way off. This is our only stopper in merging the new tests, but there's a [PR that fixes this](https://github.com/bcoe/c8/pull/357) which we hope will be merged soon.
 
 ## Examples
 
@@ -49,7 +49,7 @@ vi.mock('@/utils/campaign', async () => ({
 }))
 ```
 
-Since Vitest includes Jest compatible APIs, we mostly had to exchange `jest` with `vi`. The biggest difference in this case is where we import the actual utilities. We need to import them asynchronously because Vitest is <abbr title="ECMAScript Modules">ESM</abbr> first.
+Since Vitest includes Jest compatible APIs, we mostly had to exchange `jest` with `vi`. The biggest difference in this case is where we import the actual utilities. We need to import them asynchronously because Vitest is <dfn><abbr title="ECMAScript Modules">ESM</abbr></dfn> first.
 
 ```ts
 // Before, using Jest

@@ -6,13 +6,13 @@ tags:
   - til
   - topic/git
 layout: layouts/post.njk
-modified: '2022-02-28'
-modifiedDateTime: '2022-02-28 10:09'
+modified: '2022-03-11'
+modifiedDateTime: '2022-03-11 15:10'
 created: '2022-02-24'
 createdDateTime: '2022-02-24 09:22'
 ---
 
-Yesterday I was combining my blog and TIL posts and I wanted to find out the exact time of a git commit. It turns out that it's really easy. If you hover the date of a commit in GitHub, you'll see the full date and time.
+Yesterday I was combining my blog and <dfn><abbr title="Today I Learned">TIL</abbr></dfn> posts and I wanted to find out the exact time of a git commit. It turns out that it's really easy. If you hover the date of a commit in GitHub, you'll see the full date and time.
 
 ![exact-commit-time](/assets/exact-commit-time.png)
 
