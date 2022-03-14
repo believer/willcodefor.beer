@@ -8,7 +8,7 @@ tags:
   - topic/css
 layout: layouts/post.njk
 modified: '2022-03-14'
-modifiedDateTime: '2022-03-14 12:15'
+modifiedDateTime: '2022-03-14 12:16'
 created: '2022-03-12'
 createdDateTime: '2022-03-12 10:02'
 ---
@@ -31,7 +31,7 @@ If we want to make it even clearer where the term was first defined, we can pair
 
 ```html
 <dfn>
-	<abbr title="Cascading Style Sheets">CSS</abbr>
+  <abbr title="Cascading Style Sheets">CSS</abbr>
 </dfn>
 ```
 
@@ -49,7 +49,7 @@ Make the abbreviation element focusable using tabindex
 where it's being defined for the first time
 -->
 <dfn>
-	<abbr title="Cascading Style Sheets" tabindex="0">CSS</abbr>
+  <abbr title="Cascading Style Sheets" tabindex="0">CSS</abbr>
 </dfn>
 ```
 
