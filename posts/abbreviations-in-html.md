@@ -8,16 +8,18 @@ tags:
   - topic/css
 layout: layouts/post.njk
 modified: '2022-03-14'
-modifiedDateTime: '2022-03-14 12:16'
+modifiedDateTime: '2022-03-14 16:11'
 created: '2022-03-12'
 createdDateTime: '2022-03-12 10:02'
 ---
 
-Abbreviations can be hard to understand. Normally, we would write the full meaning followed by the abbreviation inside parentheses the first time it’s being used. After that we can use only the abbreviation. For example, CSS on Wikipedia:
+Abbreviations can be hard to understand. Normally, we would write the full meaning followed by the abbreviation inside parentheses the first time it’s being used. After that, we can use only the abbreviation. For example, CSS on Wikipedia:
 
 >**Cascading Style Sheets** (**CSS**) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript - [Wikipedia](https://en.m.wikipedia.org/wiki/CSS)
 
-<dfn><abbr title="HyperText Markup Language" tabindex="0">HTML</abbr></dfn> has an abbreviation element, `<abbr>`, that helps us reduce the amount of text, but still keep the explanation of the abbreviation.
+## Abbreviation element
+
+<dfn id="html"><abbr title="HyperText Markup Language" tabindex="0">HTML</abbr></dfn> has an abbreviation element, `<abbr>`, that helps us reduce the amount of text, but still keep the explanation of the abbreviation.
 
 **Note:** For accessibility reasons, you might still want to spell out the abbreviation in full the first time, but let's look at what we can do.
 
@@ -27,7 +29,9 @@ The `<abbr>` element takes an optional `title` attribute, but we should definite
 
 Neat! The default styling adds a dotted line under the abbreviation and if you hover it you'll see a little tooltip with the full description.
 
-If we want to make it even clearer where the term was first defined, we can pair the abbreviation element with the definition element, `<dfn>`. We only need to wrap the `<abbr>` with a `<dfn>`.
+## Definition element
+
+If we want to make it even clearer where we first defined the term, we can pair the abbreviation element with the definition element, `<dfn>`. We only need to wrap the `<abbr>` with a `<dfn>`.
 
 ```html
 <dfn>
@@ -40,6 +44,20 @@ If we added this to our Wikipedia example, we get:
 ><dfn><abbr title="Cascading Style Sheets">CSS</abbr></dfn> is a style sheet language used for describing the presentation of a document written in a markup language such as <dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn>. <abbr title="Cascading Style Sheets">CSS</abbr> is a cornerstone technology of the World Wide Web, alongside <abbr title="HyperText Markup Language">HTML</abbr> and JavaScript
 
 The default styling made the first term italic to put more emphasis that this is the first definition of the term.
+
+We can also add an `id` to the definition, which allows us to create links that navigate back to it later on. For example, [this link](#html) will take you to where I defined <abbr title="HyperText Markup Language" tabindex="0">HTML</abbr>.
+
+```html
+<!-- Add an ID -->
+<dfn id="css">
+  <abbr title="Cascading Style Sheets">CSS</abbr>
+</dfn>
+
+<!-- Somewhere later -->
+<a href="#css">CSS</a>
+```
+
+## Mobile and keyboard
 
 This all works well on desktops where users can hover the abbreviation, but not on mobile or for keyboard users. We can fix this by adding a bit of styling and HTML.
 
