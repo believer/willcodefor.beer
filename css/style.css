@@ -50,6 +50,7 @@
   }
 
   /* Display the abbr title on mobile devices when clicked */
+  abbr[title]:focus::after,
   abbr[title]:hover::after {
     content: ' (' attr(title) ')';
   }

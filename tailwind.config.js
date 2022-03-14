@@ -47,6 +47,9 @@ module.exports = {
               backgroundColor: 'rgb(229 243 255 / 30%)',
               color: theme('colors.brandBlue.700'),
             },
+            blockquote: {
+              fontStyle: 'normal',
+            },
             hr: {
               marginBottom: '20px',
               marginTop: '20px',
