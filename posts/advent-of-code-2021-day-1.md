@@ -13,21 +13,13 @@ tags:
   - topic/advent-of-code
 ---
 
-It's that time of year, [Advent of Code](https://adventofcode.com/) is
-here! Advent of Code is an advent calendar of programming puzzles. It's been
-held from December 1st to December 25th since 2015.
+It's that time of year, [Advent of Code](https://adventofcode.com/) is here! Advent of Code is an advent calendar of programming puzzles. It's been held from December 1st to December 25th since 2015.
 
-Last year I did the solutions using Rust and had such a great time doing
-them that I'm going to use Rust again this year. This year, if I got the time
-for it, I'll also try to do a post about my solution each day. My hope is that it
-might help someone and make me retain the solution better. A bit of [Learning in
-public](https://devlog.willcodefor.beer/pages/learning-in-public/).
+Last year I did the solutions using Rust and had such a great time doing them that I'm going to use Rust again this year. This year, if I got the time for it, I'll also try to do a post about my solution each day. My hope is that it might help someone and make me retain the solution better. A bit of [Learning in public](https://devlog.willcodefor.beer/pages/learning-in-public/).
 
 ## Part 1
 
-The puzzles usually start out simple and get harder as we get closer to
-Christmas. The first solution was straight-forward. We're given a list of
-integers and told to find how many times the value increases between each step.
+The puzzles usually start out simple and get harder as we get closer to Christmas. The first solution was straight-forward. We're given a list of integers and told to find how many times the value increases between each step.
 
 ```rust
 // I'm using cargo-aoc to set up boilerplate and handle inputs
@@ -57,19 +49,13 @@ pub fn solve_part_01(input: &[u32]) -> u32 {
 }
 ```
 
-This was my fastest solve ever with a time of `04:17` putting me at rank 2376.
-My previous fastest time was 11 minutes (last year), albeit with a better rank.
+This was my fastest solve ever with a time of `04:17` putting me at rank 2376. My previous fastest time was 11 minutes (last year), albeit with a better rank.
 
 ## Part 2
 
-The second part of each puzzle always builds on or slightly alters the solution of part 1. This
-time we're told to compare sums of a _three-measurement sliding window_ instead of
-each single entry.
+The second part of each puzzle always builds on or slightly alters the solution of part 1. This time we're told to compare sums of a _three-measurement sliding window_ instead of each single entry.
 
-We're given the hint to use "sliding window" which is a technique that can help
-reduce the amount of time a calculation takes by making it run in linear, or
-close to, time. Or in other words, using one loop instead of nested loops. To
-learn more about sliding windows read [this great article](https://levelup.gitconnected.com/an-introduction-to-sliding-window-algorithms-5533c4fe1cc7).
+We're given the hint to use "sliding window" which is a technique that can help reduce the amount of time a calculation takes by making it run in linear, or close to, time. Or in other words, using one loop instead of nested loops. To learn more about sliding windows read [this great article](https://levelup.gitconnected.com/an-introduction-to-sliding-window-algorithms-5533c4fe1cc7).
 
 Luckily for us Rust has a built-in [windows()](https://doc.rust-lang.org/std/slice/struct.Windows.html) method for slices.
 
